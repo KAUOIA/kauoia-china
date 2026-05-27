@@ -972,9 +972,8 @@ background-repeat: no-repeat;
             .footer-content {
                 grid-template-columns: 1fr 1fr;
             }
-            .labs-showcase {
-                grid-template-columns: 1fr;
-            }
+        
+            
 
             .labs-preview-card {
                 padding: 30px;
@@ -1065,9 +1064,7 @@ background-repeat: no-repeat;
             margin-right: auto;
         }
 
-        .download-card-highlight {
-            grid-column: span 2;
-        }
+
 
         .download-card {
             background: rgba(255,255,255,0.1);
@@ -1124,39 +1121,389 @@ background-repeat: no-repeat;
             position: relative;
         }
 
-        .download-card-highlight::before {
-            content: '推荐';
-            position: absolute;
-            top: -10px;
-            right: 20px;
-            background: var(--air-gold);
-            color: var(--primary-blue);
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-        }
 
-        .download-card-highlight i {
-            color: var(--air-gold);
-        }
 
-        .download-card-highlight:hover {
-            background: linear-gradient(135deg, rgba(201, 169, 97, 0.3) 0%, rgba(255, 255, 255, 0.2) 100%);
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(201, 169, 97, 0.3);
-        }
+
+
+
 
         @media (max-width: 768px) {
             .download-grid {
                 grid-template-columns: 1fr;
             }
-            .download-card-highlight {
-                grid-column: span 1;
-            }
+
         }
     
-    </style>
+    
+        /* ===== 研究室介绍区域 ===== */
+        .labs-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e6f2ff 50%, #f0f7ff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .labs-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0, 102, 204, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .labs-section::after {
+            content: '';
+            position: absolute;
+            bottom: -150px;
+            left: -150px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(201, 169, 97, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .labs-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 左侧预览卡片 */
+        .labs-preview-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 51, 102, 0.08);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .labs-preview-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--light-blue);
+        }
+
+        .labs-preview-header i {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-hero);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 22px;
+        }
+
+        .labs-preview-header span {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .labs-categories {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 35px;
+            flex: 1;
+        }
+
+        .lab-category {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: var(--gray-100);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .lab-category:hover {
+            background: var(--light-blue);
+            transform: translateX(5px);
+        }
+
+        .cat-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .lab-category span:last-child {
+            font-size: 15px;
+            color: var(--gray-800);
+            font-weight: 500;
+        }
+
+        .labs-stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding-top: 25px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .labs-stat {
+            text-align: center;
+        }
+
+        .labs-stat-num {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--accent-blue);
+            line-height: 1;
+        }
+
+        .labs-stat-label {
+            font-size: 12px;
+            color: var(--gray-600);
+            margin-top: 6px;
+        }
+
+        /* 右侧下载区域 */
+        .labs-download-area {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .labs-download-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 45px 40px;
+            box-shadow: 0 10px 40px rgba(0, 51, 102, 0.08);
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .labs-download-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(0, 102, 204, 0.12);
+        }
+
+        .labs-download-card::before {
+            content: '推荐下载';
+            position: absolute;
+            top: -1px;
+            right: 30px;
+            background: linear-gradient(135deg, var(--air-gold) 0%, #d4b76a 100%);
+            color: var(--primary-blue);
+            padding: 6px 18px;
+            border-radius: 0 0 12px 12px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(201, 169, 97, 0.3);
+        }
+
+        .labs-download-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #ff5252 0%, #d32f2f 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--white);
+            font-size: 36px;
+            box-shadow: 0 8px 25px rgba(211, 47, 47, 0.25);
+        }
+
+        .labs-download-card h3 {
+            font-size: 22px;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .labs-download-card > p {
+            color: var(--gray-600);
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            max-width: 380px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .labs-file-info {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .labs-file-info span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background: var(--gray-100);
+            border-radius: 20px;
+            font-size: 12px;
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        .labs-file-info i {
+            color: var(--accent-blue);
+        }
+
+        .labs-download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 45px;
+            background: var(--gradient-hero);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .labs-download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 102, 204, 0.4);
+        }
+
+        .labs-download-btn i {
+            font-size: 18px;
+        }
+
+        .labs-download-note {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 15px 18px;
+            background: var(--light-blue);
+            border-radius: 12px;
+            text-align: left;
+        }
+
+        .labs-download-note i {
+            color: var(--accent-blue);
+            font-size: 16px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .labs-download-note span {
+            font-size: 12px;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* 快速链接 */
+        .labs-quick-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .labs-quick-link {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 25px;
+            background: var(--white);
+            border-radius: 14px;
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .labs-quick-link:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.1);
+        }
+
+        .labs-quick-link i:first-child {
+            color: var(--accent-blue);
+            font-size: 16px;
+        }
+
+        .labs-quick-link i:last-child {
+            color: var(--gray-600);
+            font-size: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .labs-quick-link:hover i:last-child {
+            transform: translateX(4px);
+            color: var(--accent-blue);
+        }
+
+        /* 响应式 */
+        @media (max-width: 968px) {
+            .labs-showcase {
+                grid-template-columns: 1fr;
+            }
+
+            .labs-download-card {
+                padding: 35px 25px;
+            }
+
+            .labs-preview-card {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .labs-stats-row {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .labs-stat {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px;
+                background: var(--gray-100);
+                border-radius: 8px;
+            }
+
+            .labs-file-info {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .labs-download-btn {
+                width: 100%;
+                padding: 16px 20px;
+            }
+        }
+
+</style>
+<base target="_blank">
 </head>
 <body>
 
@@ -1288,8 +1635,8 @@ background-repeat: no-repeat;
             </div>
         </div>
     </section>
-    
-     <!-- 研究室介绍下载 -->
+
+        <!-- 研究室介绍下载 -->
     <section class="section labs-section" id="labs">
         <div class="container">
             <div class="section-header">
@@ -1389,7 +1736,7 @@ background-repeat: no-repeat;
             </div>
         </div>
     </section>
-    
+
     <!-- 招生信息 -->
     <section class="section" id="admissions">
         <div class="container">
@@ -1443,7 +1790,7 @@ background-repeat: no-repeat;
         
         <!-- 下载招生简章 -->
         <div class="container">
-           <div class="download-section">
+            <div class="download-section">
                 <h3><i class="fas fa-download"></i> 下载招生简章</h3>
                 <p>点击下方按钮下载2026年招生简章文件（PDF格式）</p>
                 <div class="download-grid">
@@ -1546,7 +1893,7 @@ background-repeat: no-repeat;
                     <img src="inform1.jpg" alt="通知1" style="width: 100%; display: block;">
                 </div>
                 <div style="flex: 1; min-width: 300px; background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
-                    <img src="inform2.jpg" alt="通知2" style="width: 100%; display: block;">
+                    <img src="inform2.png" alt="通知2" style="width: 100%; display: block;">
                 </div>
         </div>
     </section>
@@ -1570,18 +1917,16 @@ background-repeat: no-repeat;
                         
                     </div>
                 </div>
-               <div class="scholarship-item">
-    <div class="scholarship-icon">
-        <i class="fas fa-trophy"></i>
-    </div>
-    <div class="scholarship-content">
-        <h3>外籍学生成绩优秀生奖学金</h3>
-        <p>每前一个正规学期的学分在12分以上的学生按当年标准颁发 </p>
-        <a href="학부 외국인 장학제도.pdf" class="download-btn" download style="display: inline-block; margin-top: 10px; padding: 8px 20px; background: var(--air-gold); color: var(--primary-blue); border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 13px; transition: all 0.3s ease;">
-            <i class="fas fa-download"></i> 下载奖学金制度详情
-        </a>
-    </div>
-</div>
+                <div class="scholarship-item">
+                    <div class="scholarship-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="scholarship-content">
+                        <h3>外籍学生成绩优秀生奖学金</h3>
+                        <p>每前一个正规学期的学分在12分以上的学生按当年标准颁发 </p>
+        
+                    </div>
+                </div>
                 <div class="scholarship-item">
                     <div class="scholarship-icon">
                         <i class="fas fa-globe-asia"></i>
