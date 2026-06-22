@@ -916,333 +916,8 @@ background-repeat: no-repeat;
             text-overflow: ellipsis;
         }
 
-                /* 顶部社交媒体链接 */
-        .nav-social-links a:hover {
-            background: var(--air-gold) !important;
-            color: var(--primary-blue) !important;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(201, 169, 97, 0.3);
-        }
-
-/* 通知公告画廊 */
-        .notice-gallery-wrapper:hover .notice-nav-btn {
-            opacity: 1;
-        }
-
-        .notice-nav-btn:hover {
-            background: var(--accent-blue) !important;
-            color: white !important;
-            transform: translateY(-50%) scale(1.1) !important;
-        }
-
-        .notice-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.12) !important;
-        }
-
-        .notice-card:hover img {
-            transform: scale(1.08);
-        }
-
-        .notice-card:hover .zoom-icon {
-            opacity: 1 !important;
-        }
-
-        .notice-dot:hover {
-            transform: scale(1.3);
-        }
-
-        .notice-dot.active {
-            background: var(--accent-blue) !important;
-            width: 28px !important;
-            border-radius: 5px !important;
-        }
-
-        #lightbox button:hover {
-            background: rgba(255,255,255,0.2) !important;
-        }
-
-        
-        /* ===== 通知公告画廊 ===== */
-        .notice-gallery-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .notice-gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            padding: 0 10px;
-        }
-
-        .notice-card {
-            background: var(--white);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-        }
-
-        .notice-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 51, 102, 0.15);
-        }
-
-        .notice-img-wrap {
-            position: relative;
-            overflow: hidden;
-            aspect-ratio: 4/3;
-        }
-
-        .notice-img-wrap img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .notice-card:hover .notice-img-wrap img {
-            transform: scale(1.1);
-        }
-
-        .notice-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 51, 102, 0.7);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            color: white;
-        }
-
-        .notice-card:hover .notice-overlay {
-            opacity: 1;
-        }
-
-        .notice-overlay i {
-            font-size: 32px;
-            margin-bottom: 8px;
-        }
-
-        .notice-overlay span {
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        .notice-info {
-            padding: 20px;
-        }
-
-        .notice-tag {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .tag-blue { background: var(--light-blue); color: var(--accent-blue); }
-        .tag-gold { background: rgba(201, 169, 97, 0.15); color: var(--air-gold); }
-        .tag-green { background: rgba(46, 125, 50, 0.1); color: #2e7d32; }
-
-        .notice-info h4 {
-            font-size: 16px;
-            color: var(--primary-blue);
-            margin-bottom: 6px;
-            font-weight: 600;
-        }
-
-        .notice-info p {
-            font-size: 13px;
-            color: var(--gray-600);
-            margin: 0;
-        }
-
-        /* 画廊导航 */
-        .gallery-nav {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .gallery-arrow {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            border: 2px solid var(--primary-blue);
-            background: var(--white);
-            color: var(--primary-blue);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            font-size: 16px;
-        }
-
-        .gallery-arrow:hover {
-            background: var(--primary-blue);
-            color: var(--white);
-            transform: scale(1.1);
-        }
-
-        .gallery-dots {
-            display: flex;
-            gap: 10px;
-        }
-
-        .gallery-dots .dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: var(--gray-200);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .gallery-dots .dot.active {
-            background: var(--accent-blue);
-            transform: scale(1.3);
-        }
-
-        .gallery-dots .dot:hover {
-            background: var(--accent-blue);
-        }
-
-        /* Lightbox */
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.92);
-            z-index: 9999;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .lightbox.active {
-            display: flex;
-            opacity: 1;
-        }
-
-        .lightbox-content {
-            position: relative;
-            max-width: 90%;
-            max-height: 90%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .lightbox-content img {
-            max-width: 100%;
-            max-height: 85vh;
-            object-fit: contain;
-            border-radius: 8px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: -50px;
-            right: 0;
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 50%;
-            border: none;
-            color: white;
-            font-size: 20px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .lightbox-close:hover {
-            background: rgba(255,255,255,0.4);
-            transform: rotate(90deg);
-        }
-
-        .lightbox-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 50px;
-            height: 50px;
-            background: rgba(255,255,255,0.15);
-            border: 2px solid rgba(255,255,255,0.3);
-            border-radius: 50%;
-            color: white;
-            font-size: 20px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .lightbox-nav:hover {
-            background: rgba(255,255,255,0.3);
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        .lightbox-prev { left: -70px; }
-        .lightbox-next { right: -70px; }
-
-        .lightbox-counter {
-            position: absolute;
-            bottom: -40px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: rgba(255,255,255,0.8);
-            font-size: 14px;
-        }
-
+        /* 响应式设计 */
         @media (max-width: 968px) {
-            .notice-gallery {
-                grid-template-columns: 1fr;
-                max-width: 500px;
-                margin: 0 auto;
-            }
-            .lightbox-prev { left: 10px; }
-            .lightbox-next { right: 10px; }
-        }
-
-        @media (max-width: 576px) {
-            .notice-gallery {
-                gap: 15px;
-            }
-            .gallery-nav {
-                margin-top: 20px;
-            }
-        }
-
-/* 响应式设计 */
-        @media (max-width: 968px) {
-            .nav-social-links {
-                display: none !important;
-            }
-
             .nav-menu {
                 display: none;
                 position: absolute;
@@ -1297,7 +972,17 @@ background-repeat: no-repeat;
             .footer-content {
                 grid-template-columns: 1fr 1fr;
             }
-        }
+        
+            
+
+            .labs-preview-card {
+                padding: 30px;
+            }
+
+            .labs-download-card {
+                padding: 35px 25px;
+            }
+}
 
         @media (max-width: 576px) {
             .quick-menu-container {
@@ -1379,9 +1064,7 @@ background-repeat: no-repeat;
             margin-right: auto;
         }
 
-        .download-card-highlight {
-            grid-column: span 2;
-        }
+
 
         .download-card {
             background: rgba(255,255,255,0.1);
@@ -1438,36 +1121,17 @@ background-repeat: no-repeat;
             position: relative;
         }
 
-        .download-card-highlight::before {
-            content: '推荐';
-            position: absolute;
-            top: -10px;
-            right: 20px;
-            background: var(--air-gold);
-            color: var(--primary-blue);
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-        }
 
-        .download-card-highlight i {
-            color: var(--air-gold);
-        }
 
-        .download-card-highlight:hover {
-            background: linear-gradient(135deg, rgba(201, 169, 97, 0.3) 0%, rgba(255, 255, 255, 0.2) 100%);
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(201, 169, 97, 0.3);
-        }
+
+
+
 
         @media (max-width: 768px) {
             .download-grid {
                 grid-template-columns: 1fr;
             }
-            .download-card-highlight {
-                grid-column: span 1;
-            }
+
         }
     
     
@@ -1872,15 +1536,7 @@ background-repeat: no-repeat;
                 <li><a href="#cooperation">国际合作</a></li>
                 <li><a href="#contact">联系我们</a></li>
             </ul>
-                        <div class="nav-social-links" style="display: flex; align-items: center; gap: 12px; margin-left: auto; padding-right: 15px;">
-                <a href="https://www.xiaohongshu.com/user/profile/682b3313000000000e01d7a9" target="_blank" title="小红书" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(255,255,255,0.15); border-radius: 50%; color: #fff; text-decoration: none; transition: all 0.3s ease; font-size: 16px;">
-                    <i class="fas fa-book-open"></i>
-                </a>
-                <a href="https://mp.weixin.qq.com/s/YBpfTflvsJm701hnspe-xg" target="_blank" title="微信公众号" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(255,255,255,0.15); border-radius: 50%; color: #fff; text-decoration: none; transition: all 0.3s ease; font-size: 16px;">
-                    <i class="fab fa-weixin"></i>
-                </a>
-            </div>
-<button class="mobile-menu-btn" onclick="toggleMenu()">
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -2138,14 +1794,6 @@ background-repeat: no-repeat;
                 <h3><i class="fas fa-download"></i> 下载招生简章</h3>
                 <p>点击下方按钮下载2026年招生简章文件（PDF格式）</p>
                 <div class="download-grid">
-                    <div class="download-card download-card-highlight">
-                        <i class="fas fa-university"></i>
-                        <h4>韩国航空大学研究室中文介绍</h4>
-                        <p>研究室详细介绍（中文版）</p>
-                        <a href="韩国航空大学研究室中文介绍_完整版.pdf" class="download-btn" download>
-                            <i class="fas fa-download"></i> 下载
-                        </a>
-                    </div>
                     <div class="download-card">
                         <i class="fas fa-file-pdf"></i>
                         <h4>2026年 外国人招生简章</h4>
@@ -2240,66 +1888,13 @@ background-repeat: no-repeat;
                 <h2 class="section-title">通知公告</h2>
                 <p class="section-subtitle">重要通知与最新动态</p>
             </div>
-<!-- 通知公告图片画廊 -->
-            <div class="notice-gallery-wrapper">
-                <div class="notice-gallery" id="noticeGallery">
-                    <div class="notice-card" onclick="openLightbox(0)">
-                        <div class="notice-img-wrap">
-                            <img src="inform1.jpg" alt="招生通知">
-                            <div class="notice-overlay">
-                                <i class="fas fa-search-plus"></i>
-                                <span>点击放大</span>
-                            </div>
-                        </div>
-                        <div class="notice-info">
-                            <span class="notice-tag tag-blue">📢 招生通知</span>
-                            <h4>2026年秋季招生简章</h4>
-                            <p>本科/研究生申请指南</p>
-                        </div>
-                    </div>
-                    <div class="notice-card" onclick="openLightbox(1)">
-                        <div class="notice-img-wrap">
-                            <img src="inform2.png" alt="活动公告">
-                            <div class="notice-overlay">
-                                <i class="fas fa-search-plus"></i>
-                                <span>点击放大</span>
-                            </div>
-                        </div>
-                        <div class="notice-info">
-                            <span class="notice-tag tag-gold">📋 活动公告</span>
-                            <h4>校园开放日活动</h4>
-                            <p>欢迎参加线下咨询</p>
-                        </div>
-                    </div>
-                    <div class="notice-card" onclick="openLightbox(2)">
-                        <div class="notice-img-wrap">
-                            <img src="inform3.jpg" alt="最新动态">
-                            <div class="notice-overlay">
-                                <i class="fas fa-search-plus"></i>
-                                <span>点击放大</span>
-                            </div>
-                        </div>
-                        <div class="notice-info">
-                            <span class="notice-tag tag-green">📅 最新动态</span>
-                            <h4>奖学金申请指南</h4>
-                            <p>丰厚奖学金等你来拿</p>
-                        </div>
-                    </div>
+<div style="display: flex; gap: 30px; max-width: 1000px; margin: 0 auto; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 300px; background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+                    <img src="inform1.jpg" alt="通知1" style="width: 100%; display: block;">
                 </div>
-                <div class="gallery-nav">
-                    <button class="gallery-arrow gallery-prev" onclick="moveGallery(-1)">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <div class="gallery-dots">
-                        <span class="dot active" onclick="goToSlide(0)"></span>
-                        <span class="dot" onclick="goToSlide(1)"></span>
-                        <span class="dot" onclick="goToSlide(2)"></span>
-                    </div>
-                    <button class="gallery-arrow gallery-next" onclick="moveGallery(1)">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
+                <div style="flex: 1; min-width: 300px; background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+                    <img src="inform2.jpg" alt="通知2" style="width: 100%; display: block;">
                 </div>
-            </div>
         </div>
     </section>
 
@@ -2322,16 +1917,18 @@ background-repeat: no-repeat;
                         
                     </div>
                 </div>
-                <div class="scholarship-item">
-                    <div class="scholarship-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <div class="scholarship-content">
-                        <h3>外籍学生成绩优秀生奖学金</h3>
-                        <p>每前一个正规学期的学分在12分以上的学生按当年标准颁发 </p>
-        
-                    </div>
-                </div>
+              <div class="scholarship-item">
+    <div class="scholarship-icon">
+        <i class="fas fa-trophy"></i>
+    </div>
+    <div class="scholarship-content">
+        <h3>外籍学生成绩优秀生奖学金</h3>
+        <p>每前一个正规学期的学分在12分以上的学生按当年标准颁发 </p>
+        <a href="학부 외국인 장학제도.pdf" class="download-btn" download style="display: inline-block; margin-top: 10px; padding: 8px 20px; background: var(--air-gold); color: var(--primary-blue); border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 13px; transition: all 0.3s ease;">
+            <i class="fas fa-download"></i> 下载奖学金制度详情
+        </a>
+    </div>
+</div>
                 <div class="scholarship-item">
                     <div class="scholarship-icon">
                         <i class="fas fa-globe-asia"></i>
@@ -2621,160 +2218,11 @@ background-repeat: no-repeat;
             }
         });
 
-        // 通知公告画廊
-        let currentNoticeIndex = 0;
-        const noticeImages = [
-            { src: 'inform1.jpg', title: '2026年秋季招生简章' },
-            { src: 'inform2.png', title: '奖学金申请指南' },
-            { src: 'inform3.jpg', title: '校园开放日活动' },
-            { src: 'inform4.jpg', title: '宿舍申请通知' },
-            { src: 'inform5.jpg', title: '国际学术研讨会' },
-            { src: 'inform6.jpg', title: '企业招聘会' }
-        ];
-
-        function moveNoticeGallery(direction) {
-            const gallery = document.querySelector('.notice-gallery');
-            const cardWidth = gallery.querySelector('.notice-card').offsetWidth + 25;
-            const maxIndex = 3; // 6张图，每次显示3张，可滚动3次
-
-            currentNoticeIndex += direction;
-            if (currentNoticeIndex < 0) currentNoticeIndex = 0;
-            if (currentNoticeIndex > maxIndex) currentNoticeIndex = maxIndex;
-
-            gallery.scrollTo({
-                left: currentNoticeIndex * cardWidth,
-                behavior: 'smooth'
-            });
-
-            updateNoticeDots();
-        }
-
-        function goToNoticeSlide(index) {
-            currentNoticeIndex = index;
-            const gallery = document.querySelector('.notice-gallery');
-            const cardWidth = gallery.querySelector('.notice-card').offsetWidth + 25;
-            gallery.scrollTo({
-                left: index * cardWidth * 3,
-                behavior: 'smooth'
-            });
-            updateNoticeDots();
-        }
-
-        function updateNoticeDots() {
-            document.querySelectorAll('.notice-dot').forEach((dot, i) => {
-                dot.classList.toggle('active', i === currentNoticeIndex);
-            });
-        }
-
-        // 灯箱功能
-        let currentLightboxIndex = 0;
-
-        function openLightbox(index) {
-            currentLightboxIndex = index;
-            const lightbox = document.getElementById('lightbox');
-            const img = document.getElementById('lightbox-img');
-            const caption = document.getElementById('lightbox-caption');
-
-            img.src = noticeImages[index].src;
-            caption.textContent = noticeImages[index].title;
-            lightbox.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            document.getElementById('lightbox').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        function changeLightboxImage(direction) {
-            currentLightboxIndex += direction;
-            if (currentLightboxIndex < 0) currentLightboxIndex = noticeImages.length - 1;
-            if (currentLightboxIndex >= noticeImages.length) currentLightboxIndex = 0;
-
-            const img = document.getElementById('lightbox-img');
-            const caption = document.getElementById('lightbox-caption');
-            img.src = noticeImages[currentLightboxIndex].src;
-            caption.textContent = noticeImages[currentLightboxIndex].title;
-        }
-
-        // 键盘支持
-        document.addEventListener('keydown', function(e) {
-            if (document.getElementById('lightbox').style.display === 'flex') {
-                if (e.key === 'Escape') closeLightbox();
-                if (e.key === 'ArrowLeft') changeLightboxImage(-1);
-                if (e.key === 'ArrowRight') changeLightboxImage(1);
-            }
-        });
-
-        // 点击背景关闭灯箱
-        document.getElementById('lightbox').addEventListener('click', function(e) {
-            if (e.target === this) closeLightbox();
-        });
-
         // 表单提交处理
         function handleSubmit(e) {
             e.preventDefault();
             alert('感谢您的咨询！我们已收到您的信息，国际交流处工作人员将在2-3个工作日内通过邮件回复您。');
             e.target.reset();
-        }
-
-        // ===== 通知公告 Lightbox =====
-        const noticeImages = ['inform1.jpg', 'inform2.png', 'inform3.jpg'];
-        let currentImageIndex = 0;
-
-        function openLightbox(index) {
-            currentImageIndex = index;
-            const lightbox = document.getElementById('lightbox');
-            const img = document.getElementById('lightboxImg');
-            img.src = noticeImages[currentImageIndex];
-            document.getElementById('currentIndex').textContent = currentImageIndex + 1;
-            document.getElementById('totalCount').textContent = noticeImages.length;
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox(e) {
-            if (!e || e.target.id === 'lightbox') {
-                document.getElementById('lightbox').classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        }
-
-        function changeImage(direction) {
-            currentImageIndex += direction;
-            if (currentImageIndex < 0) {
-                currentImageIndex = noticeImages.length - 1;
-            } else if (currentImageIndex >= noticeImages.length) {
-                currentImageIndex = 0;
-            }
-            document.getElementById('lightboxImg').src = noticeImages[currentImageIndex];
-            document.getElementById('currentIndex').textContent = currentImageIndex + 1;
-        }
-
-        // 键盘导航
-        document.addEventListener('keydown', function(e) {
-            if (document.getElementById('lightbox').classList.contains('active')) {
-                if (e.key === 'Escape') closeLightbox();
-                if (e.key === 'ArrowLeft') changeImage(-1);
-                if (e.key === 'ArrowRight') changeImage(1);
-            }
-        });
-
-        // 画廊滑动
-        let currentSlide = 0;
-        function moveGallery(direction) {
-            currentSlide += direction;
-            if (currentSlide < 0) currentSlide = 2;
-            if (currentSlide > 2) currentSlide = 0;
-            goToSlide(currentSlide);
-        }
-
-        function goToSlide(index) {
-            currentSlide = index;
-            const dots = document.querySelectorAll('.gallery-dots .dot');
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === index);
-            });
         }
 
         // 滚动动画
@@ -2795,137 +2243,5 @@ background-repeat: no-repeat;
             observer.observe(section);
         });
     </script>
-
-    <!-- 灯箱（Lightbox）功能 -->
-    <div id="lightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999; justify-content: center; align-items: center; flex-direction: column;" onclick="closeLightbox(event)">
-        <div style="position: relative; max-width: 90%; max-height: 80%; display: flex; flex-direction: column; align-items: center;">
-            <img id="lightbox-img" src="" alt="放大图片" style="max-width: 100%; max-height: 70vh; object-fit: contain; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
-            <p id="lightbox-caption" style="color: white; margin-top: 15px; font-size: 16px; text-align: center;"></p>
-        </div>
-        <div style="position: absolute; bottom: 30px; display: flex; gap: 20px; align-items: center;">
-            <button onclick="zoomIn(event)" style="background: rgba(255,255,255,0.2); border: none; color: white; width: 50px; height: 50px; border-radius: 50%; font-size: 20px; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center;">
-                <i class="fas fa-search-plus"></i>
-            </button>
-            <button onclick="zoomOut(event)" style="background: rgba(255,255,255,0.2); border: none; color: white; width: 50px; height: 50px; border-radius: 50%; font-size: 20px; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center;">
-                <i class="fas fa-search-minus"></i>
-            </button>
-            <button onclick="resetZoom(event)" style="background: rgba(255,255,255,0.2); border: none; color: white; width: 50px; height: 50px; border-radius: 50%; font-size: 16px; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center;">
-                <i class="fas fa-compress"></i>
-            </button>
-            <button onclick="closeLightboxDirect(event)" style="background: rgba(255,255,255,0.2); border: none; color: white; width: 50px; height: 50px; border-radius: 50%; font-size: 20px; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center;">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <button onclick="closeLightboxDirect(event)" style="position: absolute; top: 20px; right: 30px; background: none; border: none; color: white; font-size: 30px; cursor: pointer; z-index: 10000;">
-            <i class="fas fa-times"></i>
-        </button>
-    </div>
-
-    <script>
-        let currentZoom = 1;
-        let isDragging = false;
-        let startX, startY, translateX = 0, translateY = 0;
-
-        function openLightbox(src) {
-            const lightbox = document.getElementById('lightbox');
-            const img = document.getElementById('lightbox-img');
-            lightbox.style.display = 'flex';
-            img.src = src;
-            currentZoom = 1;
-            translateX = 0;
-            translateY = 0;
-            updateTransform();
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox(event) {
-            if (event.target.id === 'lightbox') {
-                closeLightboxDirect(event);
-            }
-        }
-
-        function closeLightboxDirect(event) {
-            event.stopPropagation();
-            const lightbox = document.getElementById('lightbox');
-            lightbox.style.display = 'none';
-            document.body.style.overflow = 'auto';
-            currentZoom = 1;
-            translateX = 0;
-            translateY = 0;
-        }
-
-        function zoomIn(event) {
-            event.stopPropagation();
-            currentZoom = Math.min(currentZoom + 0.25, 3);
-            updateTransform();
-        }
-
-        function zoomOut(event) {
-            event.stopPropagation();
-            currentZoom = Math.max(currentZoom - 0.25, 0.5);
-            updateTransform();
-        }
-
-        function resetZoom(event) {
-            event.stopPropagation();
-            currentZoom = 1;
-            translateX = 0;
-            translateY = 0;
-            updateTransform();
-        }
-
-        function updateTransform() {
-            const img = document.getElementById('lightbox-img');
-            img.style.transform = 'translate(' + translateX + 'px, ' + translateY + 'px) scale(' + currentZoom + ')';
-            img.style.transition = 'transform 0.3s ease';
-        }
-
-        // 鼠标滚轮缩放
-        document.getElementById('lightbox').addEventListener('wheel', function(event) {
-            event.preventDefault();
-            if (event.deltaY < 0) {
-                currentZoom = Math.min(currentZoom + 0.1, 3);
-            } else {
-                currentZoom = Math.max(currentZoom - 0.1, 0.5);
-            }
-            updateTransform();
-        });
-
-        // 键盘支持
-        document.addEventListener('keydown', function(event) {
-            const lightbox = document.getElementById('lightbox');
-            if (lightbox.style.display === 'flex') {
-                if (event.key === 'Escape') {
-                    lightbox.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                } else if (event.key === '+' || event.key === '=') {
-                    currentZoom = Math.min(currentZoom + 0.25, 3);
-                    updateTransform();
-                } else if (event.key === '-') {
-                    currentZoom = Math.max(currentZoom - 0.25, 0.5);
-                    updateTransform();
-                }
-            }
-        });
-    </script>
-
-    <!-- Lightbox 图片放大查看 -->
-    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-        <div class="lightbox-content" onclick="event.stopPropagation()">
-            <button class="lightbox-close" onclick="closeLightbox()">
-                <i class="fas fa-times"></i>
-            </button>
-            <button class="lightbox-nav lightbox-prev" onclick="changeImage(-1)">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <img src="" alt="通知详情" id="lightboxImg">
-            <button class="lightbox-nav lightbox-next" onclick="changeImage(1)">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-            <div class="lightbox-counter">
-                <span id="currentIndex">1</span> / <span id="totalCount">3</span>
-            </div>
-        </div>
-    </div>
 </body>
 </html>
