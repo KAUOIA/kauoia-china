@@ -2319,8 +2319,8 @@ background-repeat: no-repeat;
             <!-- 通知公告图片画廊 -->
             <div class="notice-gallery-wrapper">
                 <div class="notice-gallery" id="noticeGallery">
-                    <div class="notice-card">
-                        <div class="notice-img-wrap" onclick="openLightbox(0)">
+                    <div class="notice-card" data-index="0">
+                        <div class="notice-img-wrap">
                             <img src="inform1.jpg" alt="招生通知">
                             <div class="notice-overlay">
                                 <i class="fas fa-search-plus"></i>
@@ -2333,8 +2333,8 @@ background-repeat: no-repeat;
                             <p>本科/研究生申请指南</p>
                         </div>
                     </div>
-                    <div class="notice-card">
-                        <div class="notice-img-wrap" onclick="openLightbox(1)">
+                    <div class="notice-card" data-index="1">
+                        <div class="notice-img-wrap">
                             <img src="inform2.png" alt="活动公告">
                             <div class="notice-overlay">
                                 <i class="fas fa-search-plus"></i>
@@ -2347,8 +2347,8 @@ background-repeat: no-repeat;
                             <p>欢迎参加线下咨询</p>
                         </div>
                     </div>
-                    <div class="notice-card">
-                        <div class="notice-img-wrap" onclick="openLightbox(2)">
+                    <div class="notice-card" data-index="2">
+                        <div class="notice-img-wrap">
                             <img src="inform3.jpg" alt="最新动态">
                             <div class="notice-overlay">
                                 <i class="fas fa-search-plus"></i>
@@ -2710,6 +2710,15 @@ background-repeat: no-repeat;
                 dot.classList.toggle('active', i === index);
             });
         }
+
+        // 事件委托 - 点击通知卡片打开灯箱
+        document.getElementById('noticeGallery').addEventListener('click', function(e) {
+            const card = e.target.closest('.notice-card');
+            if (card) {
+                const index = parseInt(card.dataset.index);
+                openLightbox(index);
+            }
+        });
 
         // ===== Lightbox 灯箱 =====
         const noticeImages = [
