@@ -963,6 +963,7 @@ background-repeat: no-repeat;
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: top center;
             transition: transform 0.5s ease;
         }
 
@@ -1095,13 +1096,25 @@ background-repeat: no-repeat;
             z-index: 9999;
             justify-content: center;
             align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
         }
 
         .lightbox.active {
             display: flex;
-            opacity: 1;
+            animation: lightboxFadeIn 0.3s ease forwards;
+        }
+
+        .lightbox.closing {
+            animation: lightboxFadeOut 0.3s ease forwards;
+        }
+
+        @keyframes lightboxFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes lightboxFadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
         }
 
         .lightbox-content {
@@ -2308,37 +2321,37 @@ background-repeat: no-repeat;
                             </div>
                         </div>
                         <div class="notice-info">
-                            <span class="notice-tag tag-blue">📢 校内新闻</span>
-                            <h4>乌兹别克政府合作</h4>
-                            <p>那沃伊国际机场国际飞行训练中心/塔什干国立交通大学</p>
+                            <span class="notice-tag tag-blue">📢 招生通知</span>
+                            <h4>2026年秋季招生简章</h4>
+                            <p>本科/研究生申请指南</p>
                         </div>
                     </div>
                     <div class="notice-card" onclick="openLightbox(1)">
                         <div class="notice-img-wrap">
-                            <img src="inform2.jpg" alt="校内新闻">
+                            <img src="inform2.png" alt="活动公告">
                             <div class="notice-overlay">
                                 <i class="fas fa-search-plus"></i>
                                 <span>点击放大查看</span>
                             </div>
                         </div>
                         <div class="notice-info">
-                            <span class="notice-tag tag-gold">📢 校内新闻</span>
-                            <h4>中国航空化大学郑州航空工业管理学院合作</h4>
-                            <p>多个领域扩大合作</p>
+                            <span class="notice-tag tag-gold">📋 活动公告</span>
+                            <h4>校园开放日活动</h4>
+                            <p>欢迎参加线下咨询</p>
                         </div>
                     </div>
                     <div class="notice-card" onclick="openLightbox(2)">
                         <div class="notice-img-wrap">
-                            <img src="inform3.jpg" alt="校内新闻">
+                            <img src="inform3.jpg" alt="最新动态">
                             <div class="notice-overlay">
                                 <i class="fas fa-search-plus"></i>
                                 <span>点击放大查看</span>
                             </div>
                         </div>
                         <div class="notice-info">
-                            <span class="notice-tag tag-green">📋 信息公告</span>
-                            <h4>预防毒品教育内容</h4>
-                            <p>毒品清净大韩民国网站</p>
+                            <span class="notice-tag tag-green">📅 最新动态</span>
+                            <h4>奖学金申请指南</h4>
+                            <p>丰厚奖学金等你来拿</p>
                         </div>
                     </div>
                 </div>
@@ -2693,9 +2706,9 @@ background-repeat: no-repeat;
 
         // ===== Lightbox 灯箱 =====
         const noticeImages = [
-            { src: 'inform1.jpg', title: '乌兹别克政府合作' },
-            { src: 'inform2.jpg', title: '中国航空化大学郑州航空工业管理学院合作' },
-            { src: 'inform3.jpg', title: '预防毒品教育内容' }
+            { src: 'inform1.jpg', title: '2026年秋季招生简章' },
+            { src: 'inform2.png', title: '校园开放日活动' },
+            { src: 'inform3.jpg', title: '奖学金申请指南' }
         ];
 
         let currentImageIndex = 0;
@@ -2724,9 +2737,13 @@ background-repeat: no-repeat;
         }
 
         function closeLightbox() {
+            lightbox.classList.add('closing');
             lightbox.classList.remove('active');
             document.body.style.overflow = '';
-            setTimeout(resetZoom, 300);
+            setTimeout(function() {
+                lightbox.classList.remove('closing');
+                resetZoom();
+            }, 300);
         }
 
         function changeImage(direction) {
