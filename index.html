@@ -957,6 +957,7 @@ background-repeat: no-repeat;
             position: relative;
             overflow: hidden;
             aspect-ratio: 4/3;
+            cursor: pointer;
         }
 
         .notice-img-wrap img {
@@ -985,6 +986,12 @@ background-repeat: no-repeat;
             opacity: 0;
             transition: opacity 0.3s ease;
             color: white;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .notice-overlay * {
+            pointer-events: none;
         }
 
         .notice-card:hover .notice-overlay {
@@ -2312,8 +2319,8 @@ background-repeat: no-repeat;
             <!-- 通知公告图片画廊 -->
             <div class="notice-gallery-wrapper">
                 <div class="notice-gallery" id="noticeGallery">
-                    <div class="notice-card" onclick="openLightbox(0)">
-                        <div class="notice-img-wrap">
+                    <div class="notice-card">
+                        <div class="notice-img-wrap" onclick="openLightbox(0)">
                             <img src="inform1.jpg" alt="招生通知">
                             <div class="notice-overlay">
                                 <i class="fas fa-search-plus"></i>
@@ -2326,8 +2333,8 @@ background-repeat: no-repeat;
                             <p>本科/研究生申请指南</p>
                         </div>
                     </div>
-                    <div class="notice-card" onclick="openLightbox(1)">
-                        <div class="notice-img-wrap">
+                    <div class="notice-card">
+                        <div class="notice-img-wrap" onclick="openLightbox(1)">
                             <img src="inform2.png" alt="活动公告">
                             <div class="notice-overlay">
                                 <i class="fas fa-search-plus"></i>
@@ -2340,8 +2347,8 @@ background-repeat: no-repeat;
                             <p>欢迎参加线下咨询</p>
                         </div>
                     </div>
-                    <div class="notice-card" onclick="openLightbox(2)">
-                        <div class="notice-img-wrap">
+                    <div class="notice-card">
+                        <div class="notice-img-wrap" onclick="openLightbox(2)">
                             <img src="inform3.jpg" alt="最新动态">
                             <div class="notice-overlay">
                                 <i class="fas fa-search-plus"></i>
