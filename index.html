@@ -1318,6 +1318,130 @@ background-repeat: no-repeat;
                 font-size: 1.1rem;
             }
         }
+
+        /* ===== 招生简章下载区域 ===== */
+.download-section {
+    margin-top: 60px;
+    padding: 50px;
+    background: linear-gradient(135deg, #003366 0%, #004080 100%);
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+}
+
+.download-section h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.download-section p {
+    opacity: 0.9;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.download-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.download-card-highlight {
+    grid-column: span 2;
+}
+
+.download-card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 12px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.download-card:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-5px);
+}
+
+.download-card i {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: var(--air-gold);
+}
+
+.download-card h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.download-card p {
+    font-size: 13px;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+.download-btn {
+    display: inline-block;
+    background: var(--air-gold);
+    color: var(--primary-blue);
+    padding: 10px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(201, 169, 97, 0.4);
+}
+
+.download-card-highlight {
+    background: linear-gradient(135deg, rgba(201, 169, 97, 0.2) 0%, rgba(255, 255, 255, 0.15) 100%);
+    border: 2px solid var(--air-gold);
+    position: relative;
+}
+
+.download-card-highlight::before {
+    content: '推荐';
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: var(--air-gold);
+    color: var(--primary-blue);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.download-card-highlight i {
+    color: var(--air-gold);
+}
+
+.download-card-highlight:hover {
+    background: linear-gradient(135deg, rgba(201, 169, 97, 0.3) 0%, rgba(255, 255, 255, 0.2) 100%);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(201, 169, 97, 0.3);
+}
+
+@media (max-width: 768px) {
+    .download-grid {
+        grid-template-columns: 1fr;
+    }
+    .download-card-highlight {
+        grid-column: span 1;
+    }
+}
+
+        
 /* ===== 研究室介绍区域 ===== */
         .labs-section {
             background: linear-gradient(135deg, #f8f9fa 0%, #e6f2ff 50%, #f0f7ff 100%);
