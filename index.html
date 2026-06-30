@@ -929,15 +929,26 @@ background-repeat: no-repeat;
             max-width: 1200px;
             margin: 0 auto;
             position: relative;
+            overflow: hidden;  /* ← 新增：隐藏溢出部分 */
+}
         }
 
         .notice-gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+           
             gap: 25px;
             padding: 0 10px;
+            transition: transform 0.5s ease;  /* ← 新增：滑动动画 */
+    /* 宽度由 JS 动态计算，或设为足够宽 */
+}
         }
-
+.notice-card {
+    flex-shrink: 0;                   /* ← 新增：防止卡片被压缩 */
+    width: calc((1200px - 50px - 20px) / 3);  /* ← 固定每张卡片宽度 */
+    /* (容器宽 - 2个gap - 左右padding) / 3 */
+    /* 或者更简单：width: 380px; */
+}
+        
         .notice-card {
             background: var(--white);
             border-radius: 16px;
