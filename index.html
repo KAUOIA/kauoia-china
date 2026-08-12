@@ -657,7 +657,7 @@ background-repeat: no-repeat;
             margin-top: 10px;
         }
 
-        /* 韩国生活 */
+        /* 生活服务 */
         .life-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -1693,7 +1693,6 @@ background-repeat: no-repeat;
         }
 
         .labs-download-card::before {
-            content: '推荐下载';
             position: absolute;
             top: -1px;
             right: 30px;
@@ -2235,7 +2234,7 @@ background-repeat: no-repeat;
                 <li><a href="#programs">留学项目</a></li>
                 <li><a href="#notice">通知公告</a></li>
                 <li><a href="#scholarships">奖学金</a></li>
-                <li><a href="#life">韩国生活</a></li>
+                <li><a href="#life">生活服务</a></li>
                 <li><a href="#cooperation">国际合作</a></li>
                 <li><a href="#contact">联系我们</a></li>
                 <li><a href="#links">快速链接</a></li>
@@ -2304,7 +2303,7 @@ background-repeat: no-repeat;
                 <div class="quick-icon">
                     <i class="fas fa-home"></i>
                 </div>
-                <h3>宿舍了解</h3>
+                <h3>宿舍介绍</h3>
                 <p>校内住宿与生活支持</p>
             </div>
             <div class="quick-item" onclick="location.href='#contact'">
@@ -2847,10 +2846,27 @@ background-repeat: no-repeat;
                     </div>
                     <div class="scholarship-content">
                         <h3>TOPIK奖学金</h3>
-                        <p>按入学后取得的TOPIK成绩（4级以上）发放 </p>
-                        
+                        <p>按入学后取得的TOPIK成绩（4级以上）发放</p>
+                        <div style="display: flex; gap: 15px; margin-top: 15px; flex-wrap: wrap;">
+                            <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 16px 24px; border-radius: 14px; text-align: center; min-width: 120px; box-shadow: 0 4px 12px rgba(0,102,204,0.1); border: 1px solid rgba(0,102,204,0.15);">
+                                <div style="font-size: 13px; color: var(--gray-600); font-weight: 500; margin-bottom: 6px;">Level-4</div>
+                                <div style="font-size: 22px; font-weight: 800; color: var(--accent-blue);">400,000</div>
+                                <div style="font-size: 12px; color: var(--gray-600); margin-top: 2px;">KRW</div>
+                            </div>
+                            <div style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); padding: 16px 24px; border-radius: 14px; text-align: center; min-width: 120px; box-shadow: 0 4px 12px rgba(201,169,97,0.15); border: 1px solid rgba(201,169,97,0.2);">
+                                <div style="font-size: 13px; color: var(--gray-600); font-weight: 500; margin-bottom: 6px;">Level-5</div>
+                                <div style="font-size: 22px; font-weight: 800; color: #e65100;">500,000</div>
+                                <div style="font-size: 12px; color: var(--gray-600); margin-top: 2px;">KRW</div>
+                            </div>
+                            <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 16px 24px; border-radius: 14px; text-align: center; min-width: 120px; box-shadow: 0 4px 12px rgba(46,125,50,0.1); border: 1px solid rgba(46,125,50,0.15);">
+                                <div style="font-size: 13px; color: var(--gray-600); font-weight: 500; margin-bottom: 6px;">Level-6</div>
+                                <div style="font-size: 22px; font-weight: 800; color: #2e7d32;">600,000</div>
+                                <div style="font-size: 12px; color: var(--gray-600); margin-top: 2px;">KRW</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
                 <div class="scholarship-item">
                     <div class="scholarship-icon">
                         <i class="fas fa-graduation-cap"></i>
@@ -2858,37 +2874,10 @@ background-repeat: no-repeat;
                     <div class="scholarship-content">
                         <h3>一般研究生院奖学金（外国人）</h3>
                         <p>面向一般研究生院外国留学生提供的学费减免奖学金</p>
-                        <div style="margin-top: 15px; display: flex; flex-direction: column; gap: 12px;">
-                            <div style="display: flex; align-items: stretch; background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04); border: 1px solid var(--gray-200);">
-                                <div style="background: var(--accent-blue); color: white; padding: 14px 18px; display: flex; align-items: center; font-weight: 700; font-size: 14px; min-width: 100px; justify-content: center;">助教<br>TA奖学金</div>
-                                <div style="padding: 14px 18px; flex: 1;">
-                                    <div style="font-size: 15px; font-weight: 700; color: var(--accent-blue); margin-bottom: 4px;">学费的 20%</div>
-                                    <div style="font-size: 13px; color: var(--gray-600);">讲课及实习·实验辅助</div>
-                                </div>
-                                <div style="padding: 14px 18px; border-left: 1px solid var(--gray-200); display: flex; align-items: center;">
-                                    <span style="font-size: 12px; color: var(--gray-600);">TA奖学金和RA奖学金<br>可重复受惠</span>
-                                </div>
-                            </div>
-                            <div style="display: flex; align-items: stretch; background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04); border: 1px solid var(--gray-200);">
-                                <div style="background: #7b1fa2; color: white; padding: 14px 18px; display: flex; align-items: center; font-weight: 700; font-size: 14px; min-width: 100px; justify-content: center;">助教<br>RA奖学金</div>
-                                <div style="padding: 14px 18px; flex: 1;">
-                                    <div style="font-size: 15px; font-weight: 700; color: #7b1fa2; margin-bottom: 4px;">学费的 40%</div>
-                                    <div style="font-size: 13px; color: var(--gray-600);">研究辅助</div>
-                                </div>
-                                <div style="padding: 14px 18px; border-left: 1px solid var(--gray-200); display: flex; align-items: center;">
-                                    <span style="font-size: 12px; color: var(--gray-600);">TA奖学金和RA奖学金<br>可重复受惠</span>
-                                </div>
-                            </div>
-                            <div style="display: flex; align-items: stretch; background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.04); border: 1px solid var(--gray-200);">
-                                <div style="background: #e65100; color: white; padding: 14px 18px; display: flex; align-items: center; font-weight: 700; font-size: 14px; min-width: 100px; justify-content: center;">外国人<br>专担学科</div>
-                                <div style="padding: 14px 18px; flex: 1;">
-                                    <div style="font-size: 15px; font-weight: 700; color: #e65100; margin-bottom: 4px;">学费的 30%</div>
-                                    <div style="font-size: 13px; color: var(--gray-600);">服务经营学(外国人) · 航空经营学(外国人)</div>
-                                </div>
-                                <div style="padding: 14px 18px; border-left: 1px solid var(--gray-200); display: flex; align-items: center;">
-                                    <span style="font-size: 12px; color: var(--gray-600);">向服务经营学或<br>航空经营学学生发放</span>
-                                </div>
-                            </div>
+                        <div style="margin-top: 15px; padding: 20px; background: var(--gray-100); border-radius: 12px; line-height: 2;">
+                            <p style="font-size: 14px; color: var(--gray-800);"><strong>助教 TA奖学金</strong> — 学费的 20%，讲课及实习·实验辅助（TA奖学金和RA奖学金可重复受惠）</p>
+                            <p style="font-size: 14px; color: var(--gray-800);"><strong>助教 RA奖学金</strong> — 学费的 40%，研究辅助（TA奖学金和RA奖学金可重复受惠）</p>
+                            <p style="font-size: 14px; color: var(--gray-800);"><strong>外国人专担学科</strong> — 学费的 30%，服务经营学(外国人) · 航空经营学(外国人)，向服务经营学或航空经营学学生发放</p>
                         </div>
                         <p style="font-size: 12px; color: var(--gray-600); margin-top: 15px; line-height: 1.8;">※ 奖学金内容今后可能变更<br>※ 奖学金对象：全日制(full time)且前一学期成绩在3.0以上者（新生除外）<br>※ 服务经营学或航空经营学志愿者请另行在招生简章中确认奖学金信息</p>
                     </div>
@@ -2916,7 +2905,7 @@ background-repeat: no-repeat;
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Life in Korea</span>
-                <h2 class="section-title">韩国生活</h2>
+                <h2 class="section-title">生活服务</h2>
                 <p class="section-subtitle">全方位的留学生活支持，让您在韩国的学习生活无忧无虑</p>
                 <div style="margin-top: 15px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
                     <a href="https://college.kau.ac.kr/web/pages/gc24393h.do" target="_blank" style="padding: 10px 25px; background: var(--light-blue); color: var(--accent-blue); border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 14px; transition: all 0.3s ease;">
@@ -2930,7 +2919,7 @@ background-repeat: no-repeat;
                         <img src="pic5.png" alt="宿舍了解" loading="lazy">
                     </div>
                     <div class="life-content">
-                        <h3>宿舍了解</h3>
+                        <h3>宿舍介绍</h3>
                         <p>提供现代化校内宿舍，配备空调、暖气、网络、公共厨房、自习室、洗衣房、健身房、多媒体室等设施。提供单人间、双人间等多种选择。</p>
                         <a href="https://college.kau.ac.kr/web/index.do?siteFlag=dorm_www" target="_blank" class="life-link-btn">
                             <i class="fas fa-external-link-alt"></i> 生活馆官网
@@ -2951,7 +2940,7 @@ background-repeat: no-repeat;
                         <img src="pic7.png" alt="韩语学习支持" loading="lazy">
                     </div>
                     <div class="life-content">
-                        <h3>韩语学习支持</h3>
+                        <h3>韩语学习</h3>
                         <p>提供语学院课程和韩语素养课程，帮助留学生提升语言能力。</p>
                         <a href="https://college.kau.ac.kr/web/pages/gc99968h.do" target="_blank" class="life-link-btn">
                             <i class="fas fa-language"></i> 韩国语教育院
@@ -2963,7 +2952,7 @@ background-repeat: no-repeat;
                         <img src="pic8.png" alt="医疗与保险" loading="lazy">
                     </div>
                     <div class="life-content">
-                        <h3>医疗与保险</h3>
+                        <h3>医疗保险</h3>
                         <p>留学生必须加入韩国国民健康保险，享受韩国医疗服务。校内设有保健中心，提供基础医疗服务。</p>
                     </div>
                 </div>
@@ -2984,7 +2973,7 @@ background-repeat: no-repeat;
                         <img src="pic10.png" alt="留学生活动" loading="lazy">
                     </div>
                     <div class="life-content">
-                        <h3>留学生活动</h3>
+                        <h3>文化活动</h3>
                         <p>定期组织文化体验活动、学术交流、企业参访等，帮助留学生拓展人脉，深入了解韩国文化。</p>
                     </div>
                 </div>
@@ -3272,7 +3261,7 @@ background-repeat: no-repeat;
     </section>
 
     <!-- 页脚 -->
-        <!-- 快速链接 -->
+           <!-- 快速链接 -->
     <section class="section links-section" id="links">
         <div class="container">
             <div class="section-header">
@@ -3280,7 +3269,8 @@ background-repeat: no-repeat;
                 <h2 class="section-title">快速链接</h2>
                 <p class="section-subtitle">点击图标快速访问学校相关系统</p>
             </div>
-            <div class="links-grid" style="grid-template-columns: repeat(4, 1fr);">
+            <!-- 上面7个 -->
+            <div class="links-grid" style="grid-template-columns: repeat(7, 1fr); gap: 15px; max-width: 1200px; margin: 0 auto 15px;">
                 <a href="https://kau.ac.kr/index/main.php" target="_blank" class="link-card">
                     <i class="fas fa-university"></i>
                     <span>学校韩文官网</span>
@@ -3291,7 +3281,7 @@ background-repeat: no-repeat;
                 </a>
                 <a href="https://college.kau.ac.kr/web/index.do?siteFlag=inter_www" target="_blank" class="link-card">
                     <i class="fas fa-handshake"></i>
-                    <span>国际交流处韩文官网</span>
+                    <span>国际交流处官网</span>
                 </a>
                 <a href="https://college.kau.ac.kr/web/index.do?siteFlag=dorm_www" target="_blank" class="link-card">
                     <i class="fas fa-home"></i>
@@ -3309,13 +3299,12 @@ background-repeat: no-repeat;
                     <i class="fas fa-book"></i>
                     <span>中央图书馆</span>
                 </a>
+            </div>
+            <!-- 下面6个 (叉缝排列) -->
+            <div class="links-grid" style="grid-template-columns: repeat(6, 1fr); gap: 15px; max-width: 1050px; margin: 0 auto; padding: 0 60px;">
                 <a href="https://sugang.kau.ac.kr/sugang/index.su" target="_blank" class="link-card">
                     <i class="fas fa-calendar-check"></i>
                     <span>选课系统</span>
-                </a>
-                <a href="https://hangkong.certpia.com/" target="_blank" class="link-card">
-                    <i class="fas fa-file-signature"></i>
-                    <span>证明书办理</span>
                 </a>
                 <a href="https://kau.ac.kr/index/main.php" target="_blank" class="link-card">
                     <i class="fas fa-user-graduate"></i>
@@ -3327,7 +3316,15 @@ background-repeat: no-repeat;
                 </a>
                 <a href="https://scm.kau.ac.kr/" target="_blank" class="link-card">
                     <i class="fas fa-chart-line"></i>
-                    <span>KAU 素养能力管理系统</span>
+                    <span>KAU素养能力管理系统</span>
+                </a>
+                <a href="http://mail.kau.ac.kr/" target="_blank" class="link-card">
+                    <i class="fas fa-envelope"></i>
+                    <span>学校邮箱</span>
+                </a>
+                <a href="https://hangkong.certpia.com/" target="_blank" class="link-card">
+                    <i class="fas fa-file-signature"></i>
+                    <span>证明书办理</span>
                 </a>
             </div>
         </div>
@@ -3335,33 +3332,38 @@ background-repeat: no-repeat;
 
 <footer>
         <div class="footer-content">
-            <div class="footer-brand">
-                <h3>韩国航空大学 国际交流处</h3>
-                <p>韩国唯一的航空特色化大学，致力于培养全球航空航天领域领军人才。为中国学生提供优质的留学教育服务，搭建中韩航空教育交流桥梁。</p>
+            <div class="footer-brand" style="text-align: center;">
+                <h3 style="text-align: center;">韩国航空大学 国际交流处</h3>
+                <p style="text-align: center;">韩国唯一的航空特色化大学，致力于培养全球航空航天领域领军人才。为中国学生提供优质的留学教育服务，搭建中韩航空教育交流桥梁。</p>
             </div>
             <div class="footer-links">
-                <h4>快速链接</h4>
+                <h4>学校信息</h4>
                 <ul>
                     <li><a href="#about">学校介绍</a></li>
+                    <li><a href="#labs">研究室介绍</a></li>
+                    <li><a href="#majors">专业介绍</a></li>
                     <li><a href="#admissions">招生信息</a></li>
                     <li><a href="#programs">留学项目</a></li>
                     <li><a href="#notice">通知公告</a></li>
                     <li><a href="#scholarships">奖学金</a></li>
+                    <li><a href="#calendar">校历</a></li>
                 </ul>
             </div>
             <div class="footer-links">
-                <h4>学生服务</h4>
+                <h4>生活服务</h4>
                 <ul>
+                    <li><a href="#life">宿舍介绍</a></li>
                     <li><a href="#life">签证办理</a></li>
-                    <li><a href="#"> 韩语学习支持</a></li>
-                    <li><a href="#">交通出行</a></li>
-                    <li><a href="#">留学生活动</a></li>
+                    <li><a href="#life">韩语学习</a></li>
+                    <li><a href="#life">医疗保险</a></li>
+                    <li><a href="#life">交通出行</a></li>
+                    <li><a href="#life">文化活动</a></li>
                 </ul>
             </div>
             <div class="footer-links">
                 <h4>合作交流</h4>
                 <ul>
-                    <li><a href="#cooperation">校际合作</a></li>
+                    <li><a href="#cooperation">国际合作</a></li>
                     <li><a href="#contact">联系我们</a></li>
                 </ul>
             </div>
