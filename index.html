@@ -2455,7 +2455,7 @@ background-repeat: no-repeat;
         </div>
     </section>
 
-    <!-- 专业介绍 -->
+  <!-- 专业介绍 -->
     <section class="section" id="majors" style="background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);">
         <div class="container">
             <div class="section-header">
@@ -2475,7 +2475,7 @@ background-repeat: no-repeat;
                     </h3>
                 </div>
                 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;">
-                    <!-- 国际交流学部 -->
+                    <!-- 国际交流学部 + 航空/经营学院 合并 -->
                     <div style="background: var(--white); border-radius: 14px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--air-gold);">
                         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid var(--light-blue);">
                             <h4 style="font-size: 16px; color: var(--primary-blue); font-weight: 700;">国际交流学部</h4>
@@ -2488,10 +2488,9 @@ background-repeat: no-repeat;
                         </div>
                         <a href="https://ibhak.kau.ac.kr/admission/html/international/guide.asp" target="_blank" style="display: inline-block; margin-top: 12px; padding: 8px 16px; background: rgba(46, 125, 50, 0.1); color: #2e7d32; border-radius: 15px; text-decoration: none; font-size: 12px; font-weight: 600;">
                             <i class="fas fa-external-link-alt"></i> 入学参考
-                        </div>
-                        <!-- 航空/经营学院 -->
-                    <div style="background: var(--white); border-radius: 14px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); grid-column: span 1;">
-                        <h4 style="font-size: 16px; color: var(--primary-blue); font-weight: 700; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid var(--light-blue);">航空/经营学院</h4>
+                        </a>
+                        
+                        <h4 style="font-size: 16px; color: var(--primary-blue); font-weight: 700; margin: 20px 0 15px; padding-bottom: 10px; border-bottom: 2px solid var(--light-blue);">航空/经营学院</h4>
                         <div style="display: flex; flex-direction: column; gap: 8px;">
                             <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航空运输专业</span>
                             <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">物流专业</span>
@@ -2548,13 +2547,19 @@ background-repeat: no-repeat;
                     </a>
                 </div>
                 <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;">
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">服务经营(管理)学系</div>
-                    <span style="font-size: 11px; color: var(--air-gold); background: rgba(201, 169, 97, 0.15); padding: 3px 10px; border-radius: 10px; font-weight: 600;">留学生专属学系</span>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">航空经营(管理)学系</div>
-                    <span style="font-size: 11px; color: var(--air-gold); background: rgba(201, 169, 97, 0.15); padding: 3px 10px; border-radius: 10px; font-weight: 600;">留学生专属学系</span>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">全球服务经营(管理)学系</div>
-                    <span style="font-size: 11px; color: var(--air-gold); background: rgba(201, 169, 97, 0.15); padding: 3px 10px; border-radius: 10px; font-weight: 600;">留学生专属学系</span>
-                <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">航空宇宙与机械工学系</div>
+                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">
+                        服务经营(管理)学系
+                        <span style="display: block; margin-top: 6px; font-size: 11px; color: var(--air-gold); background: rgba(201, 169, 97, 0.15); padding: 3px 10px; border-radius: 10px; font-weight: 600; width: fit-content;">外国人专用学系</span>
+                    </div>
+                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">
+                        航空经营(管理)学系
+                        <span style="display: block; margin-top: 6px; font-size: 11px; color: var(--air-gold); background: rgba(201, 169, 97, 0.15); padding: 3px 10px; border-radius: 10px; font-weight: 600; width: fit-content;">外国人专用学系</span>
+                    </div>
+                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">
+                        全球服务经营(管理)学系
+                        <span style="display: block; margin-top: 6px; font-size: 11px; color: var(--air-gold); background: rgba(201, 169, 97, 0.15); padding: 3px 10px; border-radius: 10px; font-weight: 600; width: fit-content;">外国人专用学系</span>
+                    </div>
+                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">航空宇宙与机械工学系</div>
                     <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">航空电子情报工学系</div>
                     <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">计算机工学系</div>
                     <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">新材料工学系</div>
@@ -2564,11 +2569,9 @@ background-repeat: no-repeat;
                     <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">航空运航管理学系</div>
                     <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">航空交通物流学系</div>
                     <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">未来航空交通学系</div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">经营学系</div
+                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">经营学系</div>
                 </div>
             </div>
-        </div>
-    </div>
 
             <!-- 专业研究生院 -->
             <div>
@@ -2600,7 +2603,6 @@ background-repeat: no-repeat;
             </div>
         </div>
     </section>
-
     <!-- 招生信息 -->
     <section class="section" id="admissions">
         <div class="container">
