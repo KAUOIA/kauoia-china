@@ -15,6 +15,8 @@
     --gray-800: #343a40;
     --air-gold: #c9a961;
     --gradient-hero: linear-gradient(135deg, #003366 0%, #004080 50%, #0066cc 100%);
+    /* 固定导航栏的高度。页面内容整体下移这个高度，避免被导航栏遮住 */
+    --navbar-height: 70px;
 }
 
 * {
@@ -28,6 +30,8 @@ body {
     line-height: 1.6;
     color: var(--gray-800);
     background-color: var(--white);
+    /* 导航栏是 fixed，会盖住页面顶部，所以整体留出它的高度 */
+    padding-top: var(--navbar-height);
 }
 
 /* 导航栏 */
@@ -136,7 +140,7 @@ body {
 
 /* 英雄区 */
 .hero {
-    margin-top: 70px;
+    /* 顶部空间由 body 的 padding-top 统一处理 */
     height: 90vh;
     min-height: 600px;
   background: 
@@ -768,13 +772,35 @@ background-repeat: no-repeat;
     margin-bottom: 30px;
 }
 
+.contact-info {
+    text-align: center;
+}
+
+.contact-heading {
+    margin-bottom: 25px;
+}
+
+.contact-heading-social {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* 三个联系方式横向排列，窄屏时自动换行 */
+.contact-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
 .contact-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     margin-bottom: 25px;
     text-align: center;
+    width: 240px;
 }
 
 .contact-icon {
@@ -786,7 +812,7 @@ background-repeat: no-repeat;
     align-items: center;
     justify-content: center;
     color: var(--accent-blue);
-    font-size: 18px;
+    font-size: 22px;
     flex-shrink: 0;
 }
 
@@ -797,14 +823,30 @@ background-repeat: no-repeat;
 .contact-detail h4 {
     font-size: 14px;
     color: var(--gray-600);
-    margin-bottom: 5px;
-    font-weight: 500;
+    margin-bottom: 8px;
+    font-weight: 600;
 }
 
 .contact-detail p {
     font-size: 16px;
     color: var(--gray-800);
     font-weight: 600;
+    line-height: 1.6;
+}
+
+.contact-detail p + p {
+    margin-top: 4px;
+}
+
+/* 办公时间等补充说明 */
+.contact-detail .contact-note {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--gray-600);
+}
+
+.social-links-center {
+    justify-content: center;
 }
 
 .social-links {

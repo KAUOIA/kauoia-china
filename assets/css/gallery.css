@@ -136,7 +136,7 @@
 
 /* 右侧缩略图列表 */
 .notice-thumbs {
-    width: 320px;
+    width: 400px;
     flex-shrink: 0;
 }
 
@@ -155,7 +155,8 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    max-height: 520px;
+    /* 与左侧主图区高度大致对齐（主图区高度 ≈ 图片 4:3 + 标题区） */
+    max-height: 650px;
     overflow-y: auto;
     padding-right: 4px;
 }
@@ -195,9 +196,11 @@
     box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
 }
 
+/* 通知海报基本都是竖版长图（宽高比约 0.3~0.8），
+   所以缩略图也用竖向，并对齐到顶部——海报的标题通常在最上方。 */
 .thumb-img {
-    width: 80px;
-    height: 60px;
+    width: 132px;
+    aspect-ratio: 3 / 4;
     border-radius: 10px;
     overflow: hidden;
     flex-shrink: 0;
