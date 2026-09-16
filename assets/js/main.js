@@ -1,0 +1,100 @@
+/* ===========================================================
+   全站公共动作
+   -----------------------------------------------------------
+   - 手机端菜单开关
+   - 页内平滑滚动
+   - 导航栏滚动效果
+   - 板块进入视野时的动画
+   - 交通指南弹窗
+   通知公告画廊的动作在 gallery.js
+   =========================================================== */
+
+import { initGallery } from './gallery.js';
+
+// ===== 手机端菜单切换 =====
+function initNavigation() {
+    const navMenu = document.getElementById('navMenu');
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+
+    if (menuBtn && navMenu) {
+        menuBtn.addEventListener('click', () => navMenu.classList.toggle('active'));
+    }
+
+    // ===== 页内平滑滚动 =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if (navMenu) navMenu.classList.remove('active');
+            }
+        });
+    });
+
+    // ===== 快捷菜单卡片 =====
+    document.querySelectorAll('.quick-item[data-target]').forEach(item => {
+        item.addEventListener('click', () => {
+            const target = document.querySelector(item.dataset.target);
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+
+    // ===== 导航栏滚动效果 =====
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    }
+}
+
+// ===== 板块进入视野时的动画 =====
+function initScrollAnimation() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.section').forEach(section => observer.observe(section));
+}
+
+// ===== 交通指南弹窗 =====
+function initTransportModal() {
+    const modal = document.getElementById('transportModal');
+    if (!modal) return;
+
+    const openBtn = document.querySelector('.transport-trigger-btn');
+    const closeBtn = modal.querySelector('.transport-close');
+
+    function open() {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function close() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    if (openBtn) openBtn.addEventListener('click', open);
+    if (closeBtn) closeBtn.addEventListener('click', close);
+
+    // 点击弹窗背景关闭
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) close();
+    });
+
+    // ESC 键关闭
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) close();
+    });
+}
+
+initNavigation();
+initScrollAnimation();
+initTransportModal();
+initGallery();
