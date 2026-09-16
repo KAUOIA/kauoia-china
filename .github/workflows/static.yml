@@ -31,6 +31,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      # 공지 데이터 문법·파일 경로를 검사합니다. 실패하면 여기서 멈추고 기존 사이트가 유지됩니다.
+      - name: Check site files
+        run: node tools/check-site.mjs
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

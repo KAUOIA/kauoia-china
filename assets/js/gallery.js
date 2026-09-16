@@ -1,11 +1,19 @@
 /* ===========================================================
    通知公告画廊 + 灯箱(图片放大)
    -----------------------------------------------------------
-   通知内容本身在 assets/data/notices.js，
+   通知内容本身在 notices/notices.js，
    这里只负责显示、切换、放大等动作。
    =========================================================== */
 
-import { notices } from '../data/notices.js';
+import { notices } from '../../notices/notices.js';
+
+// notices.js 里只写文件名，文件夹在这里统一补上
+const IMAGE_DIR = 'notices/images/';
+const THUMB_DIR = 'notices/thumbs/';
+
+const imageUrl = (notice) => IMAGE_DIR + notice.src;
+// 没有指定缩略图时，直接用文章图片
+const thumbUrl = (notice) => notice.thumb ? THUMB_DIR + notice.thumb : imageUrl(notice);
 
 export function initGallery() {
     const mainImage = document.getElementById('mainImage');
@@ -37,9 +45,17 @@ export function initGallery() {
             const imgBox = document.createElement('div');
             imgBox.className = 'thumb-img';
             const img = document.createElement('img');
-            img.src = notice.thumb;
             img.alt = notice.title;
             img.loading = 'lazy';
+            // 缩略图文件找不到（文件名写错、忘记上传）时，改用文章图片，只尝试一次
+            img.addEventListener('error', () => {
+                if (img.dataset.fallback) return;
+                img.dataset.fallback = '1';
+                img.classList.add('is-fallback');
+                img.src = imageUrl(notice);
+            });
+            img.src = thumbUrl(notice);
+            if (!notice.thumb) img.classList.add('is-fallback');
             imgBox.appendChild(img);
 
             const content = document.createElement('div');
@@ -77,7 +93,7 @@ export function initGallery() {
 
         clearTimeout(noticeTransitionTimer);
         noticeTransitionTimer = setTimeout(() => {
-            mainImage.src = notice.src;
+            mainImage.src = imageUrl(notice);
             mainImage.alt = notice.title;
             noticeTag.textContent = notice.tag;
             noticeTag.className = 'notice-tag ' + notice.tagClass;
@@ -116,7 +132,7 @@ export function initGallery() {
 
     // ----- 灯箱(点击主图放大) -----
     function syncLightbox() {
-        lightboxImage.src = notices[currentNoticeIndex].src;
+        lightboxImage.src = imageUrl(notices[currentNoticeIndex]);
         lightboxImage.alt = notices[currentNoticeIndex].title;
         lightboxCounter.textContent = (currentNoticeIndex + 1) + ' / ' + notices.length;
     }

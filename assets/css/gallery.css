@@ -196,11 +196,11 @@
     box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
 }
 
-/* 通知海报基本都是竖版长图（宽高比约 0.3~0.8），
-   所以缩略图也用竖向，并对齐到顶部——海报的标题通常在最上方。 */
+/* 缩略图使用文章中的照片（notices/thumbs/），照片多为横图，所以用 4:3。
+   上传的图片比例不限，object-fit: cover 会自动裁切填满。 */
 .thumb-img {
-    width: 132px;
-    aspect-ratio: 3 / 4;
+    width: 168px;
+    aspect-ratio: 4 / 3;
     border-radius: 10px;
     overflow: hidden;
     flex-shrink: 0;
@@ -211,8 +211,13 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top center;
+    object-position: center;
     transition: transform 0.3s ease;
+}
+
+/* 没有缩略图、改用文章长图时：显示文章顶部（标题部分） */
+.thumb-img img.is-fallback {
+    object-position: top center;
 }
 
 .thumb-card:hover .thumb-img img {

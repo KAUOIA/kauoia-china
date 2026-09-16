@@ -145,7 +145,7 @@ body {
     min-height: 600px;
   background: 
 linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-url('../../pic.jpg');
+url('../images/hero-campus.jpg');
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;

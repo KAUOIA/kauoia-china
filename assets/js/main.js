@@ -9,8 +9,6 @@
    通知公告画廊的动作在 gallery.js
    =========================================================== */
 
-import { initGallery } from './gallery.js';
-
 // ===== 手机端菜单切换 =====
 function initNavigation() {
     const navMenu = document.getElementById('navMenu');
@@ -97,4 +95,11 @@ function initTransportModal() {
 initNavigation();
 initScrollAnimation();
 initTransportModal();
-initGallery();
+
+// 画廊单独加载：即使 notices.js 写错（少逗号、引号等），
+// 菜单和弹窗等其他功能也照常工作，只有通知公告区域不显示。
+import('./gallery.js')
+    .then(({ initGallery }) => initGallery())
+    .catch((err) => {
+        console.error('[通知公告] 加载失败，请检查 notices/notices.js 的格式：', err);
+    });
