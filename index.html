@@ -2702,6 +2702,8 @@ background-repeat: no-repeat;
     </div>
 </div>
 
+    </section>
+
     <!-- 留学项目 -->
     <section class="section programs-section" id="programs">
         <div class="container">
@@ -3379,7 +3381,66 @@ background-repeat: no-repeat;
     </div>
 </footer>
 
-    
+    <!-- 交通详情弹窗 -->
+    <div class="transport-modal" id="transportModal">
+        <div class="transport-content">
+            <div class="transport-header">
+                <h3><i class="fas fa-subway"></i> 韩国航空大学 交通出行指南</h3>
+                <button class="transport-close" onclick="closeTransportModal()" aria-label="关闭">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="transport-body">
+                <div class="transport-info-grid">
+                    <div class="transport-info-card">
+                        <h4><i class="fas fa-train" style="color:var(--accent-blue)"></i> 地铁</h4>
+                        <ul>
+                            <li>京义·中央线 韩国航空大学站 2号出口</li>
+                        </ul>
+                    </div>
+                    <div class="transport-info-card">
+                        <h4><i class="fas fa-bus" style="color:var(--accent-blue)"></i> 普通公交</h4>
+                        <ul>
+                            <li>65、66、82</li>
+                        </ul>
+                    </div>
+                    <div class="transport-info-card">
+                        <h4><i class="fas fa-bus-alt" style="color:var(--accent-blue)"></i> 市区公交</h4>
+                        <ul>
+                            <li>97、11、19、100</li>
+                        </ul>
+                    </div>
+                    <div class="transport-info-card">
+                        <h4><i class="fas fa-road" style="color:var(--accent-blue)"></i> 主干线公交</h4>
+                        <ul>
+                            <li>700、760、771</li>
+                        </ul>
+                    </div>
+                    <div class="transport-info-card">
+                        <h4><i class="fas fa-map-marker-alt" style="color:var(--accent-blue)"></i> 社区线路公交</h4>
+                        <ul>
+                            <li>7727、7726</li>
+                        </ul>
+                    </div>
+                    <div class="transport-info-card">
+                        <h4><i class="fas fa-shuttle-van" style="color:var(--accent-blue)"></i> 社区公交</h4>
+                        <ul>
+                            <li>075B、022A、042</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="transport-map-wrap">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3159.8!2d126.865!3d37.598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9f8c8c8c8c8c%3A0x8c8c8c8c8c8c8c8c!2sKorea+Aerospace+University!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         // ===== 移动端菜单切换 =====
         function toggleMenu() {
@@ -3571,6 +3632,7 @@ background-repeat: no-repeat;
         ];
 
         let currentNoticeIndex = 0;
+        let noticeTransitionTimer;
 
         const mainImage = document.getElementById('mainImage');
         const mainWrapper = document.getElementById('mainWrapper');
@@ -3586,7 +3648,7 @@ background-repeat: no-repeat;
         // 初始化
         function initNoticeGallery() {
             renderThumbs();
-            goToNotice(0);
+            goToNotice(0, false);
         }
 
         // 渲染缩略图
@@ -3612,7 +3674,7 @@ background-repeat: no-repeat;
         }
 
         // 切换通知
-        function goToNotice(index) {
+        function goToNotice(index, scrollThumbnail = true) {
             if (index < 0) index = notices.length - 1;
             if (index >= notices.length) index = 0;
 
@@ -3621,7 +3683,8 @@ background-repeat: no-repeat;
 
             mainImage.classList.add('fade-out');
 
-            setTimeout(() => {
+            clearTimeout(noticeTransitionTimer);
+            noticeTransitionTimer = setTimeout(() => {
                 mainImage.src = notice.src;
                 mainImage.alt = notice.title;
                 noticeTag.textContent = notice.tag;
@@ -3635,8 +3698,19 @@ background-repeat: no-repeat;
 
             document.querySelectorAll('.thumb-card').forEach((card, i) => {
                 card.classList.toggle('active', i === index);
-                if (i === index) {
-                    card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                if (i === index && scrollThumbnail) {
+                    // 只滚动缩略图列表，避免带动整个页面。
+                    const cardRect = card.getBoundingClientRect();
+                    const listRect = thumbList.getBoundingClientRect();
+                    const left = listRect.left + thumbList.clientLeft;
+                    const top = listRect.top + thumbList.clientTop;
+                    const right = left + thumbList.clientWidth;
+                    const bottom = top + thumbList.clientHeight;
+                    const dx = cardRect.left < left ? cardRect.left - left
+                        : cardRect.right > right ? cardRect.right - right : 0;
+                    const dy = cardRect.top < top ? cardRect.top - top
+                        : cardRect.bottom > bottom ? cardRect.bottom - bottom : 0;
+                    thumbList.scrollBy({ left: dx, top: dy, behavior: 'smooth' });
                 }
             });
         }
@@ -3671,10 +3745,16 @@ background-repeat: no-repeat;
 
         // 事件绑定
         if (document.getElementById('prevBtn')) {
-            document.getElementById('prevBtn').addEventListener('click', prevNotice);
+            document.getElementById('prevBtn').addEventListener('click', (e) => {
+                e.stopPropagation();
+                prevNotice();
+            });
         }
         if (document.getElementById('nextBtn')) {
-            document.getElementById('nextBtn').addEventListener('click', nextNotice);
+            document.getElementById('nextBtn').addEventListener('click', (e) => {
+                e.stopPropagation();
+                nextNotice();
+            });
         }
         if (document.getElementById('lightboxPrev')) {
             document.getElementById('lightboxPrev').addEventListener('click', (e) => { e.stopPropagation(); lightboxPrev(); });
@@ -3700,9 +3780,15 @@ background-repeat: no-repeat;
                 if (e.key === 'ArrowRight') lightboxNext();
                 if (e.key === 'ArrowLeft') lightboxPrev();
                 if (e.key === 'Escape') closeLightbox();
-            } else {
-                if (e.key === 'ArrowRight') nextNotice();
-                if (e.key === 'ArrowLeft') prevNotice();
+            } else if (mainWrapper.contains(e.target)) {
+                if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    nextNotice();
+                }
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    prevNotice();
+                }
             }
         });
 
@@ -3768,93 +3854,6 @@ background-repeat: no-repeat;
             e.target.reset();
         }
     </script>
-    <!-- Lightbox 全屏放大查看 -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" onclick="closeLightbox()" aria-label="关闭">
-            <i class="fas fa-times"></i>
-        </button>
-        <button class="lightbox-nav lightbox-prev" onclick="changeImage(-1)" aria-label="上一张">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <div class="lightbox-content">
-            <div class="lightbox-img-container" id="lightboxImgContainer">
-                <img src="" alt="通知详情" id="lightboxImg" draggable="false">
-            </div>
-        </div>
-        <button class="lightbox-nav lightbox-next" onclick="changeImage(1)" aria-label="下一张">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-        <div class="zoom-controls">
-            <button class="zoom-btn" onclick="zoomOut()" aria-label="缩小">−</button>
-            <span class="zoom-level" id="zoomLevel">100%</span>
-            <button class="zoom-btn" onclick="zoomIn()" aria-label="放大">+</button>
-            <button class="zoom-btn zoom-reset-btn" onclick="resetZoom()" aria-label="重置">重置</button>
-        </div>
-        <div class="lightbox-counter">
-            <span id="currentIndex">1</span> / <span id="totalCount">3</span>
-        </div>
-        <div class="lightbox-hint">🖱️ 滚轮缩放 · 拖拽移动 · 双击放大/还原 · ← → 切换 · Esc 关闭</div>
-    </div>
-
-    <!-- 交通详情弹窗 -->
-    <div class="transport-modal" id="transportModal">
-        <div class="transport-content">
-            <div class="transport-header">
-                <h3><i class="fas fa-subway"></i> 韩国航空大学 交通出行指南</h3>
-                <button class="transport-close" onclick="closeTransportModal()" aria-label="关闭">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="transport-body">
-                <div class="transport-info-grid">
-                    <div class="transport-info-card">
-                        <h4><i class="fas fa-train" style="color:var(--accent-blue)"></i> 地铁</h4>
-                        <ul>
-                            <li>京义·中央线 韩国航空大学站 2号出口</li>
-                        </ul>
-                    </div>
-                    <div class="transport-info-card">
-                        <h4><i class="fas fa-bus" style="color:var(--accent-blue)"></i> 普通公交</h4>
-                        <ul>
-                            <li>65、66、82</li>
-                        </ul>
-                    </div>
-                    <div class="transport-info-card">
-                        <h4><i class="fas fa-bus-alt" style="color:var(--accent-blue)"></i> 市区公交</h4>
-                        <ul>
-                            <li>97、11、19、100</li>
-                        </ul>
-                    </div>
-                    <div class="transport-info-card">
-                        <h4><i class="fas fa-road" style="color:var(--accent-blue)"></i> 主干线公交</h4>
-                        <ul>
-                            <li>700、760、771</li>
-                        </ul>
-                    </div>
-                    <div class="transport-info-card">
-                        <h4><i class="fas fa-map-marker-alt" style="color:var(--accent-blue)"></i> 社区线路公交</h4>
-                        <ul>
-                            <li>7727、7726</li>
-                        </ul>
-                    </div>
-                    <div class="transport-info-card">
-                        <h4><i class="fas fa-shuttle-van" style="color:var(--accent-blue)"></i> 社区公交</h4>
-                        <ul>
-                            <li>075B、022A、042</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="transport-map-wrap">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3159.8!2d126.865!3d37.598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9f8c8c8c8c8c%3A0x8c8c8c8c8c8c8c8c!2sKorea+Aerospace+University!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </div>
-        </div>
-    </div>
 
 </body>
 </html>
