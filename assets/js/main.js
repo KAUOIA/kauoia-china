@@ -102,7 +102,11 @@ function initTransportModal() {
     const openBtn = document.querySelector('.transport-trigger-btn');
     const closeBtn = modal.querySelector('.transport-close');
 
+    // 地图在第一次打开弹窗时才加载
+    const mapFrame = modal.querySelector('iframe[data-src]');
+
     function open() {
+        if (mapFrame && !mapFrame.src) mapFrame.src = mapFrame.dataset.src;
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
     }

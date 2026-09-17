@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>韩国航空大学 国际交流处 - 中文官方网站</title>
     <meta name="description" content="韩国航空大学国际交流处中文官方网站，为中国留学生提供权威留学信息、招生指南、奖学金申请、韩国生活支持等一站式服务。">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 图标（Font Awesome 6.4.0，放在本站内，不依赖外部 CDN，中国大陆也能正常加载） -->
+    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/gallery.css">
 <base target="_blank">
@@ -1220,12 +1220,27 @@
                     </div>
                 </div>
                 <div class="transport-map-wrap">
+                    <!-- 地图显示不出来时（例如中国大陆无法访问 Google），会看到这段提示 -->
+                    <p class="transport-map-fallback">
+                        <i class="fas fa-map-marked-alt"></i>
+                        地图无法显示时，请点击下方按钮在地图应用中查看
+                    </p>
+                    <!-- 地图地址放在 data-src，打开弹窗时才加载（见 main.js），不拖慢首页 -->
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3159.8!2d126.865!3d37.598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9f8c8c8c8c8c%3A0x8c8c8c8c8c8c8c8c!2sKorea+Aerospace+University!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr"
+                        data-src="https://www.google.com/maps/embed?origin=mfe&amp;pb=!1m3!2m1!1s37.5994,126.8651!6i16!3m1!1szh-CN!5m1!1szh-CN"
+                        title="韩国航空大学位置地图"
                         allowfullscreen=""
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
+                </div>
+                <!-- 在地图应用中打开（坐标：37.5994, 126.8651） -->
+                <div class="transport-map-links">
+                    <span class="transport-map-links-label"><i class="fas fa-location-arrow"></i> 在地图中打开：</span>
+                    <a class="map-link" href="https://uri.amap.com/marker?position=126.8651,37.5994&amp;name=韩国航空大学&amp;coordinate=wgs84&amp;callnative=1" target="_blank" rel="noopener">高德地图</a>
+                    <a class="map-link" href="https://api.map.baidu.com/marker?location=37.5994,126.8651&amp;title=韩国航空大学&amp;content=韩国京畿道高阳市德阳区航空大学路76&amp;coord_type=wgs84&amp;output=html&amp;src=webapp.kauoia.chinese" target="_blank" rel="noopener">百度地图</a>
+                    <a class="map-link" href="https://map.naver.com/p/search/한국항공대학교" target="_blank" rel="noopener">Naver 地图</a>
+                    <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=37.5994,126.8651" target="_blank" rel="noopener">Google 地图</a>
                 </div>
             </div>
         </div>

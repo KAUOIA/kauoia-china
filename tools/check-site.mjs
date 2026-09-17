@@ -86,7 +86,7 @@ for (const [, url] of html.matchAll(/\s(?:src|href)="([^"]*)"/g)) {
     if (!existsSync(rel(path))) errors.push(`[파일 없음] index.html → ${url}`);
 }
 
-for (const css of ['assets/css/styles.css', 'assets/css/gallery.css']) {
+for (const css of ['assets/css/styles.css', 'assets/css/gallery.css', 'assets/vendor/fontawesome/css/all.min.css']) {
     const text = readFileSync(rel(css), 'utf8');
     for (const [, url] of text.matchAll(/url\(\s*['"]?([^'")]+)['"]?\s*\)/g)) {
         if (isExternal(url)) continue;
