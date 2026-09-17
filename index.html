@@ -3776,34 +3776,7 @@ background-repeat: no-repeat;
             e.target.reset();
         }
     </script>
-    <!-- Lightbox 全屏放大查看 -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" onclick="closeLightbox()" aria-label="关闭">
-            <i class="fas fa-times"></i>
-        </button>
-        <button class="lightbox-nav lightbox-prev" onclick="changeImage(-1)" aria-label="上一张">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <div class="lightbox-content">
-            <div class="lightbox-img-container" id="lightboxImgContainer">
-                <img src="" alt="通知详情" id="lightboxImg" draggable="false">
-            </div>
-        </div>
-        <button class="lightbox-nav lightbox-next" onclick="changeImage(1)" aria-label="下一张">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-        <div class="zoom-controls">
-            <button class="zoom-btn" onclick="zoomOut()" aria-label="缩小">−</button>
-            <span class="zoom-level" id="zoomLevel">100%</span>
-            <button class="zoom-btn" onclick="zoomIn()" aria-label="放大">+</button>
-            <button class="zoom-btn zoom-reset-btn" onclick="resetZoom()" aria-label="重置">重置</button>
-        </div>
-        <div class="lightbox-counter">
-            <span id="currentIndex">1</span> / <span id="totalCount">3</span>
-        </div>
-        <div class="lightbox-hint">🖱️ 滚轮缩放 · 拖拽移动 · 双击放大/还原 · ← → 切换 · Esc 关闭</div>
-    </div>
-
+   
     <!-- 交通详情弹窗 -->
     <div class="transport-modal" id="transportModal">
         <div class="transport-content">
