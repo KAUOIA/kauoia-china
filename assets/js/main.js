@@ -9,13 +9,47 @@
    通知公告画廊的动作在 gallery.js
    =========================================================== */
 
-// ===== 手机端菜单切换 =====
+// ===== 手机/平板菜单（汉堡按钮）=====
 function initNavigation() {
     const navMenu = document.getElementById('navMenu');
     const menuBtn = document.querySelector('.mobile-menu-btn');
+    const menuIcon = menuBtn ? menuBtn.querySelector('i') : null;
+
+    function setMenuOpen(open) {
+        if (!navMenu || !menuBtn) return;
+        navMenu.classList.toggle('active', open);
+        menuBtn.setAttribute('aria-expanded', String(open));
+        // 打开时图标变成 ×
+        if (menuIcon) {
+            menuIcon.classList.toggle('fa-bars', !open);
+            menuIcon.classList.toggle('fa-times', open);
+        }
+    }
 
     if (menuBtn && navMenu) {
-        menuBtn.addEventListener('click', () => navMenu.classList.toggle('active'));
+        menuBtn.setAttribute('aria-controls', 'navMenu');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            setMenuOpen(!navMenu.classList.contains('active'));
+        });
+
+        // 点击菜单以外的地方关闭
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && !navMenu.contains(e.target)) {
+                setMenuOpen(false);
+            }
+        });
+
+        // ESC 关闭
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') setMenuOpen(false);
+        });
+
+        // 窗口变宽回到电脑布局时，重置菜单状态
+        window.matchMedia('(min-width: 1025px)').addEventListener('change', (e) => {
+            if (e.matches) setMenuOpen(false);
+        });
     }
 
     // ===== 页内平滑滚动 =====
@@ -25,7 +59,7 @@ function initNavigation() {
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
                 target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                if (navMenu) navMenu.classList.remove('active');
+                setMenuOpen(false);
             }
         });
     });

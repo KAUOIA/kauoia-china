@@ -356,8 +356,41 @@
     letter-spacing: 2px;
 }
 
-/* 响应式 */
-@media (max-width: 968px) {
+
+/* ===========================================================
+   响应式 —— 断点与 styles.css 相同：平板 ≤ 1024px，手机 ≤ 767px
+   =========================================================== */
+
+/* ================= 平板 (≤ 1024px) ================= */
+@media (max-width: 1024px) {
+    .notice-gallery {
+        gap: 20px;
+    }
+
+    .notice-thumbs {
+        width: 300px;
+    }
+
+    .thumb-list {
+        max-height: 460px;
+    }
+
+    .thumb-img {
+        width: 120px;
+    }
+
+    /* 触屏没有鼠标悬停，箭头一直显示 */
+    .notice-nav-btn {
+        opacity: 1;
+    }
+
+    .lightbox-nav-btn.prev { left: 10px; }
+    .lightbox-nav-btn.next { right: 10px; }
+}
+
+/* ================= 手机 (≤ 767px) ================= */
+@media (max-width: 767px) {
+    /* 主图在上，通知列表在下变成横向滑动 */
     .notice-gallery {
         flex-direction: column;
     }
@@ -371,35 +404,77 @@
         overflow-x: auto;
         overflow-y: hidden;
         max-height: none;
-        padding-bottom: 8px;
+        padding: 4px 4px 12px;
+        scroll-snap-type: x proximity;
     }
 
+    /* 卡片宽度固定；标题过长时显示省略号，不会把卡片撑宽 */
     .thumb-card {
-        min-width: 260px;
+        flex: 0 0 180px;
+        min-width: 0;
+        flex-direction: column;
+        gap: 8px;
+        padding: 8px;
+        scroll-snap-align: start;
     }
 
-    .notice-nav-btn {
-        opacity: 1;
+    .thumb-content {
+        flex: none;
+        width: 100%;
     }
 
-    .lightbox-nav-btn.prev { left: 10px; }
-    .lightbox-nav-btn.next { right: 10px; }
-}
-
-@media (max-width: 576px) {
-    .notice-image-wrapper {
-        aspect-ratio: 3/2;
+    .thumb-card:hover {
+        transform: none;
     }
 
-    .thumb-card {
-        min-width: 220px;
+    .thumb-img {
+        width: 100%;
+    }
+
+    .main-notice {
+        border-radius: 16px;
     }
 
     .notice-info {
-        padding: 18px;
+        padding: 16px 18px;
     }
 
     .notice-title {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
+    }
+
+    .notice-nav-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .notice-nav-btn.prev { left: 10px; }
+    .notice-nav-btn.next { right: 10px; }
+
+    .notice-counter {
+        top: 10px;
+        right: 10px;
+        padding: 4px 10px;
+        font-size: 12px;
+    }
+
+    .lightbox-image {
+        max-width: 92%;
+        max-height: 78vh;
+    }
+
+    .lightbox-nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .lightbox-close {
+        top: 14px;
+        right: 14px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
     }
 }

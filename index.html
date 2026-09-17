@@ -24,16 +24,16 @@
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo-section" style="margin-left: 20px; flex-shrink: 0;">
-                <a href="https://kau.ac.kr/index/main.php" target="_blank" style="text-decoration: none; flex-shrink: 0;">
-                    <div class="logo-icon" style="cursor: pointer;"><img src="assets/images/logo.jpg" alt="KAU" style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover;"></div>
+            <div class="logo-section">
+                <a href="https://kau.ac.kr/index/main.php" target="_blank">
+                    <div class="logo-icon"><img src="assets/images/logo.jpg" alt="KAU"></div>
                 </a>
-                <div class="logo-text" style="white-space: nowrap;">
-                    <a href="https://kau.ac.kr/chinese/index/main.php" target="_blank" style="text-decoration: none; color: var(--white);"><h1>韩国航空大学</h1></a>
-                    <span style="color: var(--white); opacity: 0.9; font-weight: 300;"><a href="https://college.kau.ac.kr/web/index.do?siteFlag=inter_www" target="_blank" style="text-decoration: none; color: var(--white);">国际交流处</a> · 中文官网</span>
+                <div class="logo-text">
+                    <a href="https://kau.ac.kr/chinese/index/main.php" target="_blank"><h1>韩国航空大学</h1></a>
+                    <span><a href="https://college.kau.ac.kr/web/index.do?siteFlag=inter_www" target="_blank">国际交流处</a> · 中文官网</span>
                 </div>
             </div>
-            <ul class="nav-menu" id="navMenu" style="margin-left: auto; gap: 22px;">
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#home">首页</a></li>
                 <li><a href="#about">学校介绍</a></li>
                 <li><a href="#majors">专业介绍</a></li>
@@ -46,11 +46,11 @@
                 <li><a href="#contact">联系我们</a></li>
                 <li><a href="#links">快速链接</a></li>
             </ul>
-                        <div class="nav-social-links" style="display: flex; align-items: center; gap: 12px; margin-left: auto; padding-right: 15px;">
-                <a href="https://www.xiaohongshu.com/user/profile/682b3313000000000e01d7a9" target="_blank" title="小红书" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(255,255,255,0.15); border-radius: 50%; color: #fff; text-decoration: none; transition: all 0.3s ease; font-size: 16px;">
+                        <div class="nav-social-links">
+                <a href="https://www.xiaohongshu.com/user/profile/682b3313000000000e01d7a9" target="_blank" title="小红书">
                     <i class="fas fa-book-open"></i>
                 </a>
-                <a href="https://mp.weixin.qq.com/s/YBpfTflvsJm701hnspe-xg" target="_blank" title="微信公众号" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(255,255,255,0.15); border-radius: 50%; color: #fff; text-decoration: none; transition: all 0.3s ease; font-size: 16px;">
+                <a href="https://mp.weixin.qq.com/s/YBpfTflvsJm701hnspe-xg" target="_blank" title="微信公众号">
                     <i class="fab fa-weixin"></i>
                 </a>
             </div>
@@ -263,143 +263,143 @@
     </section>
 
   <!-- 专业介绍 -->
-    <section class="section" id="majors" style="background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);">
+    <section class="section" id="majors">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Majors</span>
                 <h2 class="section-title">专业介绍</h2>
                 <p class="section-subtitle">韩国航空大学设有本科、研究生院及专业研究生院，涵盖航空航天、人工智能、经营管理等多元领域</p>
-                <a href="https://kau.ac.kr/chinese/degrees/engineering.php" target="_blank" style="display: inline-block; margin-top: 15px; padding: 10px 25px; background: var(--gradient-hero); color: var(--white); border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 14px; transition: all 0.3s ease;">
+                <a class="btn-gradient section-header-btn" href="https://kau.ac.kr/chinese/degrees/engineering.php" target="_blank">
                     <i class="fas fa-external-link-alt"></i> 详细专业说明参考
                 </a>
             </div>
 
             <!-- 大学本科 -->
-            <div style="margin-bottom: 50px;">
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 3px solid #2e7d32;">
-                    <h3 style="font-size: 22px; color: var(--primary-blue); display: flex; align-items: center; gap: 10px;">
+            <div class="majors-group">
+                <div class="majors-group-header majors-group-header--green">
+                    <h3 class="majors-group-title">
                         <i class="fas fa-book" style="color: #2e7d32;"></i> 大学本科
                     </h3>
                 </div>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;">
+                <div class="majors-undergrad-grid">
                     <!-- 国际交流学部 + 航空/经营学院 合并 -->
-                    <div style="background: var(--white); border-radius: 14px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--air-gold);">
-                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid var(--light-blue);">
-                            <h4 style="font-size: 16px; color: var(--primary-blue); font-weight: 700;">国际交流学部</h4>
-                            <span style="font-size: 11px; color: var(--air-gold); background: rgba(201, 169, 97, 0.15); padding: 3px 10px; border-radius: 10px; font-weight: 600;">留学生专属学部</span>
+                    <div class="major-card major-card--gold">
+                        <div class="major-card-header">
+                            <h4 class="major-card-title">国际交流学部</h4>
+                            <span class="major-badge">留学生专属学部</span>
                         </div>
-                        <div style="display: flex; flex-direction: column; gap: 8px;">
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航空经营专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">服务经营专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航空交通物流专业</span>
+                        <div class="major-list">
+                            <span class="major-item">航空经营专业</span>
+                            <span class="major-item">服务经营专业</span>
+                            <span class="major-item">航空交通物流专业</span>
                         </div>
-                        <a href="https://ibhak.kau.ac.kr/admission/html/international/guide.asp" target="_blank" style="display: inline-block; margin-top: 12px; padding: 8px 16px; background: rgba(46, 125, 50, 0.1); color: #2e7d32; border-radius: 15px; text-decoration: none; font-size: 12px; font-weight: 600;">
+                        <a class="major-link" href="https://ibhak.kau.ac.kr/admission/html/international/guide.asp" target="_blank">
                             <i class="fas fa-external-link-alt"></i> 入学参考
                         </a>
                         
-                        <h4 style="font-size: 16px; color: var(--primary-blue); font-weight: 700; margin: 20px 0 15px; padding-bottom: 10px; border-bottom: 2px solid var(--light-blue);">航空/经营学院</h4>
-                        <div style="display: flex; flex-direction: column; gap: 8px;">
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航空运输专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">物流专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">工商管理专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航空管理专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航空运航学系</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航空交通物流学部</span>
+                        <h4 class="major-card-title major-card-title--ruled major-card-title--spaced">航空/经营学院</h4>
+                        <div class="major-list">
+                            <span class="major-item">航空运输专业</span>
+                            <span class="major-item">物流专业</span>
+                            <span class="major-item">工商管理专业</span>
+                            <span class="major-item">航空管理专业</span>
+                            <span class="major-item">航空运航学系</span>
+                            <span class="major-item">航空交通物流学部</span>
                         </div>
                     </div>
                     <!-- 工科学院 -->
-                    <div style="background: var(--white); border-radius: 14px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                        <h4 style="font-size: 16px; color: var(--primary-blue); font-weight: 700; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid var(--light-blue);">工科学院</h4>
-                        <div style="display: flex; flex-direction: column; gap: 8px;">
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">宇宙工程专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航空工程专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">机械工学专攻</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航天新材料专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">半导体材料专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航空维修工程专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">智能无人机工程学科</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航空宇宙工程学系</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">机械航空工程学系</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">新材料工程学系</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航空宇宙及机械工程学部</span>
+                    <div class="major-card">
+                        <h4 class="major-card-title major-card-title--ruled">工科学院</h4>
+                        <div class="major-list">
+                            <span class="major-item">宇宙工程专业</span>
+                            <span class="major-item">航空工程专业</span>
+                            <span class="major-item">机械工学专攻</span>
+                            <span class="major-item">航天新材料专业</span>
+                            <span class="major-item">半导体材料专业</span>
+                            <span class="major-item">航空维修工程专业</span>
+                            <span class="major-item">智能无人机工程学科</span>
+                            <span class="major-item">航空宇宙工程学系</span>
+                            <span class="major-item">机械航空工程学系</span>
+                            <span class="major-item">新材料工程学系</span>
+                            <span class="major-item">航空宇宙及机械工程学部</span>
                         </div>
                     </div>
                     <!-- AI融合学院 -->
-                    <div style="background: var(--white); border-radius: 14px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                        <h4 style="font-size: 16px; color: var(--primary-blue); font-weight: 700; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid var(--light-blue);">AI融合学院</h4>
-                        <div style="display: flex; flex-direction: column; gap: 8px;">
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">人工智能专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">计算机科学与工程专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">半导体系统专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">电子及航空电子工程专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">AI-ICT融合专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">AI自动驾驶系统工程学系</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">软件工程学系</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">电脑工程学系</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航空电子信息工程学部</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">电机电子工程学系</span>
+                    <div class="major-card">
+                        <h4 class="major-card-title major-card-title--ruled">AI融合学院</h4>
+                        <div class="major-list">
+                            <span class="major-item">人工智能专业</span>
+                            <span class="major-item">计算机科学与工程专业</span>
+                            <span class="major-item">半导体系统专业</span>
+                            <span class="major-item">电子及航空电子工程专业</span>
+                            <span class="major-item">AI-ICT融合专业</span>
+                            <span class="major-item">AI自动驾驶系统工程学系</span>
+                            <span class="major-item">软件工程学系</span>
+                            <span class="major-item">电脑工程学系</span>
+                            <span class="major-item">航空电子信息工程学部</span>
+                            <span class="major-item">电机电子工程学系</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- 一般研究生院 -->
-            <div style="margin-bottom: 50px;">
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 3px solid var(--primary-blue);">
-                    <h3 style="font-size: 22px; color: var(--primary-blue); display: flex; align-items: center; gap: 10px;">
+            <div class="majors-group">
+                <div class="majors-group-header">
+                    <h3 class="majors-group-title">
                         <i class="fas fa-graduation-cap" style="color: var(--air-gold);"></i> 一般研究生院(硕博士)
                     </h3>
-                    <a href="https://kau.ac.kr/index/main.php" target="_blank" style="padding: 8px 18px; background: var(--light-blue); color: var(--accent-blue); border-radius: 20px; text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.3s ease;">
+                    <a class="pill-link" href="https://kau.ac.kr/index/main.php" target="_blank">
                         <i class="fas fa-external-link-alt"></i> 一般研究生院官网
                     </a>
                 </div>
-                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;">
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">
+                <div class="majors-grad-grid">
+                    <div class="grad-dept">
                         服务经营(管理)学系
-                        <span style="display: block; margin-top: 6px; font-size: 11px; color: var(--air-gold); background: rgba(201, 169, 97, 0.15); padding: 3px 10px; border-radius: 10px; font-weight: 600; width: fit-content;">留学生专属学系</span>
+                        <span class="major-badge major-badge--block">留学生专属学系</span>
                     </div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">
+                    <div class="grad-dept">
                         航空经营(管理)学系
-                        <span style="display: block; margin-top: 6px; font-size: 11px; color: var(--air-gold); background: rgba(201, 169, 97, 0.15); padding: 3px 10px; border-radius: 10px; font-weight: 600; width: fit-content;">留学生专属学系</span>
+                        <span class="major-badge major-badge--block">留学生专属学系</span>
                     </div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">
+                    <div class="grad-dept">
                         全球服务经营(管理)学系
-                        <span style="display: block; margin-top: 6px; font-size: 11px; color: var(--air-gold); background: rgba(201, 169, 97, 0.15); padding: 3px 10px; border-radius: 10px; font-weight: 600; width: fit-content;">留学生专属学系</span>
+                        <span class="major-badge major-badge--block">留学生专属学系</span>
                     </div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">航空宇宙与机械工学系</div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">航空电子情报工学系</div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">计算机工学系</div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">新材料工学系</div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">智能航空出行学系</div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">人工智能工学系</div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">半导体工学系</div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">航空运航管理学系</div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">航空交通物流学系</div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">未来航空交通学系</div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">经营学系</div>
+                    <div class="grad-dept">航空宇宙与机械工学系</div>
+                    <div class="grad-dept">航空电子情报工学系</div>
+                    <div class="grad-dept">计算机工学系</div>
+                    <div class="grad-dept">新材料工学系</div>
+                    <div class="grad-dept">智能航空出行学系</div>
+                    <div class="grad-dept">人工智能工学系</div>
+                    <div class="grad-dept">半导体工学系</div>
+                    <div class="grad-dept">航空运航管理学系</div>
+                    <div class="grad-dept">航空交通物流学系</div>
+                    <div class="grad-dept">未来航空交通学系</div>
+                    <div class="grad-dept">经营学系</div>
                 </div>
             </div>
 
             <!-- 专业研究生院 -->
             <div>
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 3px solid var(--air-gold);">
-                    <h3 style="font-size: 22px; color: var(--primary-blue); display: flex; align-items: center; gap: 10px;">
+                <div class="majors-group-header majors-group-header--gold">
+                    <h3 class="majors-group-title">
                         <i class="fas fa-university" style="color: var(--air-gold);"></i> 专业研究生院(硕博士)
                     </h3>
                 </div>
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
-                    <div style="padding: 25px; background: var(--white); border-radius: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--accent-blue);">
-                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
-                            <h4 style="font-size: 18px; color: var(--primary-blue); font-weight: 700;">航空·经营研究生院</h4>
-                            <a href="https://gradbus.kau.ac.kr/index/main.php" target="_blank" style="padding: 6px 14px; background: var(--light-blue); color: var(--accent-blue); border-radius: 15px; text-decoration: none; font-size: 12px; font-weight: 600;">
+                <div class="majors-pro-grid">
+                    <div class="major-card major-card--blue">
+                        <div class="pro-card-header">
+                            <h4 class="pro-card-title">航空·经营研究生院</h4>
+                            <a class="pill-link pill-link--sm" href="https://gradbus.kau.ac.kr/index/main.php" target="_blank">
                                 <i class="fas fa-external-link-alt"></i> 官网
                             </a>
                         </div>
                     </div>
-                    <div style="padding: 25px; background: var(--white); border-radius: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--accent-blue);">
-                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
-                            <h4 style="font-size: 18px; color: var(--primary-blue); font-weight: 700;">航空航天政策研究生院</h4>
-                            <a href="https://college.kau.ac.kr/web/index.do?siteFlag=lawpolicy_www" target="_blank" style="padding: 6px 14px; background: var(--light-blue); color: var(--accent-blue); border-radius: 15px; text-decoration: none; font-size: 12px; font-weight: 600;">
+                    <div class="major-card major-card--blue">
+                        <div class="pro-card-header">
+                            <h4 class="pro-card-title">航空航天政策研究生院</h4>
+                            <a class="pill-link pill-link--sm" href="https://college.kau.ac.kr/web/index.do?siteFlag=lawpolicy_www" target="_blank">
                                 <i class="fas fa-external-link-alt"></i> 官网
                             </a>
                         </div>
@@ -469,7 +469,7 @@
                 <i class="fas fa-university"></i>
                 <h4>韩国语教育院</h4>
                 <p>面向外国留学生开设D4韩国语课程</p>
-                <a href="documents/중국어 - 어학원 모집요강.pdf" class="download-btn" download style="display: inline-block; text-align: center; background: var(--air-gold); color: var(--primary-blue); padding: 10px 40px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 14px; min-width: 80px;">
+                <a href="documents/중국어 - 어학원 모집요강.pdf" class="download-btn" download>
                     下载
                 </a>
             </div>
@@ -477,7 +477,7 @@
                 <i class="fas fa-file-pdf"></i>
                 <h4>2026年 外国人招生简章</h4>
                 <p>外国人专用招生简章（中文版）</p>
-                <a href="documents/2026학년도 순수외국인전형 모집요강(CHN).pdf" class="download-btn" download style="display: inline-block; text-align: center; background: var(--air-gold); color: var(--primary-blue); padding: 10px 40px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 14px; min-width: 80px;">
+                <a href="documents/2026학년도 순수외국인전형 모집요강(CHN).pdf" class="download-btn" download>
                     下载
                 </a>
             </div>
@@ -485,7 +485,7 @@
                 <i class="fas fa-file-pdf"></i>
                 <h4>2026年 一般研究生院招生简章</h4>
                 <p>研究生院外国人新生招生简章（韩语版）</p>
-                <a href="documents/2026 후기 일반대학원 외국인 신입생 모집요강(한글).pdf" class="download-btn" download style="display: inline-block; text-align: center; background: var(--air-gold); color: var(--primary-blue); padding: 10px 40px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 14px; min-width: 80px;">
+                <a href="documents/2026 후기 일반대학원 외국인 신입생 모집요강(한글).pdf" class="download-btn" download>
                     下载
                 </a>
             </div>
@@ -493,7 +493,7 @@
                 <i class="fas fa-file-pdf"></i>
                 <h4>服务经营及航空经营学科招生简章</h4>
                 <p>2026年下学期招生简章（中文版）</p>
-                <a href="documents/2026 후기 서비스경영 및 항공경영학과 모집요강(중문) (1).pdf" class="download-btn" download style="display: inline-block; text-align: center; background: var(--air-gold); color: var(--primary-blue); padding: 10px 40px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 14px; min-width: 80px;">
+                <a href="documents/2026 후기 서비스경영 및 항공경영학과 모집요강(중문) (1).pdf" class="download-btn" download>
                     下载
                 </a>
             </div>
@@ -501,7 +501,7 @@
                 <i class="fas fa-file-pdf"></i>
                 <h4>全球服务经营学科招生简章</h4>
                 <p>2026年下学期招生简章（中文版）</p>
-                <a href="documents/2026 후기 글로벌서비스경영학과 모집요강(중문) (1).pdf" class="download-btn" download style="display: inline-block; text-align: center; background: var(--air-gold); color: var(--primary-blue); padding: 10px 40px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 14px; min-width: 80px;">
+                <a href="documents/2026 후기 글로벌서비스경영학과 모집요강(중문) (1).pdf" class="download-btn" download>
                     下载
                 </a>
             </div>
@@ -628,7 +628,7 @@
                 <span class="section-tag">Scholarships</span>
                 <h2 class="section-title">奖学金</h2>
                 <p class="section-subtitle">为优秀中国学生提供丰厚的奖学金支持，助力留学梦想</p>
-                <a href="documents/학부 외국인 장학제도.pdf" class="download-btn" download style="display: inline-block; margin-top: 15px; padding: 10px 25px; background: var(--air-gold); color: var(--primary-blue); border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 14px; transition: all 0.3s ease;">
+                <a href="documents/학부 외국인 장학제도.pdf" class="download-btn section-header-btn" download>
                     <i class="fas fa-download"></i> 下载奖学金制度详情
                 </a>
             </div>
@@ -670,12 +670,12 @@
                     <div class="scholarship-content">
                         <h3>一般研究生院奖学金（外国人）</h3>
                         <p>面向一般研究生院外国留学生提供的学费减免奖学金</p>
-                        <div style="margin-top: 15px; padding: 20px; background: var(--gray-100); border-radius: 12px; line-height: 2;">
+                        <div class="scholarship-detail">
                             <p>助教 TA奖学金 — 学费的 20%，讲课及实习·实验辅助（TA奖学金和RA奖学金可重复受惠）</p>
                             <p>助教 RA奖学金 — 学费的 40%，研究辅助（TA奖学金和RA奖学金可重复受惠）</p>
                             <p>外国人专担学科 — 学费的 30%，服务经营学(外国人) · 航空经营学(外国人)，向服务经营学或航空经营学学生发放</p>
                         </div>
-                        <p style="font-size: 12px; color: var(--gray-600); margin-top: 15px; line-height: 1.8;">※ 奖学金内容今后可能变更<br>※ 奖学金对象：全日制(full time)且前一学期成绩在3.0以上者（新生除外）<br>※ 服务经营学或航空经营学志愿者请另行在招生简章中确认奖学金信息</p>
+                        <p class="scholarship-note">※ 奖学金内容今后可能变更<br>※ 奖学金对象：全日制(full time)且前一学期成绩在3.0以上者（新生除外）<br>※ 服务经营学或航空经营学志愿者请另行在招生简章中确认奖学金信息</p>
                     </div>
                 </div>
 
@@ -703,8 +703,8 @@
                 <span class="section-tag">Life in Korea</span>
                 <h2 class="section-title">生活服务</h2>
                 <p class="section-subtitle">全方位的留学生活支持，让您在韩国的学习生活无忧无虑</p>
-                <div style="margin-top: 15px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                    <a href="https://college.kau.ac.kr/web/pages/gc24393h.do" target="_blank" style="padding: 10px 25px; background: var(--light-blue); color: var(--accent-blue); border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 14px; transition: all 0.3s ease;">
+                <div class="section-header-actions">
+                    <a class="pill-link pill-link--lg" href="https://college.kau.ac.kr/web/pages/gc24393h.do" target="_blank">
                         <i class="fas fa-info-circle"></i> 生活与学业信息
                     </a>
                 </div>
@@ -778,7 +778,7 @@
     </section>
 
     <!-- 校历 -->
-    <section class="section" id="calendar" style="background: linear-gradient(135deg, #fff8e1 0%, #ffffff 50%, #e8f5e9 100%);">
+    <section class="section" id="calendar">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Academic Calendar</span>
@@ -786,24 +786,24 @@
                 <p class="section-subtitle">2026~2027学年度主要学期日程安排，帮助留学生合理规划学业与生活</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+            <div class="calendar-grid">
                 <!-- 第一学期 -->
-                <div style="background: var(--white); border-radius: 20px; padding: 35px; box-shadow: 0 8px 30px rgba(0,0,0,0.06); border-top: 5px solid var(--accent-blue);">
-                    <h3 style="font-size: 22px; color: var(--primary-blue); margin-bottom: 25px; display: flex; align-items: center; gap: 10px;">
+                <div class="calendar-card calendar-card--blue">
+                    <h3 class="calendar-card-title">
                         <i class="fas fa-seedling" style="color: var(--accent-blue);"></i> 第一学期（春季）
                     </h3>
-                    <div style="display: flex; flex-direction: column; gap: 10px;">
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--accent-blue); color: white; padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">1月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                    <div class="calendar-months">
+                        <div class="calendar-month">
+                            <span class="calendar-badge">1月</span>
+                            <div class="calendar-events">
                                 <strong>1.1</strong> 元旦<br>
                                 <strong>1.2 ~ 1.8</strong> 复学集中申请<br>
                                 <strong>1.13</strong> 冬季学期结课
                             </div>
                         </div>
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--accent-blue); color: white; padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">2月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                        <div class="calendar-month">
+                            <span class="calendar-badge">2月</span>
+                            <div class="calendar-events">
                                 <strong>2.3 ~ 2.4</strong> 购物车选课<br>
                                 <strong>2.9 ~ 2.13</strong> 休学集中申请<br>
                                 <strong>2.10 ~ 2.11</strong> 正式选课<br>
@@ -813,9 +813,9 @@
                                 <strong>2.27</strong> 新生入学式
                             </div>
                         </div>
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--accent-blue); color: white; padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">3月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                        <div class="calendar-month">
+                            <span class="calendar-badge">3月</span>
+                            <div class="calendar-events">
                                 <strong>3.1</strong> 三一节<br>
                                 <strong>3.2</strong> 三一节替代休假日<br>
                                 <strong>3.3</strong> 开学<br>
@@ -823,18 +823,18 @@
                                 <strong>3.30</strong> 授课天数4周线
                             </div>
                         </div>
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--accent-blue); color: white; padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">5月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                        <div class="calendar-month">
+                            <span class="calendar-badge">5月</span>
+                            <div class="calendar-events">
                                 <strong>5.5</strong> 儿童节<br>
                                 <strong>5.11</strong> 授课天数2/3线<br>
                                 <strong>5.24</strong> 释迦诞辰日<br>
                                 <strong>5.25</strong> 释迦诞辰日替代休假日
                             </div>
                         </div>
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--accent-blue); color: white; padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">6月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                        <div class="calendar-month">
+                            <span class="calendar-badge">6月</span>
+                            <div class="calendar-events">
                                 <strong>6.3</strong> 地方选举日<br>
                                 <strong>6.6</strong> 显忠日<br>
                                 <strong>6.9 ~ 6.15</strong> 期末考试<br>
@@ -843,9 +843,9 @@
                                 <strong>6.29</strong> 夏季学期开学
                             </div>
                         </div>
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--accent-blue); color: white; padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">7月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                        <div class="calendar-month">
+                            <span class="calendar-badge">7月</span>
+                            <div class="calendar-events">
                                 <strong>7.1 ~ 7.7</strong> 复学集中申请<br>
                                 <strong>7.20</strong> 夏季学期结课
                             </div>
@@ -854,14 +854,14 @@
                 </div>
 
                 <!-- 第二学期 -->
-                <div style="background: var(--white); border-radius: 20px; padding: 35px; box-shadow: 0 8px 30px rgba(0,0,0,0.06); border-top: 5px solid var(--air-gold);">
-                    <h3 style="font-size: 22px; color: var(--primary-blue); margin-bottom: 25px; display: flex; align-items: center; gap: 10px;">
+                <div class="calendar-card calendar-card--gold">
+                    <h3 class="calendar-card-title">
                         <i class="fas fa-leaf" style="color: var(--air-gold);"></i> 第二学期（秋季）
                     </h3>
-                    <div style="display: flex; flex-direction: column; gap: 10px;">
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--air-gold); color: var(--primary-blue); padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">8月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                    <div class="calendar-months">
+                        <div class="calendar-month">
+                            <span class="calendar-badge calendar-badge--gold">8月</span>
+                            <div class="calendar-events">
                                 <strong>8.6 ~ 8.7</strong> 购物车选课<br>
                                 <strong>8.13 ~ 8.14</strong> 正式选课<br>
                                 <strong>8.15</strong> 光复节<br>
@@ -870,49 +870,49 @@
                                 <strong>8.24 ~ 8.28</strong> 注册缴费
                             </div>
                         </div>
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--air-gold); color: var(--primary-blue); padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">9月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                        <div class="calendar-month">
+                            <span class="calendar-badge calendar-badge--gold">9月</span>
+                            <div class="calendar-events">
                                 <strong>9.1</strong> 开学<br>
                                 <strong>9.1 ~ 9.7</strong> 选课变更<br>
                                 <strong>9.24 ~ 9.26</strong> 中秋节<br>
                                 <strong>9.28</strong> 授课天数4周线
                             </div>
                         </div>
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--air-gold); color: var(--primary-blue); padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">10月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                        <div class="calendar-month">
+                            <span class="calendar-badge calendar-badge--gold">10月</span>
+                            <div class="calendar-events">
                                 <strong>10.3</strong> 开天节<br>
                                 <strong>10.5</strong> 开天节替代休假日<br>
                                 <strong>10.9</strong> 韩文日
                             </div>
                         </div>
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--air-gold); color: var(--primary-blue); padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">11月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                        <div class="calendar-month">
+                            <span class="calendar-badge calendar-badge--gold">11月</span>
+                            <div class="calendar-events">
                                 <strong>11.9</strong> 授课天数2/3线
                             </div>
                         </div>
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--air-gold); color: var(--primary-blue); padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">12月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                        <div class="calendar-month">
+                            <span class="calendar-badge calendar-badge--gold">12月</span>
+                            <div class="calendar-events">
                                 <strong>12.8 ~ 12.14</strong> 期末考试<br>
                                 <strong>12.15 ~ 12.21</strong> 第二学期补课<br>
                                 <strong>12.25</strong> 圣诞节<br>
                                 <strong>12.28</strong> 冬季学期开学
                             </div>
                         </div>
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--air-gold); color: var(--primary-blue); padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">2027年1月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                        <div class="calendar-month">
+                            <span class="calendar-badge calendar-badge--gold">2027年1月</span>
+                            <div class="calendar-events">
                                 <strong>1.1</strong> 元旦<br>
                                 <strong>1.4 ~ 1.8</strong> 复学集中申请<br>
                                 <strong>1.18</strong> 冬季学期结课
                             </div>
                         </div>
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--air-gold); color: var(--primary-blue); padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">2027年2月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                        <div class="calendar-month">
+                            <span class="calendar-badge calendar-badge--gold">2027年2月</span>
+                            <div class="calendar-events">
                                 <strong>2.3 ~ 2.4</strong> 购物车选课<br>
                                 <strong>2.6 ~ 2.8</strong> 春节连休<br>
                                 <strong>2.9</strong> 春节替代连休<br>
@@ -927,8 +927,8 @@
                 </div>
             </div>
 
-            <div style="margin-top: 30px; text-align: center;">
-                <a href="https://kau.ac.kr/kaulife/schedule.php" target="_blank" style="display: inline-block; padding: 12px 30px; background: var(--gradient-hero); color: var(--white); border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 14px; transition: all 0.3s ease;">
+            <div class="calendar-more">
+                <a class="btn-gradient btn-gradient--lg" href="https://kau.ac.kr/kaulife/schedule.php" target="_blank">
                     <i class="fas fa-calendar-alt"></i> 查看完整校历（韩文官网）
                 </a>
             </div>
@@ -958,18 +958,18 @@
                 <div class="partner-logo">河北科技大学等  </div>
             </div>
             <div class="cooperation-info">
-                <h3 style="color: var(--primary-blue); margin-bottom: 20px;">校际交流协议与合作项目</h3>
-                <p style="color: var(--gray-600); line-height: 1.8; margin-bottom: 20px;">
+                <h3>校际交流协议与合作项目</h3>
+                <p>
                     韩国航空大学与中国多所航空航天院校建立了长期稳定的合作关系，开展学生交换、联合培养、双学位项目、教师互访、科研合作等多种形式的交流合作。</p>
-                <ul style="color: var(--gray-600); line-height: 2;">
+                <ul>
                     <li>✈ 交换生项目：每年接收中国学生进行学期/学年交换</li>
                     <li>✈ 双学位项目：2+2、3+1等多种模式，毕业获两校学位</li>
                     <li>✈ 联合培养：硕士、博士层次联合指导，共享科研资源</li>
                     <li>✈ 短期交流：暑期学校、冬令营、企业参访等活动</li>
                 </ul>
-                <div style="margin-top: 30px; padding: 20px; border-radius: 8px;">
-                    <strong style="color: var(--primary-blue);">合作咨询：</strong>
-                    <span style="color: var(--gray-600);">如需建立校际合作关系或咨询合作项目，请联系国际交流处</span>
+                <div class="cooperation-contact">
+                    <strong>合作咨询：</strong>
+                    <span>如需建立校际合作关系或咨询合作项目，请联系国际交流处</span>
                 </div>
             </div>
         </div>
@@ -1047,8 +1047,10 @@
                 <h2 class="section-title">快速链接</h2>
                 <p class="section-subtitle">点击图标快速访问学校相关系统</p>
             </div>
+            <!-- 电脑上分两行各 7 个；平板/手机上合并成一个网格自动换行 -->
+            <div class="links-grids">
             <!-- 上面7个 -->
-            <div class="links-grid" style="grid-template-columns: repeat(7, 1fr); gap: 15px; max-width: 1200px; margin: 0 auto 15px;">
+            <div class="links-grid">
                 <a href="https://kau.ac.kr/index/main.php" target="_blank" class="link-card">
                     <i class="fas fa-university"></i>
                     <span>学校韩文官网</span>
@@ -1079,7 +1081,7 @@
                 </a>
             </div>
             <!-- 下面7个 -->
-            <div class="links-grid" style="grid-template-columns: repeat(7, 1fr); gap: 15px; max-width: 1200px; margin: 0 auto;">
+            <div class="links-grid">
                 <a href="https://lib.kau.ac.kr/" target="_blank" class="link-card">
                     <i class="fas fa-book"></i>
                     <span>中央图书馆</span>
@@ -1109,62 +1111,63 @@
                     <span>证明书办理</span>
                 </a>
             </div>
+            </div>
         </div>
     </section>
 
-<footer style="padding: 60px 0 30px;">
-    <div class="footer-content" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 50px; align-items: start; max-width: 1200px; margin: 0 auto; padding: 0 30px;">
-        <div class="footer-brand" style="text-align: left; padding-right: 20px;">
-            <h3 style="font-size: 20px; margin-bottom: 18px; font-weight: 700;">
-        <a href="https://kau.ac.kr/index/main.php" target="_blank" style="color: inherit; text-decoration: none;">韩国航空大学</a>
-        <span style="opacity: 0.6;"> - </span>
-        <a href="https://college.kau.ac.kr/web/pages/gc78482h.do" target="_blank" style="color: inherit; text-decoration: none;">国际交流处</a>
+<footer>
+    <div class="footer-content">
+        <div class="footer-brand">
+            <h3>
+        <a href="https://kau.ac.kr/index/main.php" target="_blank">韩国航空大学</a>
+        <span class="footer-sep"> - </span>
+        <a href="https://college.kau.ac.kr/web/pages/gc78482h.do" target="_blank">国际交流处</a>
     </h3>
-            <p style="font-size: 16px; line-height: 1.9; opacity: 0.85;">
+            <p>
     韩国唯一的航空特色化大学，致力于培养全球航空航天领域领军人才。<br>
     为中国学生提供优质的留学教育资源，搭建中韩航空教育交流桥梁。
 </p>
         </div>
         <div class="footer-links">
-            <h4 style="font-size: 18px; margin-bottom: 20px; color: var(--air-gold); font-weight: 600;">学校资讯</h4>
-            <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 12px;"><a href="#about" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">学校介绍</a></li>
-                <li style="margin-bottom: 12px;"><a href="#labs" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">研究室介绍</a></li>
-                <li style="margin-bottom: 12px;"><a href="#majors" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">专业介绍</a></li>
-                <li style="margin-bottom: 12px;"><a href="#admissions" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">招生信息</a></li>
-                <li style="margin-bottom: 12px;"><a href="#programs" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">留学项目</a></li>
+            <h4>学校资讯</h4>
+            <ul>
+                <li><a href="#about">学校介绍</a></li>
+                <li><a href="#labs">研究室介绍</a></li>
+                <li><a href="#majors">专业介绍</a></li>
+                <li><a href="#admissions">招生信息</a></li>
+                <li><a href="#programs">留学项目</a></li>
             </ul>
         </div>
         <div class="footer-links">
-            <h4 style="font-size: 18px; margin-bottom: 20px; color: var(--air-gold); font-weight: 600;">校园资讯</h4>
-            <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 12px;"><a href="#notice" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">通知公告</a></li>
-                <li style="margin-bottom: 12px;"><a href="#scholarships" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">奖学金</a></li>
-                <li style="margin-bottom: 12px;"><a href="#calendar" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">校历</a></li>
+            <h4>校园资讯</h4>
+            <ul>
+                <li><a href="#notice">通知公告</a></li>
+                <li><a href="#scholarships">奖学金</a></li>
+                <li><a href="#calendar">校历</a></li>
             </ul>
         </div>
         <div class="footer-links">
-            <h4 style="font-size: 18px; margin-bottom: 20px; color: var(--air-gold); font-weight: 600;">生活服务</h4>
-            <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 12px;"><a href="#life" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">宿舍介绍</a></li>
-                <li style="margin-bottom: 12px;"><a href="#life" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">签证办理</a></li>
-                <li style="margin-bottom: 12px;"><a href="#life" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">韩语学习</a></li>
-                <li style="margin-bottom: 12px;"><a href="#life" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">医疗保险</a></li>
-                <li style="margin-bottom: 12px;"><a href="#life" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">交通出行</a></li>
-                <li style="margin-bottom: 12px;"><a href="#life" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">文化活动</a></li>
+            <h4>生活服务</h4>
+            <ul>
+                <li><a href="#life">宿舍介绍</a></li>
+                <li><a href="#life">签证办理</a></li>
+                <li><a href="#life">韩语学习</a></li>
+                <li><a href="#life">医疗保险</a></li>
+                <li><a href="#life">交通出行</a></li>
+                <li><a href="#life">文化活动</a></li>
             </ul>
         </div>
         <div class="footer-links">
-            <h4 style="font-size: 18px; margin-bottom: 20px; color: var(--air-gold); font-weight: 600;">合作交流</h4>
-            <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 12px;"><a href="#cooperation" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">国际合作</a></li>
-                <li style="margin-bottom: 12px;"><a href="#contact" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">联系我们</a></li>
+            <h4>合作交流</h4>
+            <ul>
+                <li><a href="#cooperation">国际合作</a></li>
+                <li><a href="#contact">联系我们</a></li>
             </ul>
         </div>
     </div>
-    <div class="footer-bottom" style="max-width: 1200px; margin: 50px auto 0; padding: 25px 30px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 14px; opacity: 0.7;">
+    <div class="footer-bottom">
         <p>&copy; 2026 韩国航空大学 国际交流处 | Korea Aerospace University the Office of International Affairs (OIA)</p>
-        <p style="margin-top: 8px;">本网站为韩国航空大学国际交流处中文官方网站，所有信息以官方最新发布为准</p>
+        <p>本网站为韩国航空大学国际交流处中文官方网站，所有信息以官方最新发布为准</p>
     </div>
 </footer>
 
@@ -1180,37 +1183,37 @@
             <div class="transport-body">
                 <div class="transport-info-grid">
                     <div class="transport-info-card">
-                        <h4><i class="fas fa-train" style="color:var(--accent-blue)"></i> 地铁</h4>
+                        <h4><i class="fas fa-train"></i> 地铁</h4>
                         <ul>
                             <li>京义·中央线 韩国航空大学站 2号出口</li>
                         </ul>
                     </div>
                     <div class="transport-info-card">
-                        <h4><i class="fas fa-bus" style="color:var(--accent-blue)"></i> 普通公交</h4>
+                        <h4><i class="fas fa-bus"></i> 普通公交</h4>
                         <ul>
                             <li>65、66、82</li>
                         </ul>
                     </div>
                     <div class="transport-info-card">
-                        <h4><i class="fas fa-bus-alt" style="color:var(--accent-blue)"></i> 市区公交</h4>
+                        <h4><i class="fas fa-bus-alt"></i> 市区公交</h4>
                         <ul>
                             <li>97、11、19、100</li>
                         </ul>
                     </div>
                     <div class="transport-info-card">
-                        <h4><i class="fas fa-road" style="color:var(--accent-blue)"></i> 主干线公交</h4>
+                        <h4><i class="fas fa-road"></i> 主干线公交</h4>
                         <ul>
                             <li>700、760、771</li>
                         </ul>
                     </div>
                     <div class="transport-info-card">
-                        <h4><i class="fas fa-map-marker-alt" style="color:var(--accent-blue)"></i> 社区线路公交</h4>
+                        <h4><i class="fas fa-map-marker-alt"></i> 社区线路公交</h4>
                         <ul>
                             <li>7727、7726</li>
                         </ul>
                     </div>
                     <div class="transport-info-card">
-                        <h4><i class="fas fa-shuttle-van" style="color:var(--accent-blue)"></i> 社区公交</h4>
+                        <h4><i class="fas fa-shuttle-van"></i> 社区公交</h4>
                         <ul>
                             <li>075B、022A、042</li>
                         </ul>

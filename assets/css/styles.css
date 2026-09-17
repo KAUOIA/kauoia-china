@@ -25,6 +25,11 @@
     box-sizing: border-box;
 }
 
+/* 点击菜单跳转时，给固定导航栏留出空间，避免标题被遮住 */
+html {
+    scroll-padding-top: var(--navbar-height);
+}
+
 body {
     font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: 1.6;
@@ -59,13 +64,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: var(--navbar-height);
 }
 
 .logo-section {
     display: flex;
     align-items: center;
     gap: 15px;
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+
+.logo-section > a {
+    text-decoration: none;
+    flex-shrink: 0;
 }
 
 .logo-icon {
@@ -79,9 +91,23 @@ body {
     color: var(--primary-blue);
     font-size: 20px;
     font-weight: bold;
+    cursor: pointer;
+}
+
+.logo-icon img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .logo-text {
+    color: var(--white);
+    white-space: nowrap;
+}
+
+.logo-text a {
+    text-decoration: none;
     color: var(--white);
 }
 
@@ -92,6 +118,7 @@ body {
 }
 
 .logo-text span {
+    color: var(--white);
     font-size: 12px;
     opacity: 0.9;
     font-weight: 300;
@@ -100,7 +127,8 @@ body {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 22px;
+    margin-left: auto;
 }
 
 .nav-menu a {
@@ -376,6 +404,64 @@ background-repeat: no-repeat;
     margin: 0 auto;
 }
 
+/* 板块标题下方的按钮/链接 */
+.section-header-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* 选择器加上 .section-header，保证优先于 .download-btn 的 inline-flex */
+.section-header .section-header-btn {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+/* 渐变色按钮（蓝） */
+.btn-gradient {
+    display: inline-block;
+    padding: 10px 25px;
+    background: var(--gradient-hero);
+    color: var(--white);
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-gradient--lg {
+    padding: 12px 30px;
+}
+
+/* 浅蓝色圆角链接 */
+.pill-link {
+    display: inline-block;
+    padding: 8px 18px;
+    background: var(--light-blue);
+    color: var(--accent-blue);
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.pill-link--sm {
+    padding: 6px 14px;
+    border-radius: 15px;
+    font-size: 12px;
+    transition: none;
+}
+
+.pill-link--lg {
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
 /* 学校介绍 */
 .about-section {
     background: var(--gray-100);
@@ -481,6 +567,159 @@ background-repeat: no-repeat;
     position: absolute;
     left: 0;
     color: var(--accent-blue);
+}
+
+/* 专业介绍 */
+#majors {
+    background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+}
+
+.majors-group {
+    margin-bottom: 50px;
+}
+
+.majors-group-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--primary-blue);
+}
+
+.majors-group-header--green { border-bottom-color: #2e7d32; }
+.majors-group-header--gold  { border-bottom-color: var(--air-gold); }
+
+.majors-group-title {
+    font-size: 22px;
+    color: var(--primary-blue);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 大学本科：3 列学院卡片 */
+.majors-undergrad-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.major-card {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.major-card--gold { border-top: 4px solid var(--air-gold); }
+.major-card--blue { border-top: 4px solid var(--accent-blue); }
+
+.major-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--light-blue);
+}
+
+.major-card-title {
+    font-size: 16px;
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+.major-card-title--ruled {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--light-blue);
+}
+
+.major-card-title--spaced {
+    margin: 20px 0 15px;
+}
+
+.major-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.major-item {
+    font-size: 13px;
+    color: var(--gray-800);
+    padding: 6px 10px;
+    background: var(--gray-100);
+    border-radius: 6px;
+}
+
+.major-badge {
+    font-size: 11px;
+    color: var(--air-gold);
+    background: rgba(201, 169, 97, 0.15);
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.major-badge--block {
+    display: block;
+    margin-top: 6px;
+    width: fit-content;
+}
+
+.major-link {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    background: rgba(46, 125, 50, 0.1);
+    color: #2e7d32;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* 一般研究生院：4 列学系 */
+.majors-grad-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.grad-dept {
+    padding: 14px 18px;
+    background: var(--white);
+    border-radius: 10px;
+    border-left: 4px solid var(--accent-blue);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gray-800);
+}
+
+/* 专业研究生院：2 列 */
+.majors-pro-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.pro-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.pro-card-title {
+    font-size: 18px;
+    color: var(--primary-blue);
+    font-weight: 700;
 }
 
 /* 招生信息 */
@@ -661,6 +900,22 @@ background-repeat: no-repeat;
     margin-top: 10px;
 }
 
+/* 一般研究生院奖学金明细 */
+.scholarship-detail {
+    margin-top: 15px;
+    padding: 20px;
+    background: var(--gray-100);
+    border-radius: 12px;
+    line-height: 2;
+}
+
+.scholarship-content .scholarship-note {
+    font-size: 12px;
+    color: var(--gray-600);
+    margin-top: 15px;
+    line-height: 1.8;
+}
+
 /* 生活服务 */
 .life-grid {
     display: grid;
@@ -720,6 +975,77 @@ background-repeat: no-repeat;
     line-height: 1.6;
 }
 
+/* 校历 */
+#calendar {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffffff 50%, #e8f5e9 100%);
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.calendar-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+.calendar-card--blue { border-top: 5px solid var(--accent-blue); }
+.calendar-card--gold { border-top: 5px solid var(--air-gold); }
+
+.calendar-card-title {
+    font-size: 22px;
+    color: var(--primary-blue);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.calendar-months {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.calendar-month {
+    display: flex;
+    gap: 12px;
+    padding: 10px 14px;
+    background: var(--gray-100);
+    border-radius: 10px;
+    align-items: flex-start;
+}
+
+.calendar-badge {
+    background: var(--accent-blue);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.calendar-badge--gold {
+    background: var(--air-gold);
+    color: var(--primary-blue);
+}
+
+.calendar-events {
+    font-size: 13px;
+    color: var(--gray-800);
+    line-height: 1.7;
+}
+
+.calendar-more {
+    margin-top: 30px;
+    text-align: center;
+}
+
 /* 国际合作 */
 .cooperation-section {
     background: var(--gray-100);
@@ -757,6 +1083,36 @@ background-repeat: no-repeat;
     padding: 40px;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.cooperation-info h3 {
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+.cooperation-info > p {
+    color: var(--gray-600);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.cooperation-info ul {
+    color: var(--gray-600);
+    line-height: 2;
+}
+
+.cooperation-contact {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.cooperation-contact strong {
+    color: var(--primary-blue);
+}
+
+.cooperation-contact span {
+    color: var(--gray-600);
 }
 
 /* 联系我们 */
@@ -945,42 +1301,60 @@ footer {
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 30px;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.footer-brand {
+    text-align: left;
+    padding-right: 20px;
 }
 
 .footer-brand h3 {
     font-size: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+
+.footer-brand h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-sep {
+    opacity: 0.6;
 }
 
 .footer-brand p {
-    opacity: 0.8;
-    font-size: 14px;
-    line-height: 1.7;
+    opacity: 0.85;
+    font-size: 16px;
+    line-height: 1.9;
 }
 
 .footer-links h4 {
-    font-size: 14px;
+    font-size: 18px;
     margin-bottom: 20px;
     color: var(--air-gold);
+    font-weight: 600;
 }
 
 .footer-links ul {
     list-style: none;
+    padding: 0;
 }
 
 .footer-links li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .footer-links a {
     color: rgba(255,255,255,0.8);
     text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s ease;
+    font-size: 15px;
+    transition: color 0.3s;
 }
 
 .footer-links a:hover {
@@ -989,12 +1363,16 @@ footer {
 
 .footer-bottom {
     max-width: 1200px;
-    margin: 40px auto 0;
-    padding: 20px;
+    margin: 50px auto 0;
+    padding: 25px 30px;
     border-top: 1px solid rgba(255,255,255,0.1);
     text-align: center;
-    font-size: 13px;
-    opacity: 0.6;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.footer-bottom p + p {
+    margin-top: 8px;
 }
 
 /* 通知公告栏 */
@@ -1034,9 +1412,31 @@ footer {
 }
 
         /* 顶部社交媒体链接 */
+.nav-social-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+    padding-right: 15px;
+}
+
+.nav-social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
 .nav-social-links a:hover {
-    background: var(--air-gold) !important;
-    color: var(--primary-blue) !important;
+    background: var(--air-gold);
+    color: var(--primary-blue);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(201, 169, 97, 0.3);
 }
@@ -1083,6 +1483,8 @@ text-align: center;
 .download-card .download-btn {
 display: inline-block;
 margin: 0 auto;
+padding: 10px 40px;
+min-width: 80px;
 }
 
 .download-card-highlight {
@@ -1170,16 +1572,6 @@ background: linear-gradient(135deg, rgba(201, 169, 97, 0.3) 0%, rgba(255, 255, 2
 transform: translateY(-8px);
 box-shadow: 0 15px 40px rgba(201, 169, 97, 0.3);
 }
-
-@media (max-width: 768px) {
-.download-grid {
-grid-template-columns: 1fr;
-}
-.download-card-highlight {
-grid-column: span 1;
-}
-}
-
 
 /* ===== 研究室介绍区域 ===== */
 .labs-section {
@@ -1506,48 +1898,6 @@ grid-column: span 1;
     color: var(--accent-blue);
 }
 
-/* 响应式 */
-@media (max-width: 968px) {
-    .labs-showcase {
-        grid-template-columns: 1fr;
-    }
-
-    .labs-download-card {
-        padding: 35px 25px;
-    }
-
-    .labs-preview-card {
-        padding: 30px;
-    }
-}
-
-@media (max-width: 576px) {
-    .labs-stats-row {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    .labs-stat {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px;
-        background: var(--gray-100);
-        border-radius: 8px;
-    }
-
-    .labs-file-info {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .labs-download-btn {
-        width: 100%;
-        padding: 16px 20px;
-    }
-}
-
-
 /* ===== 友情链接 ===== */
 .links-section {
     background: var(--gray-100);
@@ -1556,11 +1906,15 @@ grid-column: span 1;
 
 .links-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.links-grid + .links-grid {
+    margin-top: 15px;
 }
 
 .link-card {
@@ -1708,6 +2062,10 @@ grid-column: span 1;
     gap: 8px;
 }
 
+.transport-info-card h4 i {
+    color: var(--accent-blue);
+}
+
 .transport-info-card ul {
     list-style: none;
     color: var(--gray-600);
@@ -1812,43 +2170,704 @@ grid-column: span 1;
     box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
 }
 
-@media (max-width: 968px) {
-    .links-grid {
-        grid-template-columns: repeat(3, 1fr);
+
+/* ===========================================================
+   响应式 (Responsive)
+   -----------------------------------------------------------
+   全站只用两个断点：
+     平板  ≤ 1024px
+     手机  ≤ 767px   （手机会同时套用平板的规则，再覆盖一部分）
+   电脑（> 1024px）使用上面的默认样式。
+   下面按页面从上到下的顺序排列。通知公告画廊的响应式在 gallery.css。
+   =========================================================== */
+
+/* ---- 窄屏电脑 (1025px ~ 1180px)：11 个菜单项放不下，缩小间距 ---- */
+@media (min-width: 1025px) and (max-width: 1180px) {
+    .nav-menu {
+        gap: 12px;
     }
-    #majors .container > div:nth-of-type(2) > div:last-child {
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
-    #majors .container > div:nth-of-type(3) > div:last-child {
-        grid-template-columns: 1fr !important;
-    }
-    .transport-info-grid {
-        grid-template-columns: 1fr;
-    }
-    .hero-stats {
-        position: relative;
-        bottom: auto;
-        right: auto;
-        margin-top: 40px;
-        justify-content: center;
-        flex-wrap: wrap;
+
+    .logo-section {
+        margin-left: 0;
     }
 }
 
-@media (max-width: 576px) {
-    .links-grid {
-        grid-template-columns: repeat(2, 1fr);
+/* ================= 平板 (≤ 1024px) ================= */
+@media (max-width: 1024px) {
+
+    /* ----- 导航栏：菜单收进汉堡按钮 ----- */
+    .logo-section {
+        margin-left: 0;
     }
-    #majors .container > div:nth-of-type(2) > div:last-child {
-        grid-template-columns: 1fr !important;
+
+    .mobile-menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        margin-left: 8px;
     }
-    #majors .container > div:nth-of-type(3) > div:last-child {
-        grid-template-columns: 1fr !important;
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        margin: 0;
+        background: rgba(0, 51, 102, 0.98);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
     }
-    .stat-number {
+
+    .nav-menu.active {
+        max-height: calc(100vh - var(--navbar-height));
+        overflow-y: auto;
+    }
+
+    .nav-menu li {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 14px 24px;
+        font-size: 15px;
+    }
+
+    .nav-menu a::after {
+        display: none;
+    }
+
+    /* ----- 首页大图 ----- */
+    .hero {
+        height: auto;
+        min-height: 0;
+        padding: 80px 0 60px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero h2 {
         font-size: 40px;
     }
+
+    .hero-stats {
+        position: static;
+        margin-top: 40px;
+        gap: 40px;
+        padding: 20px 32px;
+    }
+
+    /* 第三个统计项是空的，窄屏时隐藏 */
+    .stat-item:not(:has(*)) {
+        display: none;
+    }
+
+    /* ----- 板块通用 ----- */
+    .section {
+        padding: 64px 0;
+    }
+
+    .section-header {
+        margin-bottom: 48px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    /* ----- 快捷菜单 ----- */
+    .quick-menu-container {
+        gap: 15px;
+    }
+
+    .quick-item {
+        padding: 20px 15px;
+    }
+
+    /* ----- 学校介绍：上下排列，两张图片左右并排 ----- */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-images-col {
+        flex-direction: row;
+    }
+
+    /* ----- 研究室介绍 ----- */
+    .labs-showcase {
+        grid-template-columns: 1fr;
+    }
+
+    .labs-preview-card {
+        padding: 30px;
+    }
+
+    .labs-download-card {
+        padding: 35px 25px;
+    }
+
+    /* ----- 专业介绍：本科保持 3 列（避免最后一张卡片单独一行），缩小间距 ----- */
+    .majors-undergrad-grid {
+        gap: 16px;
+    }
+
+    .major-card {
+        padding: 20px 18px;
+    }
+
+    .majors-grad-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* ----- 招生信息：卡片自动换行（宽屏 3 列，窄一点 2 列） ----- */
+    .admission-cards {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+    }
+
+    .admission-card {
+        padding: 32px 24px;
+    }
+
+    .download-section {
+        padding: 40px 30px;
+    }
+
+    /* ----- 留学项目 ----- */
+    .program-item {
+        padding: 28px;
+    }
+
+    /* ----- 生活服务 ----- */
+    .life-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ----- 校历 ----- */
+    .calendar-grid {
+        gap: 20px;
+    }
+
+    .calendar-card {
+        padding: 25px;
+    }
+
+    .calendar-card-title {
+        font-size: 20px;
+    }
+
+    /* ----- 国际合作 ----- */
+    .partners-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* ----- 快速链接：保持每行 7 个，卡片缩小 ----- */
+    .links-grid {
+        gap: 10px;
+        padding: 0;
+    }
+
+    .links-grid + .links-grid {
+        margin-top: 10px;
+    }
+
+    .link-card {
+        padding: 16px 6px;
+        gap: 8px;
+    }
+
+    .link-card i {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+
+    .link-card span {
+        font-size: 12px;
+    }
+
+    /* ----- 页脚：简介占一整行，下面 4 列链接 ----- */
+    .footer-content {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+        padding-right: 0;
+    }
+
+    .footer-brand p {
+        font-size: 15px;
+    }
+}
+
+/* ================= 手机 (≤ 767px) ================= */
+@media (max-width: 767px) {
+
+    :root {
+        --navbar-height: 60px;
+    }
+
+    /* ----- 导航栏 ----- */
+    .nav-container {
+        padding: 0 14px;
+    }
+
+    .logo-section {
+        gap: 10px;
+    }
+
+    .logo-icon,
+    .logo-icon img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .logo-text h1 {
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+
+    .logo-text span {
+        font-size: 11px;
+    }
+
+    .nav-social-links {
+        gap: 8px;
+        padding-right: 0;
+    }
+
+    .nav-social-links a {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .mobile-menu-btn {
+        margin-left: 4px;
+        font-size: 22px;
+    }
+
+    /* ----- 顶部通知栏 ----- */
+    .notice-content {
+        padding: 0 16px;
+        gap: 10px;
+    }
+
+    .notice-label {
+        font-size: 11px;
+        padding: 3px 8px;
+    }
+
+    .notice-text {
+        font-size: 13px;
+    }
+
+    /* ----- 首页大图 ----- */
+    .hero {
+        padding: 56px 0 40px;
+    }
+
+    .hero-content {
+        padding: 0 16px;
+    }
+
+    .hero-badge {
+        font-size: 10px;
+        letter-spacing: 1px;
+        padding: 6px 14px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .btn {
+        padding: 12px 24px;
+    }
+
+    .hero-stats {
+        margin-top: 32px;
+        gap: 24px;
+        padding: 16px 24px;
+    }
+
+    .stat-item {
+        min-width: 0;
+    }
+
+    .stat-number {
+        font-size: 36px;
+    }
+
     .stat-label {
         font-size: 13px;
+    }
+
+    /* ----- 板块通用 ----- */
+    .container {
+        padding: 0 16px;
+    }
+
+    .section {
+        padding: 48px 0;
+    }
+
+    .section-header {
+        margin-bottom: 32px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .section-subtitle {
+        font-size: 14px;
+    }
+
+    /* ----- 快捷菜单：2×2 ----- */
+    .quick-menu {
+        padding: 24px 0;
+    }
+
+    .quick-menu-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 0 16px;
+    }
+
+    .quick-item {
+        padding: 16px 10px;
+    }
+
+    .quick-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .quick-item h3 {
+        font-size: 15px;
+    }
+
+    /* ----- 学校介绍 ----- */
+    .about-grid {
+        gap: 28px;
+    }
+
+    .about-images-col {
+        flex-direction: column;
+    }
+
+    .about-image-top img,
+    .about-image-bottom img {
+        min-height: 200px;
+    }
+
+    .president-link {
+        font-size: 14px;
+        padding: 12px 16px;
+    }
+
+    .about-content h3 {
+        font-size: 22px;
+    }
+
+    /* ----- 研究室介绍 ----- */
+    .labs-preview-card {
+        padding: 24px;
+    }
+
+    .labs-download-card {
+        padding: 30px 20px;
+    }
+
+    .labs-stats-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .labs-stat {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background: var(--gray-100);
+        border-radius: 8px;
+    }
+
+    .labs-file-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .labs-download-btn {
+        width: 100%;
+        padding: 16px 20px;
+    }
+
+    /* ----- 专业介绍 ----- */
+    .majors-group {
+        margin-bottom: 36px;
+    }
+
+    .majors-group-header {
+        flex-wrap: wrap;
+    }
+
+    .majors-group-title {
+        font-size: 19px;
+    }
+
+    .majors-undergrad-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .major-card {
+        padding: 20px;
+    }
+
+    .majors-grad-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .grad-dept {
+        padding: 12px 14px;
+        font-size: 13px;
+    }
+
+    .majors-pro-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .pro-card-title {
+        font-size: 16px;
+    }
+
+    /* ----- 招生信息 ----- */
+    .admission-cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .admission-card {
+        padding: 28px 22px;
+    }
+
+    .download-section {
+        margin-top: 40px;
+        padding: 30px 18px;
+        border-radius: 16px;
+    }
+
+    .download-section h3 {
+        font-size: 22px;
+    }
+
+    .download-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .download-card-highlight {
+        grid-column: span 1;
+    }
+
+    /* ----- 留学项目 ----- */
+    .programs-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .program-item {
+        padding: 24px 20px;
+    }
+
+    /* ----- 奖学金 ----- */
+    .scholarship-item {
+        gap: 16px;
+        margin-bottom: 28px;
+    }
+
+    .scholarship-icon {
+        width: 46px;
+        height: 46px;
+        font-size: 16px;
+    }
+
+    .scholarship-detail {
+        padding: 14px;
+        line-height: 1.8;
+    }
+
+    /* ----- 生活服务 ----- */
+    .life-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* ----- 校历 ----- */
+    .calendar-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .calendar-card {
+        padding: 22px 16px;
+        border-radius: 16px;
+    }
+
+    .calendar-card-title {
+        font-size: 19px;
+        margin-bottom: 18px;
+    }
+
+    .calendar-month {
+        padding: 10px 12px;
+        gap: 10px;
+    }
+
+    /* ----- 国际合作 ----- */
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-bottom: 32px;
+    }
+
+    .partner-logo {
+        height: 72px;
+        padding: 0 8px;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .cooperation-info {
+        padding: 24px 18px;
+    }
+
+    .cooperation-contact {
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    /* ----- 联系我们：一行一个 ----- */
+    .contact-items {
+        gap: 0;
+    }
+
+    .contact-item {
+        width: 100%;
+    }
+
+    /* ----- 快速链接：两行合并成一个 3 列网格 ----- */
+    .links-grids {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .links-grid {
+        display: contents;
+    }
+
+    .link-card i {
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
+    }
+
+    .link-card span {
+        font-size: 12px;
+    }
+
+    /* ----- 页脚：简介一整行，链接 2 列 ----- */
+    footer {
+        padding: 44px 0 24px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px 20px;
+        padding: 0 16px;
+    }
+
+    .footer-brand h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .footer-brand p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .footer-links h4 {
+        font-size: 16px;
+        margin-bottom: 14px;
+    }
+
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        margin-top: 32px;
+        padding: 20px 16px;
+        font-size: 12px;
+    }
+
+    /* ----- 交通指南弹窗 ----- */
+    .transport-modal {
+        padding: 12px;
+    }
+
+    .transport-header {
+        padding: 18px 20px;
+    }
+
+    .transport-header h3 {
+        font-size: 17px;
+    }
+
+    .transport-body {
+        padding: 20px;
+    }
+
+    .transport-info-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .transport-info-card {
+        padding: 16px;
+    }
+
+    .transport-map-wrap iframe {
+        height: 260px;
     }
 }
