@@ -37,6 +37,14 @@
 
 export const notices = [
     {
+        src: "inform20.webp",
+        thumb: "inform20.webp",
+        title: "与乌兹别克斯坦交通部签署政府层面MOU",
+        date: "2026-09-16",
+        tag: "校内新闻",
+        tagClass: "tag-blue"
+    },
+    {
         src: "inform19.webp",
         thumb: "inform19.webp",
         title: "乌兹别克斯坦交通部长带团访问",
