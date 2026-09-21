@@ -659,6 +659,11 @@ background-repeat: no-repeat;
     background: var(--gray-100);
     border-radius: 6px;
 }
+.major-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    color: var(--accent-blue);
+}
 
 .major-badge {
     font-size: 11px;
