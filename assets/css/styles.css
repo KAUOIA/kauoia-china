@@ -1233,11 +1233,43 @@ background-repeat: no-repeat;
     transform: translateY(-3px);
 }
 
+.contact-grid {
+    align-items: start;
+}
+
 .contact-form {
     background: var(--white);
     padding: 40px;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+/* 必填标记 */
+/* [한국어] 필수 입력 표시 */
+.form-required {
+    color: #d32f2f;
+}
+
+.submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* 表单下方的说明 */
+/* [한국어] 폼 아래 안내 문구 */
+.contact-form-note {
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--gray-600);
+}
+
+.contact-form-note a {
+    color: var(--accent-blue);
+    font-weight: 600;
 }
 
 .form-group {
@@ -2415,6 +2447,13 @@ box-shadow: 0 15px 40px rgba(201, 169, 97, 0.3);
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* ----- 联系我们：咨询表单移到联系方式下方 ----- */
+    /* ----- [한국어] 연락처 아래로 문의 양식이 내려옵니다 ----- */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
     /* ----- 校历 ----- */
     .calendar-grid {
         gap: 20px;
@@ -2831,13 +2870,17 @@ box-shadow: 0 15px 40px rgba(201, 169, 97, 0.3);
         padding: 0;
     }
 
-    /* ----- 联系我们：一行一个 ----- */
+    /* ----- 联系我们 ----- */
     .contact-items {
         gap: 0;
     }
 
     .contact-item {
         width: 100%;
+    }
+
+    .contact-form {
+        padding: 24px 18px;
     }
 
     /* ----- 快速链接：两行合并成一个 3 列网格 ----- */

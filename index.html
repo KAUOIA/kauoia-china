@@ -618,6 +618,8 @@
             <i class="fas fa-chevron-right"></i>
         </button>
         <div class="lightbox-counter" id="lightboxCounter">1 / 6</div>
+        <!-- 操作提示（手机上隐藏） / [한국어] 조작 안내 (휴대폰에서는 숨김) -->
+        <div class="lightbox-hint">🖱️ 滚轮缩放 · 拖拽移动 · 双击放大/还原 · ← → 切换 · Esc 关闭</div>
     </div>
 
     
@@ -984,6 +986,7 @@
                 <p class="section-subtitle">欢迎通过以下方式与我们取得联系，我们将竭诚为您服务</p>
             </div>
 
+            <div class="contact-grid">
             <div class="contact-info">
                 <h3 class="contact-heading">国际交流处联系方式</h3>
 
@@ -1034,6 +1037,48 @@
                         <i class="fab fa-weixin"></i>
                     </a>
                 </div>
+            </div>
+
+            <!-- 在线咨询表单：填好后用访客自己的邮件应用发送到国际交流处 -->
+            <!-- [한국어] 문의 양식: 작성 후 방문자 본인의 메일 앱으로 국제교류처에 전송 -->
+            <div class="contact-form">
+                <h3 class="contact-heading">在线咨询</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="contactName">姓名 <span class="form-required">*</span></label>
+                        <input type="text" id="contactName" name="name" required autocomplete="name" placeholder="请输入您的姓名">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">邮箱 / 联系方式 <span class="form-required">*</span></label>
+                        <input type="email" id="contactEmail" name="email" required autocomplete="email" placeholder="example@mail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactCategory">咨询类型 <span class="form-required">*</span></label>
+                        <select id="contactCategory" name="category" required>
+                            <option value="">请选择</option>
+                            <option value="招生咨询">招生咨询</option>
+                            <option value="奖学金">奖学金</option>
+                            <option value="宿舍·生活">宿舍·生活</option>
+                            <option value="签证·外国人登录证">签证·外国人登录证</option>
+                            <option value="交换生·校际合作">交换生·校际合作</option>
+                            <option value="韩国语教育院">韩国语教育院</option>
+                            <option value="其他">其他</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">咨询内容 <span class="form-required">*</span></label>
+                        <textarea id="contactMessage" name="message" required placeholder="请填写您的问题"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> 用邮件发送
+                    </button>
+                </form>
+                <p class="contact-form-note">
+                    点击后会打开您电脑或手机上的邮件应用，内容已自动填好，确认后发送即可。<br>
+                    如果没有自动打开，请直接发送到
+                    <a href="mailto:international@kau.ac.kr">international@kau.ac.kr</a>。
+                </p>
+            </div>
             </div>
         </div>
     </section>

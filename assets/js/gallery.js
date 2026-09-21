@@ -158,10 +158,120 @@ export function initGallery() {
     function closeLightbox() {
         lightbox.classList.remove('active');
         document.body.style.overflow = '';
+        resetZoom();
     }
 
-    function lightboxNext() { nextNotice(); syncLightbox(); }
-    function lightboxPrev() { prevNotice(); syncLightbox(); }
+    function lightboxNext() { nextNotice(); syncLightbox(); resetZoom(); }
+    function lightboxPrev() { prevNotice(); syncLightbox(); resetZoom(); }
+
+    /* ----- 灯箱缩放：滚轮放大缩小、拖拽移动、双击还原 -----
+       [한국어] 확대창 줌: 마우스 휠로 확대·축소, 끌어서 이동, 더블클릭으로 원래 크기 */
+    const MAX_SCALE = 6;
+    let scale = 1;
+    let offsetX = 0;
+    let offsetY = 0;
+
+    function applyTransform() {
+        if (scale === 1) {
+            // 原始大小时交给 CSS，保留打开时的动画
+            // [한국어] 원래 크기일 때는 인라인 스타일을 지워 CSS의 열림 애니메이션을 살립니다.
+            lightboxImage.style.transform = '';
+            lightboxImage.classList.remove('is-zooming');
+        } else {
+            lightboxImage.classList.add('is-zooming');
+            lightboxImage.style.transform =
+                `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
+        }
+    }
+
+    function resetZoom() {
+        scale = 1;
+        offsetX = 0;
+        offsetY = 0;
+        lightboxImage.classList.remove('is-dragging');
+        applyTransform();
+    }
+
+    // 以鼠标位置为中心缩放
+    // [한국어] 마우스 커서 위치를 기준으로 확대·축소합니다.
+    function zoomAt(clientX, clientY, nextScale) {
+        nextScale = Math.min(MAX_SCALE, Math.max(1, nextScale));
+        if (nextScale === scale) return;
+
+        const rect = lightboxImage.getBoundingClientRect();
+        // 变形前的图片中心 → 去掉当前位移就是原始中心
+        // [한국어] 현재 이미지 중심에서 이동값을 빼면 원래(변형 전) 중심입니다.
+        const baseCenterX = rect.left + rect.width / 2 - offsetX;
+        const baseCenterY = rect.top + rect.height / 2 - offsetY;
+        // 光标指向的位置，换算成未缩放时的坐标
+        // [한국어] 커서가 가리키는 지점을 확대 전 좌표로 환산합니다.
+        const localX = (clientX - baseCenterX - offsetX) / scale;
+        const localY = (clientY - baseCenterY - offsetY) / scale;
+
+        offsetX += localX * (scale - nextScale);
+        offsetY += localY * (scale - nextScale);
+        scale = nextScale;
+
+        if (scale === 1) {
+            offsetX = 0;
+            offsetY = 0;
+        }
+        applyTransform();
+    }
+
+    // 滚轮缩放（阻止页面滚动）
+    // [한국어] 휠로 확대·축소 (뒤 페이지가 스크롤되지 않도록 기본 동작을 막습니다)
+    lightbox.addEventListener('wheel', (e) => {
+        if (!lightbox.classList.contains('active')) return;
+        e.preventDefault();
+        const factor = e.deltaY < 0 ? 1.15 : 1 / 1.15;
+        zoomAt(e.clientX, e.clientY, scale * factor);
+    }, { passive: false });
+
+    // 双击：放大 ↔ 还原
+    // [한국어] 더블클릭: 확대 ↔ 원래 크기
+    lightboxImage.addEventListener('dblclick', (e) => {
+        e.stopPropagation();
+        if (scale > 1) {
+            resetZoom();
+        } else {
+            zoomAt(e.clientX, e.clientY, 2.5);
+        }
+    });
+
+    // 放大后按住拖动
+    // [한국어] 확대된 상태에서 끌어서 이동
+    let dragging = false;
+    let dragStartX = 0;
+    let dragStartY = 0;
+
+    lightboxImage.addEventListener('pointerdown', (e) => {
+        if (scale === 1) return;
+        dragging = true;
+        dragStartX = e.clientX - offsetX;
+        dragStartY = e.clientY - offsetY;
+        lightboxImage.classList.add('is-dragging');
+        lightboxImage.setPointerCapture(e.pointerId);
+    });
+
+    lightboxImage.addEventListener('pointermove', (e) => {
+        if (!dragging) return;
+        offsetX = e.clientX - dragStartX;
+        offsetY = e.clientY - dragStartY;
+        applyTransform();
+    });
+
+    function endDrag(e) {
+        if (!dragging) return;
+        dragging = false;
+        lightboxImage.classList.remove('is-dragging');
+        if (lightboxImage.hasPointerCapture(e.pointerId)) {
+            lightboxImage.releasePointerCapture(e.pointerId);
+        }
+    }
+
+    lightboxImage.addEventListener('pointerup', endDrag);
+    lightboxImage.addEventListener('pointercancel', endDrag);
 
     // ----- 事件绑定 -----
     // ----- [한국어] 버튼·클릭 동작 연결 -----

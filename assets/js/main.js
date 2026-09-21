@@ -151,9 +151,56 @@ function initTransportModal() {
     });
 }
 
+// ===== 在线咨询表单 =====
+// ===== [한국어] 문의 양식 =====
+//
+// 本站是静态网站，没有可以发信的服务器（也不能直接使用 SMTP）。
+// 所以这里的做法是：把填写的内容整理好，打开访客自己的邮件应用，
+// 由访客本人把邮件发送到国际交流处。发件人就是访客自己的邮箱。
+//
+// [한국어] 이 사이트는 정적 사이트라 메일을 보낼 서버가 없습니다(SMTP 직접 사용 불가).
+// 그래서 입력한 내용을 정리해 방문자 본인의 메일 앱을 열어 주고,
+// 방문자가 직접 국제교류처로 보내는 방식입니다. 발신자는 방문자 본인 메일이 됩니다.
+function initContactForm() {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+
+    const TO = 'international@kau.ac.kr';
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // 浏览器自带的必填检查
+        // [한국어] 브라우저 기본 필수 입력 검사
+        if (!form.reportValidity()) return;
+
+        const data = new FormData(form);
+        const name = String(data.get('name') || '').trim();
+        const email = String(data.get('email') || '').trim();
+        const category = String(data.get('category') || '').trim();
+        const message = String(data.get('message') || '').trim();
+
+        const subject = `[中文官网咨询] ${category} - ${name}`;
+        const body = [
+            `姓名 / 이름: ${name}`,
+            `邮箱 / 메일: ${email}`,
+            `咨询类型 / 문의 종류: ${category}`,
+            '',
+            '咨询内容 / 문의 내용:',
+            message,
+            '',
+            '---',
+            '（本邮件通过国际交流处中文官网的咨询表单填写）',
+        ].join('\n');
+
+        window.location.href =
+            `mailto:${TO}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+}
+
 initNavigation();
 initScrollAnimation();
 initTransportModal();
+initContactForm();
 
 // 画廊单独加载：即使 notices.js 写错（少逗号、引号等），
 // 菜单和弹窗等其他功能也照常工作，只有通知公告区域不显示。
