@@ -5,2203 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>韩国航空大学 国际交流处 - 中文官方网站</title>
     <meta name="description" content="韩国航空大学国际交流处中文官方网站，为中国留学生提供权威留学信息、招生指南、奖学金申请、韩国生活支持等一站式服务。">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-
-        :root {
-            --primary-blue: #003366;
-            --secondary-blue: #004080;
-            --accent-blue: #0066cc;
-            --light-blue: #e6f2ff;
-            --white: #ffffff;
-            --gray-100: #f8f9fa;
-            --gray-200: #e9ecef;
-            --gray-600: #6c757d;
-            --gray-800: #343a40;
-            --air-gold: #c9a961;
-            --gradient-hero: linear-gradient(135deg, #003366 0%, #004080 50%, #0066cc 100%);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: var(--gray-800);
-            background-color: var(--white);
-        }
-
-        /* 导航栏 */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 51, 102, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo-icon {
-            width: 45px;
-            height: 45px;
-            background: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-blue);
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .logo-text {
-            color: var(--white);
-        }
-
-        .logo-text h1 {
-            font-size: 18px;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        .logo-text span {
-            font-size: 12px;
-            opacity: 0.9;
-            font-weight: 300;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        .nav-menu a {
-            color: var(--white);
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
-            padding: 5px 0;
-            white-space: nowrap;
-        }
-
-        .nav-menu a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--air-gold);
-            transition: width 0.3s ease;
-        }
-
-        .nav-menu a:hover::after {
-            width: 100%;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--white);
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        /* 英雄区 */
-        .hero {
-            margin-top: 70px;
-            height: 90vh;
-            min-height: 600px;
-          background: 
-linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-url('pic.jpg');
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-            position: relative;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
-            background-size: cover;
-        }
-
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            position: relative;
-            z-index: 2;
-            color: var(--white);
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: rgba(201, 169, 97, 0.2);
-            border: 1px solid var(--air-gold);
-            color: var(--air-gold);
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-
-        .hero h2 {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 18px;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-bottom: 30px;
-            font-weight: 300;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 14px 32px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-primary {
-            background: var(--air-gold);
-            color: var(--primary-blue);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(201, 169, 97, 0.3);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--white);
-            border: 2px solid rgba(255,255,255,0.3);
-        }
-
-        .btn-secondary:hover {
-            background: var(--white);
-            color: var(--primary-blue);
-        }
-
-        .hero-stats {
-            position: absolute;
-            bottom: 60px;
-            right: 60px;
-            display: flex;
-            gap: 50px;
-            color: var(--white);
-            background: rgba(0, 51, 102, 0.6);
-            backdrop-filter: blur(10px);
-            padding: 25px 40px;
-            border-radius: 16px;
-            border: 1px solid rgba(201, 169, 97, 0.3);
-        }
-
-        .stat-item {
-            text-align: center;
-            min-width: 100px;
-        }
-
-        .stat-number {
-            font-size: 52px;
-            font-weight: 800;
-            color: var(--air-gold);
-            line-height: 1.1;
-            text-shadow: 0 2px 10px rgba(201, 169, 97, 0.3);
-        }
-
-        .stat-label {
-            font-size: 15px;
-            opacity: 0.95;
-            margin-top: 8px;
-            font-weight: 500;
-            letter-spacing: 1px;
-        }
-
-        /* 快捷菜单 */
-        .quick-menu {
-            background: var(--white);
-            padding: 40px 0;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            position: relative;
-            z-index: 10;
-        }
-
-        .quick-menu-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .quick-item {
-            background: var(--gray-100);
-            padding: 25px;
-            border-radius: 12px;
-            text-align: center;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: 1px solid transparent;
-        }
-
-        .quick-item:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-blue);
-            box-shadow: 0 10px 30px rgba(0, 102, 204, 0.1);
-        }
-
-        .quick-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--light-blue);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 15px;
-            color: var(--accent-blue);
-            font-size: 20px;
-        }
-
-        .quick-item h3 {
-            font-size: 16px;
-            color: var(--gray-800);
-            margin-bottom: 5px;
-        }
-
-        .quick-item p {
-            font-size: 12px;
-            color: var(--gray-600);
-        }
-
-        /* 板块通用样式 */
-        .section {
-            padding: 80px 0;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-tag {
-            display: inline-block;
-            color: var(--accent-blue);
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-
-        .section-title {
-            font-size: 36px;
-            font-weight: 700;
-            color: var(--primary-blue);
-            margin-bottom: 15px;
-        }
-
-        .section-subtitle {
-            font-size: 16px;
-            color: var(--gray-600);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* 学校介绍 */
-        .about-section {
-            background: var(--gray-100);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .about-images-col {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .about-image-top {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-            flex: 1;
-        }
-
-        .about-image-top img {
-            width: 100%;
-            height: 100%;
-            min-height: 240px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .about-image-bottom {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .about-image-bottom img {
-            width: 100%;
-            height: 100%;
-            min-height: 240px;
-            object-fit: cover;
-            display: block;
-            flex: 1;
-        }
-
-        .president-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 16px 20px;
-            background: var(--gradient-hero);
-            color: var(--white);
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .president-link:hover {
-            background: linear-gradient(135deg, #004080 0%, #0066cc 50%, #0080ff 100%);
-        }
-
-        .president-link i {
-            font-size: 18px;
-            color: var(--air-gold);
-        }
-
-        .about-content h3 {
-            font-size: 28px;
-            color: var(--primary-blue);
-            margin-bottom: 20px;
-        }
-
-        .about-content p {
-            color: var(--gray-600);
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-
-        .feature-list {
-            list-style: none;
-            margin-top: 30px;
-        }
-
-        .feature-list li {
-            padding: 10px 0;
-            padding-left: 30px;
-            position: relative;
-            color: var(--gray-800);
-        }
-
-        .feature-list li::before {
-            content: '✈';
-            position: absolute;
-            left: 0;
-            color: var(--accent-blue);
-        }
-
-        /* 招生信息 */
-        .admission-cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .admission-card {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 40px 30px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-            border-top: 4px solid var(--accent-blue);
-        }
-
-        .admission-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        .admission-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--light-blue);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent-blue);
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .admission-card h3 {
-            font-size: 20px;
-            color: var(--primary-blue);
-            margin-bottom: 15px;
-        }
-
-        .admission-card ul {
-            list-style: none;
-            color: var(--gray-600);
-            font-size: 14px;
-        }
-
-        .admission-card li {
-            padding: 8px 0;
-            border-bottom: 1px solid var(--gray-200);
-        }
-
-        .admission-card li:last-child {
-            border-bottom: none;
-        }
-
-        /* 留学项目 */
-        .programs-section {
-            background: var(--primary-blue);
-            color: var(--white);
-        }
-
-        .programs-section .section-title {
-            color: var(--white);
-        }
-
-        .programs-section .section-subtitle {
-            color: rgba(255,255,255,0.8);
-        }
-
-        .programs-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-
-        .program-item {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 16px;
-            padding: 35px;
-            transition: all 0.3s ease;
-        }
-
-        .program-item:hover {
-            background: rgba(255,255,255,0.15);
-            transform: translateY(-5px);
-        }
-
-        .program-item h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .program-item p {
-            opacity: 0.9;
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-
-        .program-tags {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .program-tag {
-            background: rgba(201, 169, 97, 0.3);
-            color: var(--air-gold);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 500;
-        }
-
-        /* 奖学金 */
-        .scholarship-timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .scholarship-item {
-            display: flex;
-            gap: 30px;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        .scholarship-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient-hero);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 20px;
-            flex-shrink: 0;
-            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
-        }
-
-        .scholarship-content {
-            background: var(--white);
-            padding: 25px 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            flex: 1;
-            border-left: 4px solid var(--accent-blue);
-        }
-
-        .scholarship-content h3 {
-            color: var(--primary-blue);
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .scholarship-content p {
-            color: var(--gray-600);
-            font-size: 14px;
-            line-height: 1.7;
-        }
-
-        .scholarship-amount {
-            display: inline-block;
-            background: var(--air-gold);
-            color: var(--primary-blue);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 700;
-            margin-top: 10px;
-        }
-
-        /* 生活服务 */
-        .life-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .life-card {
-            background: var(--white);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-        }
-
-        .life-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-        }
-
-.life-image {
-            height: 160px;
-            background: var(--gray-200);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gray-600);
-            font-size: 30px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .life-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .life-card:hover .life-image img {
-            transform: scale(1.08);
-        }
-
-        .life-content {
-            padding: 25px;
-        }
-
-        .life-content h3 {
-            font-size: 18px;
-            color: var(--primary-blue);
-            margin-bottom: 10px;
-        }
-
-        .life-content p {
-            font-size: 14px;
-            color: var(--gray-600);
-            line-height: 1.6;
-        }
-
-        /* 国际合作 */
-        .cooperation-section {
-            background: var(--gray-100);
-        }
-
-        .partners-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-bottom: 50px;
-        }
-
-        .partner-logo {
-            background: var(--white);
-            height: 100px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            font-size: 14px;
-            color: var(--gray-600);
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .partner-logo:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            color: var(--accent-blue);
-        }
-
-        .cooperation-info {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-        }
-
-        /* 联系我们 */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-        }
-
-        .contact-info h3 {
-            font-size: 24px;
-            color: var(--primary-blue);
-            margin-bottom: 30px;
-        }
-
-        .contact-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 25px;
-            text-align: center;
-        }
-
-        .contact-icon {
-            width: 45px;
-            height: 45px;
-            background: var(--light-blue);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent-blue);
-            font-size: 18px;
-            flex-shrink: 0;
-        }
-
-        .contact-detail {
-            text-align: center;
-        }
-
-        .contact-detail h4 {
-            font-size: 14px;
-            color: var(--gray-600);
-            margin-bottom: 5px;
-            font-weight: 500;
-        }
-
-        .contact-detail p {
-            font-size: 16px;
-            color: var(--gray-800);
-            font-weight: 600;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .social-link {
-            width: 45px;
-            height: 45px;
-            background: var(--primary-blue);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-link:hover {
-            background: var(--accent-blue);
-            transform: translateY(-3px);
-        }
-
-        .contact-form {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 14px;
-            color: var(--gray-800);
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid var(--gray-200);
-            border-radius: 8px;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            font-family: inherit;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--accent-blue);
-            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 14px;
-            background: var(--gradient-hero);
-            color: var(--white);
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.3);
-        }
-
-        /* 页脚 */
-        footer {
-            background: var(--primary-blue);
-            color: var(--white);
-            padding: 60px 0 30px;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-        }
-
-        .footer-brand h3 {
-            font-size: 20px;
-            margin-bottom: 15px;
-        }
-
-        .footer-brand p {
-            opacity: 0.8;
-            font-size: 14px;
-            line-height: 1.7;
-        }
-
-        .footer-links h4 {
-            font-size: 14px;
-            margin-bottom: 20px;
-            color: var(--air-gold);
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--white);
-        }
-
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 40px auto 0;
-            padding: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            text-align: center;
-            font-size: 13px;
-            opacity: 0.6;
-        }
-
-        /* 通知公告栏 */
-        .notice-bar {
-            background: var(--air-gold);
-            color: var(--primary-blue);
-            padding: 12px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .notice-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .notice-label {
-            background: var(--primary-blue);
-            color: var(--white);
-            padding: 4px 12px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: 600;
-            flex-shrink: 0;
-        }
-
-        .notice-text {
-            font-size: 14px;
-            font-weight: 500;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-                /* 顶部社交媒体链接 */
-        .nav-social-links a:hover {
-            background: var(--air-gold) !important;
-            color: var(--primary-blue) !important;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(201, 169, 97, 0.3);
-        }
-
-
-        /* ===== 通知公告画廊（新版） ===== */
-        .notice-gallery-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .notice-gallery {
-            display: flex;
-            gap: 30px;
-            align-items: flex-start;
-        }
-
-        /* 左侧主图区 */
-        .main-notice {
-            flex: 1;
-            background: var(--white);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            position: relative;
-            border: 1px solid var(--gray-200);
-        }
-
-        .notice-image-wrapper {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 4/3;
-            overflow: hidden;
-            cursor: zoom-in;
-            background: var(--gray-100);
-        }
-
-        .notice-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top center;
-            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
-        }
-
-        .notice-image.fade-out {
-            opacity: 0;
-        }
-
-        .notice-image-wrapper:hover .notice-image {
-            transform: scale(1.03);
-        }
-
-        /* 导航箭头 */
-        .notice-nav-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.95);
-            border: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-            transition: all 0.3s ease;
-            z-index: 10;
-            opacity: 0;
-            color: var(--primary-blue);
-            font-size: 16px;
-        }
-
-        .main-notice:hover .notice-nav-btn {
-            opacity: 1;
-        }
-
-        .notice-nav-btn:hover {
-            background: var(--white);
-            transform: translateY(-50%) scale(1.1);
-            color: var(--accent-blue);
-        }
-
-        .notice-nav-btn.prev { left: 16px; }
-        .notice-nav-btn.next { right: 16px; }
-
-        /* 图片计数器 */
-        .notice-counter {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            background: rgba(0, 51, 102, 0.75);
-            color: var(--white);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 500;
-            backdrop-filter: blur(10px);
-            z-index: 5;
-        }
-
-        /* 通知信息 */
-        .notice-info {
-            padding: 24px;
-        }
-
-        .notice-tag {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-
-        .tag-blue { background: var(--light-blue); color: var(--accent-blue); }
-        .tag-gold { background: rgba(201, 169, 97, 0.15); color: var(--air-gold); }
-        .tag-green { background: rgba(46, 125, 50, 0.1); color: #2e7d32; }
-
-        .notice-title {
-            font-size: 1.25rem;
-            color: var(--primary-blue);
-            font-weight: 700;
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
-
-        .notice-date {
-            color: var(--gray-600);
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        /* 右侧缩略图列表 */
-        .notice-thumbs {
-            width: 320px;
-            flex-shrink: 0;
-        }
-
-        .thumbs-title {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 16px;
-            padding-left: 4px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .thumb-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            max-height: 520px;
-            overflow-y: auto;
-            padding-right: 4px;
-        }
-
-        .thumb-list::-webkit-scrollbar {
-            width: 4px;
-        }
-        .thumb-list::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        .thumb-list::-webkit-scrollbar-thumb {
-            background: var(--gray-200);
-            border-radius: 2px;
-        }
-
-        .thumb-card {
-            display: flex;
-            gap: 12px;
-            padding: 12px;
-            background: var(--white);
-            border-radius: 14px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-        }
-
-        .thumb-card:hover {
-            transform: translateX(5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-            border-color: var(--light-blue);
-        }
-
-        .thumb-card.active {
-            border-color: var(--accent-blue);
-            background: var(--light-blue);
-            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
-        }
-
-        .thumb-img {
-            width: 80px;
-            height: 60px;
-            border-radius: 10px;
-            overflow: hidden;
-            flex-shrink: 0;
-            background: var(--gray-200);
-        }
-
-        .thumb-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top center;
-            transition: transform 0.3s ease;
-        }
-
-        .thumb-card:hover .thumb-img img {
-            transform: scale(1.1);
-        }
-
-        .thumb-content {
-            flex: 1;
-            min-width: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .thumb-title {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--gray-800);
-            margin-bottom: 4px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            line-height: 1.4;
-        }
-
-        .thumb-date {
-            font-size: 12px;
-            color: var(--gray-600);
-        }
-
-        .thumb-tag {
-            display: inline-block;
-            padding: 2px 8px;
-            border-radius: 10px;
-            font-size: 10px;
-            font-weight: 600;
-            margin-top: 4px;
-            width: fit-content;
-        }
-
-        /* 灯箱 */
-        .lightbox {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.92);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.4s ease;
-        }
-
-        .lightbox.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .lightbox-image {
-            max-width: 85%;
-            max-height: 80vh;
-            object-fit: contain;
-            border-radius: 12px;
-            transform: scale(0.9);
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .lightbox.active .lightbox-image {
-            transform: scale(1);
-        }
-
-        .lightbox-nav-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.15);
-            border: 1px solid rgba(255,255,255,0.3);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            color: var(--white);
-            font-size: 18px;
-            z-index: 10;
-        }
-
-        .lightbox-nav-btn:hover {
-            background: rgba(255,255,255,0.3);
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        .lightbox-nav-btn.prev { left: 30px; }
-        .lightbox-nav-btn.next { right: 30px; }
-
-        .lightbox-close {
-            position: absolute;
-            top: 25px;
-            right: 25px;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.15);
-            border: 1px solid rgba(255,255,255,0.3);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            color: var(--white);
-            font-size: 20px;
-            z-index: 10;
-        }
-
-        .lightbox-close:hover {
-            background: rgba(255,255,255,0.3);
-            transform: rotate(90deg);
-        }
-
-        .lightbox-counter {
-            position: absolute;
-            bottom: 25px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: rgba(255,255,255,0.8);
-            font-size: 15px;
-            letter-spacing: 2px;
-        }
-
-        /* 响应式 */
-        @media (max-width: 968px) {
-            .notice-gallery {
-                flex-direction: column;
-            }
-
-            .notice-thumbs {
-                width: 100%;
-            }
-
-            .thumb-list {
-                flex-direction: row;
-                overflow-x: auto;
-                overflow-y: hidden;
-                max-height: none;
-                padding-bottom: 8px;
-            }
-
-            .thumb-card {
-                min-width: 260px;
-            }
-
-            .notice-nav-btn {
-                opacity: 1;
-            }
-
-            .lightbox-nav-btn.prev { left: 10px; }
-            .lightbox-nav-btn.next { right: 10px; }
-        }
-
-        @media (max-width: 576px) {
-            .notice-image-wrapper {
-                aspect-ratio: 3/2;
-            }
-
-            .thumb-card {
-                min-width: 220px;
-            }
-
-            .notice-info {
-                padding: 18px;
-            }
-
-            .notice-title {
-                font-size: 1.1rem;
-            }
-        }
-
-        /* ===== 招生简章下载区域 ===== */
-.download-section {
-    margin-top: 60px;
-    padding: 50px;
-    background: linear-gradient(135deg, #003366 0%, #004080 100%);
-    border-radius: 20px;
-    color: white;
-    text-align: center;
-}
-
-.download-section h3 {
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.download-section p {
-    opacity: 0.9;
-    margin-bottom: 30px;
-    font-size: 16px;
-}
-
-.download-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    margin-top: 30px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.download-card {
-    text-align: center;
-}
-
-.download-card .download-btn {
-    display: inline-block;
-    margin: 0 auto;
-}
-
-.download-card-highlight {
-    grid-column: span 2;
-}
-
-.download-card {
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 12px;
-    padding: 25px;
-    transition: all 0.3s ease;
-    text-align: center;
-}
-
-.download-card:hover {
-    background: rgba(255,255,255,0.15);
-    transform: translateY(-5px);
-}
-
-.download-card i {
-    font-size: 40px;
-    margin-bottom: 15px;
-    color: var(--air-gold);
-}
-
-.download-card h4 {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.download-card p {
-    font-size: 13px;
-    opacity: 0.8;
-    margin-bottom: 15px;
-}
-
-.download-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--air-gold);
-    color: var(--primary-blue);
-    padding: 10px 25px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    text-align: center;
-    gap: 6px;
-}
-
-.download-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 20px rgba(201, 169, 97, 0.4);
-}
-
-.download-card-highlight {
-    background: linear-gradient(135deg, rgba(201, 169, 97, 0.2) 0%, rgba(255, 255, 255, 0.15) 100%);
-    border: 2px solid var(--air-gold);
-    position: relative;
-}
-
-.download-card-highlight::before {
-    content: '推荐';
-    position: absolute;
-    top: -10px;
-    right: 20px;
-    background: var(--air-gold);
-    color: var(--primary-blue);
-    padding: 4px 12px;
-    border-radius: 12px;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.download-card-highlight i {
-    color: var(--air-gold);
-}
-
-.download-card-highlight:hover {
-    background: linear-gradient(135deg, rgba(201, 169, 97, 0.3) 0%, rgba(255, 255, 255, 0.2) 100%);
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(201, 169, 97, 0.3);
-}
-
-@media (max-width: 768px) {
-    .download-grid {
-        grid-template-columns: 1fr;
-    }
-    .download-card-highlight {
-        grid-column: span 1;
-    }
-}
-
-        
-/* ===== 研究室介绍区域 ===== */
-        .labs-section {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e6f2ff 50%, #f0f7ff 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .labs-section::before {
-            content: '';
-            position: absolute;
-            top: -100px;
-            right: -100px;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(0, 102, 204, 0.05) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .labs-section::after {
-            content: '';
-            position: absolute;
-            bottom: -150px;
-            left: -150px;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(201, 169, 97, 0.06) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .labs-showcase {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            max-width: 1100px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* 左侧预览卡片 */
-        .labs-preview-card {
-            background: var(--white);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 40px rgba(0, 51, 102, 0.08);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .labs-preview-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid var(--light-blue);
-        }
-
-        .labs-preview-header i {
-            width: 50px;
-            height: 50px;
-            background: var(--gradient-hero);
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 22px;
-        }
-
-        .labs-preview-header span {
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--primary-blue);
-        }
-
-        .labs-categories {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-            margin-bottom: 35px;
-            flex: 1;
-        }
-
-        .lab-category {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px 16px;
-            background: var(--gray-100);
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .lab-category:hover {
-            background: var(--light-blue);
-            transform: translateX(5px);
-        }
-
-        .cat-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
-
-        .lab-category span:last-child {
-            font-size: 15px;
-            color: var(--gray-800);
-            font-weight: 500;
-        }
-
-        .labs-stats-row {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            padding-top: 25px;
-            border-top: 1px solid var(--gray-200);
-        }
-
-        .labs-stat {
-            text-align: center;
-        }
-
-        .labs-stat-num {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--accent-blue);
-            line-height: 1;
-        }
-
-        .labs-stat-label {
-            font-size: 12px;
-            color: var(--gray-600);
-            margin-top: 6px;
-        }
-
-        /* 右侧下载区域 */
-        .labs-download-area {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .labs-download-card {
-            background: var(--white);
-            border-radius: 20px;
-            padding: 45px 40px;
-            box-shadow: 0 10px 40px rgba(0, 51, 102, 0.08);
-            text-align: center;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .labs-download-card:hover {
-            border-color: var(--accent-blue);
-            transform: translateY(-3px);
-            box-shadow: 0 15px 50px rgba(0, 102, 204, 0.12);
-        }
-
-        .labs-download-card::before {
-            position: absolute;
-            top: -1px;
-            right: 30px;
-            background: linear-gradient(135deg, var(--air-gold) 0%, #d4b76a 100%);
-            color: var(--primary-blue);
-            padding: 6px 18px;
-            border-radius: 0 0 12px 12px;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 15px rgba(201, 169, 97, 0.3);
-        }
-
-        .labs-download-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #ff5252 0%, #d32f2f 100%);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 25px;
-            color: var(--white);
-            font-size: 36px;
-            box-shadow: 0 8px 25px rgba(211, 47, 47, 0.25);
-        }
-
-        .labs-download-card h3 {
-            font-size: 22px;
-            color: var(--primary-blue);
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .labs-download-card > p {
-            color: var(--gray-600);
-            font-size: 14px;
-            line-height: 1.8;
-            margin-bottom: 25px;
-            max-width: 380px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .labs-file-info {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 25px;
-            flex-wrap: wrap;
-        }
-
-        .labs-file-info span {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 6px 14px;
-            background: var(--gray-100);
-            border-radius: 20px;
-            font-size: 12px;
-            color: var(--gray-600);
-            font-weight: 500;
-        }
-
-        .labs-file-info i {
-            color: var(--accent-blue);
-        }
-
-        .labs-download-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 16px 45px;
-            background: var(--gradient-hero);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 16px;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.3);
-            margin-bottom: 20px;
-        }
-
-        .labs-download-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(0, 102, 204, 0.4);
-        }
-
-        .labs-download-btn i {
-            font-size: 18px;
-        }
-
-        .labs-download-note {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            padding: 15px 18px;
-            background: var(--light-blue);
-            border-radius: 12px;
-            text-align: left;
-        }
-
-        .labs-download-note i {
-            color: var(--accent-blue);
-            font-size: 16px;
-            margin-top: 2px;
-            flex-shrink: 0;
-        }
-
-        .labs-download-note span {
-            font-size: 12px;
-            color: var(--gray-600);
-            line-height: 1.6;
-        }
-
-        /* 快速链接 */
-        .labs-quick-links {
-            display: flex;
-            gap: 12px;
-        }
-
-        .labs-quick-link {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 18px 25px;
-            background: var(--white);
-            border-radius: 14px;
-            text-decoration: none;
-            color: var(--primary-blue);
-            font-weight: 600;
-            font-size: 14px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-            border: 1px solid transparent;
-        }
-
-        .labs-quick-link:hover {
-            border-color: var(--accent-blue);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.1);
-        }
-
-        .labs-quick-link i:first-child {
-            color: var(--accent-blue);
-            font-size: 16px;
-        }
-
-        .labs-quick-link i:last-child {
-            color: var(--gray-600);
-            font-size: 12px;
-            transition: transform 0.3s ease;
-        }
-
-        .labs-quick-link:hover i:last-child {
-            transform: translateX(4px);
-            color: var(--accent-blue);
-        }
-
-        /* 响应式 */
-        @media (max-width: 968px) {
-            .labs-showcase {
-                grid-template-columns: 1fr;
-            }
-
-            .labs-download-card {
-                padding: 35px 25px;
-            }
-
-            .labs-preview-card {
-                padding: 30px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .labs-stats-row {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-
-            .labs-stat {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 10px;
-                background: var(--gray-100);
-                border-radius: 8px;
-            }
-
-            .labs-file-info {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .labs-download-btn {
-                width: 100%;
-                padding: 16px 20px;
-            }
-        }
-
-
-        /* ===== 友情链接 ===== */
-        .links-section {
-            background: var(--gray-100);
-            padding: 60px 0;
-        }
-
-        .links-grid {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .link-card {
-            background: var(--white);
-            border-radius: 14px;
-            padding: 25px 15px;
-            text-align: center;
-            text-decoration: none;
-            color: var(--gray-800);
-            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-            transition: all 0.3s ease;
-            border: 1px solid transparent;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .link-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-blue);
-            box-shadow: 0 10px 30px rgba(0, 102, 204, 0.1);
-        }
-
-        .link-card i {
-            width: 50px;
-            height: 50px;
-            background: var(--light-blue);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent-blue);
-            font-size: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .link-card:hover i {
-            background: var(--accent-blue);
-            color: var(--white);
-        }
-
-        .link-card span {
-            font-size: 13px;
-            font-weight: 600;
-        }
-
-        /* ===== 交通详情弹窗 ===== */
-        .transport-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.75);
-            z-index: 9999;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .transport-modal.active {
-            display: flex;
-            animation: modalFadeIn 0.3s ease;
-        }
-
-        @keyframes modalFadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .transport-content {
-            background: var(--white);
-            border-radius: 20px;
-            max-width: 900px;
-            width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
-            position: relative;
-            box-shadow: 0 25px 80px rgba(0,0,0,0.3);
-        }
-
-        .transport-header {
-            background: var(--gradient-hero);
-            color: var(--white);
-            padding: 30px 35px;
-            border-radius: 20px 20px 0 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .transport-header h3 {
-            font-size: 22px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .transport-close {
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.2);
-            border: none;
-            border-radius: 50%;
-            color: var(--white);
-            font-size: 18px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .transport-close:hover {
-            background: rgba(255,255,255,0.35);
-            transform: rotate(90deg);
-        }
-
-        .transport-body {
-            padding: 35px;
-        }
-
-        .transport-info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-            margin-bottom: 30px;
-        }
-
-        .transport-info-card {
-            background: var(--gray-100);
-            border-radius: 14px;
-            padding: 22px;
-            border-left: 4px solid var(--accent-blue);
-        }
-
-        .transport-info-card h4 {
-            color: var(--primary-blue);
-            font-size: 15px;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .transport-info-card ul {
-            list-style: none;
-            color: var(--gray-600);
-            font-size: 14px;
-            line-height: 2;
-        }
-
-        .transport-info-card ul li::before {
-            content: '•';
-            color: var(--accent-blue);
-            margin-right: 8px;
-            font-weight: bold;
-        }
-
-        .transport-map-wrap {
-            border-radius: 14px;
-            overflow: hidden;
-            border: 2px solid var(--gray-200);
-        }
-
-        .transport-map-wrap iframe {
-            width: 100%;
-            height: 380px;
-            border: none;
-            display: block;
-        }
-
-        /* ===== 视频播放器 ===== */
-        .video-section {
-            margin-bottom: 40px;
-        }
-
-        .video-wrapper {
-            position: relative;
-            width: 100%;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-            background: #000;
-        }
-
-        .video-wrapper video {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 20px;
-        }
-
-        .video-caption {
-            text-align: center;
-            margin-top: 15px;
-            color: var(--gray-600);
-            font-size: 14px;
-        }
-
-        /* 生活馆链接按钮 */
-        .life-link-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-top: 12px;
-            padding: 8px 18px;
-            background: var(--light-blue);
-            color: var(--accent-blue);
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 1px solid transparent;
-        }
-
-        .life-link-btn:hover {
-            background: var(--accent-blue);
-            color: var(--white);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
-        }
-
-        /* 交通了解按钮 */
-        .transport-trigger-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-top: 12px;
-            padding: 8px 18px;
-            background: var(--light-blue);
-            color: var(--accent-blue);
-            border-radius: 20px;
-            border: none;
-            font-size: 13px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: inherit;
-        }
-
-        .transport-trigger-btn:hover {
-            background: var(--accent-blue);
-            color: var(--white);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
-        }
-
-        @media (max-width: 968px) {
-            .links-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            #majors .container > div:nth-of-type(2) > div:last-child {
-                grid-template-columns: repeat(2, 1fr) !important;
-            }
-            #majors .container > div:nth-of-type(3) > div:last-child {
-                grid-template-columns: 1fr !important;
-            }
-            .transport-info-grid {
-                grid-template-columns: 1fr;
-            }
-            .hero-stats {
-                position: relative;
-                bottom: auto;
-                right: auto;
-                margin-top: 40px;
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .links-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            #majors .container > div:nth-of-type(2) > div:last-child {
-                grid-template-columns: 1fr !important;
-            }
-            #majors .container > div:nth-of-type(3) > div:last-child {
-                grid-template-columns: 1fr !important;
-            }
-            .stat-number {
-                font-size: 40px;
-            }
-            .stat-label {
-                font-size: 13px;
-            }
-        }
-</style>
+    <!-- 图标（Font Awesome 6.4.0，放在本站内，不依赖外部 CDN，中国大陆也能正常加载） -->
+    <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/gallery.css">
 <base target="_blank">
 </head>
 <body>
@@ -2217,16 +24,16 @@ background-repeat: no-repeat;
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo-section" style="margin-left: 20px; flex-shrink: 0;">
-                <a href="https://kau.ac.kr/index/main.php" target="_blank" style="text-decoration: none; flex-shrink: 0;">
-                    <div class="logo-icon" style="cursor: pointer;"><img src="logo.jpg" alt="KAU" style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover;"></div>
+            <div class="logo-section">
+                <a href="https://kau.ac.kr/index/main.php" target="_blank">
+                    <div class="logo-icon"><img src="assets/images/logo.jpg" alt="KAU"></div>
                 </a>
-                <div class="logo-text" style="white-space: nowrap;">
-                    <a href="https://kau.ac.kr/chinese/index/main.php" target="_blank" style="text-decoration: none; color: var(--white);"><h1>韩国航空大学</h1></a>
-                    <span style="color: var(--white); opacity: 0.9; font-weight: 300;"><a href="https://college.kau.ac.kr/web/index.do?siteFlag=inter_www" target="_blank" style="text-decoration: none; color: var(--white);">国际交流处</a> · 中文官网</span>
+                <div class="logo-text">
+                    <a href="https://kau.ac.kr/chinese/index/main.php" target="_blank"><h1>韩国航空大学</h1></a>
+                    <span><a href="https://college.kau.ac.kr/web/index.do?siteFlag=inter_www" target="_blank">国际交流处</a> · 中文官网</span>
                 </div>
             </div>
-            <ul class="nav-menu" id="navMenu" style="margin-left: auto; gap: 22px;">
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#home">首页</a></li>
                 <li><a href="#about">学校介绍</a></li>
                 <li><a href="#majors">专业介绍</a></li>
@@ -2239,15 +46,15 @@ background-repeat: no-repeat;
                 <li><a href="#contact">联系我们</a></li>
                 <li><a href="#links">快速链接</a></li>
             </ul>
-                        <div class="nav-social-links" style="display: flex; align-items: center; gap: 12px; margin-left: auto; padding-right: 15px;">
-                <a href="https://www.xiaohongshu.com/user/profile/682b3313000000000e01d7a9" target="_blank" title="小红书" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(255,255,255,0.15); border-radius: 50%; color: #fff; text-decoration: none; transition: all 0.3s ease; font-size: 16px;">
+                        <div class="nav-social-links">
+                <a href="https://www.xiaohongshu.com/user/profile/682b3313000000000e01d7a9" target="_blank" title="小红书">
                     <i class="fas fa-book-open"></i>
                 </a>
-                <a href="https://mp.weixin.qq.com/s/YBpfTflvsJm701hnspe-xg" target="_blank" title="微信公众号" style="display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(255,255,255,0.15); border-radius: 50%; color: #fff; text-decoration: none; transition: all 0.3s ease; font-size: 16px;">
+                <a href="https://mp.weixin.qq.com/s/YBpfTflvsJm701hnspe-xg" target="_blank" title="微信公众号">
                     <i class="fab fa-weixin"></i>
                 </a>
             </div>
-<button class="mobile-menu-btn" onclick="toggleMenu()">
+<button class="mobile-menu-btn" aria-label="菜单">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
@@ -2285,28 +92,28 @@ background-repeat: no-repeat;
     <!-- 快捷菜单 -->
     <section class="quick-menu">
         <div class="quick-menu-container">
-            <div class="quick-item" onclick="location.href='#admissions'">
+            <div class="quick-item" data-target="#admissions">
                 <div class="quick-icon">
                     <i class="fas fa-file-alt"></i>
                 </div>
                 <h3>申请指南</h3>
                 <p>本科/研究生申请流程</p>
             </div>
-            <div class="quick-item" onclick="location.href='#programs'">
+            <div class="quick-item" data-target="#programs">
                 <div class="quick-icon">
                     <i class="fas fa-graduation-cap"></i>
                 </div>
                 <h3>专业介绍</h3>
                 <p>服务经营、航空经营专业等</p>
             </div>
-            <div class="quick-item" onclick="location.href='#life'">
+            <div class="quick-item" data-target="#life">
                 <div class="quick-icon">
                     <i class="fas fa-home"></i>
                 </div>
                 <h3>宿舍介绍</h3>
                 <p>校内住宿与生活支持</p>
             </div>
-            <div class="quick-item" onclick="location.href='#contact'">
+            <div class="quick-item" data-target="#contact">
                 <div class="quick-icon">
                     <i class="fas fa-question-circle"></i>
                 </div>
@@ -2327,13 +134,13 @@ background-repeat: no-repeat;
                <div class="about-grid">
                 <div class="about-images-col">     
                 <div class="about-image-top">
-                        <img src="pic4.png" alt="韩国航空大学校长">
+                        <img src="assets/images/about-president.png" alt="韩国航空大学校长">
                         <a href="https://kau.ac.kr/chinese/kau/president.php#none" target="_blank" class="president-link">
                             <i class="fas fa-user-tie"></i> 校长寄语 — 許喜寧校长
                         </a>
                     </div>
                     <div class="about-image-bottom">
-                        <img src="pic3.png" alt="韩国航空大学校园">
+                        <img src="assets/images/about-campus.png" alt="韩国航空大学校园">
                     </div>
                 </div>
                 <div class="about-content">
@@ -2431,7 +238,7 @@ background-repeat: no-repeat;
                             </span>
                         </div>
 
-                        <a href="韩国航空大学研究室中文介绍_完整版.pdf" class="labs-download-btn" download>
+                        <a href="documents/韩国航空大学研究室中文介绍_完整版.pdf" class="labs-download-btn" download>
                             <i class="fas fa-download"></i>
                             <span>立即下载</span>
                         </a>
@@ -2456,143 +263,143 @@ background-repeat: no-repeat;
     </section>
 
   <!-- 专业介绍 -->
-    <section class="section" id="majors" style="background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);">
+    <section class="section" id="majors">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Majors</span>
                 <h2 class="section-title">专业介绍</h2>
                 <p class="section-subtitle">韩国航空大学设有本科、研究生院及专业研究生院，涵盖航空航天、人工智能、经营管理等多元领域</p>
-                <a href="https://kau.ac.kr/chinese/degrees/engineering.php" target="_blank" style="display: inline-block; margin-top: 15px; padding: 10px 25px; background: var(--gradient-hero); color: var(--white); border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 14px; transition: all 0.3s ease;">
+                <a class="btn-gradient section-header-btn" href="https://kau.ac.kr/chinese/degrees/engineering.php" target="_blank">
                     <i class="fas fa-external-link-alt"></i> 详细专业说明参考
                 </a>
             </div>
 
             <!-- 大学本科 -->
-            <div style="margin-bottom: 50px;">
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 3px solid #2e7d32;">
-                    <h3 style="font-size: 22px; color: var(--primary-blue); display: flex; align-items: center; gap: 10px;">
+            <div class="majors-group">
+                <div class="majors-group-header majors-group-header--green">
+                    <h3 class="majors-group-title">
                         <i class="fas fa-book" style="color: #2e7d32;"></i> 大学本科
                     </h3>
                 </div>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;">
+                <div class="majors-undergrad-grid">
                     <!-- 国际交流学部 + 航空/经营学院 合并 -->
-                    <div style="background: var(--white); border-radius: 14px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--air-gold);">
-                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid var(--light-blue);">
-                            <h4 style="font-size: 16px; color: var(--primary-blue); font-weight: 700;">国际交流学部</h4>
-                            <span style="font-size: 11px; color: var(--air-gold); background: rgba(201, 169, 97, 0.15); padding: 3px 10px; border-radius: 10px; font-weight: 600;">留学生专属学部</span>
+                    <div class="major-card major-card--gold">
+                        <div class="major-card-header">
+                            <h4 class="major-card-title">国际交流学部</h4>
+                            <span class="major-badge">留学生专属学部</span>
                         </div>
-                        <div style="display: flex; flex-direction: column; gap: 8px;">
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航空经营专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">服务经营专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航空交通物流专业</span>
+                        <div class="major-list">
+                            <span class="major-item">航空经营专业</span>
+                            <span class="major-item">服务经营专业</span>
+                            <span class="major-item">航空交通物流专业</span>
                         </div>
-                        <a href="https://ibhak.kau.ac.kr/admission/html/international/guide.asp" target="_blank" style="display: inline-block; margin-top: 12px; padding: 8px 16px; background: rgba(46, 125, 50, 0.1); color: #2e7d32; border-radius: 15px; text-decoration: none; font-size: 12px; font-weight: 600;">
+                        <a class="major-link" href="https://ibhak.kau.ac.kr/admission/html/international/guide.asp" target="_blank">
                             <i class="fas fa-external-link-alt"></i> 入学参考
                         </a>
                         
-                        <h4 style="font-size: 16px; color: var(--primary-blue); font-weight: 700; margin: 20px 0 15px; padding-bottom: 10px; border-bottom: 2px solid var(--light-blue);">航空/经营学院</h4>
-                        <div style="display: flex; flex-direction: column; gap: 8px;">
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航空运输专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">物流专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">工商管理专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航空管理专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航空运航学系</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航空交通物流学部</span>
+                        <h4 class="major-card-title major-card-title--ruled major-card-title--spaced">航空/经营学院</h4>
+                        <div class="major-list">
+                            <span class="major-item">航空运输专业</span>
+                            <span class="major-item">物流专业</span>
+                            <span class="major-item">工商管理专业</span>
+                            <span class="major-item">航空管理专业</span>
+                            <span class="major-item">航空运航学系</span>
+                            <span class="major-item">航空交通物流学部</span>
                         </div>
                     </div>
                     <!-- 工科学院 -->
-                    <div style="background: var(--white); border-radius: 14px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                        <h4 style="font-size: 16px; color: var(--primary-blue); font-weight: 700; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid var(--light-blue);">工科学院</h4>
-                        <div style="display: flex; flex-direction: column; gap: 8px;">
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">宇宙工程专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航空工程专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">机械工学专攻</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航天新材料专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">半导体材料专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航空维修工程专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">智能无人机工程学科</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航空宇宙工程学系</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">机械航空工程学系</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">新材料工程学系</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航空宇宙及机械工程学部</span>
+                    <div class="major-card">
+                        <h4 class="major-card-title major-card-title--ruled">工科学院</h4>
+                        <div class="major-list">
+                            <span class="major-item">宇宙工程专业</span>
+                            <span class="major-item">航空工程专业</span>
+                            <span class="major-item">机械工学专攻</span>
+                            <span class="major-item">航天新材料专业</span>
+                            <span class="major-item">半导体材料专业</span>
+                            <span class="major-item">航空维修工程专业</span>
+                            <span class="major-item">智能无人机工程学科</span>
+                            <span class="major-item">航空宇宙工程学系</span>
+                            <span class="major-item">机械航空工程学系</span>
+                            <span class="major-item">新材料工程学系</span>
+                            <span class="major-item">航空宇宙及机械工程学部</span>
                         </div>
                     </div>
                     <!-- AI融合学院 -->
-                    <div style="background: var(--white); border-radius: 14px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                        <h4 style="font-size: 16px; color: var(--primary-blue); font-weight: 700; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid var(--light-blue);">AI融合学院</h4>
-                        <div style="display: flex; flex-direction: column; gap: 8px;">
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">人工智能专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">计算机科学与工程专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">半导体系统专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">电子及航空电子工程专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">AI-ICT融合专业</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">AI自动驾驶系统工程学系</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">软件工程学系</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">电脑工程学系</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">航空电子信息工程学部</span>
-                            <span style="font-size: 13px; color: var(--gray-800); padding: 6px 10px; background: var(--gray-100); border-radius: 6px;">电机电子工程学系</span>
+                    <div class="major-card">
+                        <h4 class="major-card-title major-card-title--ruled">AI融合学院</h4>
+                        <div class="major-list">
+                            <span class="major-item">人工智能专业</span>
+                            <span class="major-item">计算机科学与工程专业</span>
+                            <span class="major-item">半导体系统专业</span>
+                            <span class="major-item">电子及航空电子工程专业</span>
+                            <span class="major-item">AI-ICT融合专业</span>
+                            <span class="major-item">AI自动驾驶系统工程学系</span>
+                            <span class="major-item">软件工程学系</span>
+                            <span class="major-item">电脑工程学系</span>
+                            <span class="major-item">航空电子信息工程学部</span>
+                            <span class="major-item">电机电子工程学系</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- 一般研究生院 -->
-            <div style="margin-bottom: 50px;">
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 3px solid var(--primary-blue);">
-                    <h3 style="font-size: 22px; color: var(--primary-blue); display: flex; align-items: center; gap: 10px;">
+            <div class="majors-group">
+                <div class="majors-group-header">
+                    <h3 class="majors-group-title">
                         <i class="fas fa-graduation-cap" style="color: var(--air-gold);"></i> 一般研究生院(硕博士)
                     </h3>
-                    <a href="https://kau.ac.kr/index/main.php" target="_blank" style="padding: 8px 18px; background: var(--light-blue); color: var(--accent-blue); border-radius: 20px; text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.3s ease;">
+                    <a class="pill-link" href="https://kau.ac.kr/index/main.php" target="_blank">
                         <i class="fas fa-external-link-alt"></i> 一般研究生院官网
                     </a>
                 </div>
-                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;">
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">
+                <div class="majors-grad-grid">
+                    <div class="grad-dept">
                         服务经营(管理)学系
-                        <span style="display: block; margin-top: 6px; font-size: 11px; color: var(--air-gold); background: rgba(201, 169, 97, 0.15); padding: 3px 10px; border-radius: 10px; font-weight: 600; width: fit-content;">留学生专属学系</span>
+                        <span class="major-badge major-badge--block">留学生专属学系</span>
                     </div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">
+                    <div class="grad-dept">
                         航空经营(管理)学系
-                        <span style="display: block; margin-top: 6px; font-size: 11px; color: var(--air-gold); background: rgba(201, 169, 97, 0.15); padding: 3px 10px; border-radius: 10px; font-weight: 600; width: fit-content;">留学生专属学系</span>
+                        <span class="major-badge major-badge--block">留学生专属学系</span>
                     </div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">
+                    <div class="grad-dept">
                         全球服务经营(管理)学系
-                        <span style="display: block; margin-top: 6px; font-size: 11px; color: var(--air-gold); background: rgba(201, 169, 97, 0.15); padding: 3px 10px; border-radius: 10px; font-weight: 600; width: fit-content;">留学生专属学系</span>
+                        <span class="major-badge major-badge--block">留学生专属学系</span>
                     </div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">航空宇宙与机械工学系</div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">航空电子情报工学系</div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">计算机工学系</div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">新材料工学系</div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">智能航空出行学系</div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">人工智能工学系</div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">半导体工学系</div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">航空运航管理学系</div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">航空交通物流学系</div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">未来航空交通学系</div>
-                    <div style="padding: 14px 18px; background: var(--white); border-radius: 10px; border-left: 4px solid var(--accent-blue); box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 14px; font-weight: 500; color: var(--gray-800);">经营学系</div>
+                    <div class="grad-dept">航空宇宙与机械工学系</div>
+                    <div class="grad-dept">航空电子情报工学系</div>
+                    <div class="grad-dept">计算机工学系</div>
+                    <div class="grad-dept">新材料工学系</div>
+                    <div class="grad-dept">智能航空出行学系</div>
+                    <div class="grad-dept">人工智能工学系</div>
+                    <div class="grad-dept">半导体工学系</div>
+                    <div class="grad-dept">航空运航管理学系</div>
+                    <div class="grad-dept">航空交通物流学系</div>
+                    <div class="grad-dept">未来航空交通学系</div>
+                    <div class="grad-dept">经营学系</div>
                 </div>
             </div>
 
             <!-- 专业研究生院 -->
             <div>
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 3px solid var(--air-gold);">
-                    <h3 style="font-size: 22px; color: var(--primary-blue); display: flex; align-items: center; gap: 10px;">
+                <div class="majors-group-header majors-group-header--gold">
+                    <h3 class="majors-group-title">
                         <i class="fas fa-university" style="color: var(--air-gold);"></i> 专业研究生院(硕博士)
                     </h3>
                 </div>
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
-                    <div style="padding: 25px; background: var(--white); border-radius: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--accent-blue);">
-                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
-                            <h4 style="font-size: 18px; color: var(--primary-blue); font-weight: 700;">航空·经营研究生院</h4>
-                            <a href="https://gradbus.kau.ac.kr/index/main.php" target="_blank" style="padding: 6px 14px; background: var(--light-blue); color: var(--accent-blue); border-radius: 15px; text-decoration: none; font-size: 12px; font-weight: 600;">
+                <div class="majors-pro-grid">
+                    <div class="major-card major-card--blue">
+                        <div class="pro-card-header">
+                            <h4 class="pro-card-title">航空·经营研究生院</h4>
+                            <a class="pill-link pill-link--sm" href="https://gradbus.kau.ac.kr/index/main.php" target="_blank">
                                 <i class="fas fa-external-link-alt"></i> 官网
                             </a>
                         </div>
                     </div>
-                    <div style="padding: 25px; background: var(--white); border-radius: 14px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--accent-blue);">
-                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
-                            <h4 style="font-size: 18px; color: var(--primary-blue); font-weight: 700;">航空航天政策研究生院</h4>
-                            <a href="https://college.kau.ac.kr/web/index.do?siteFlag=lawpolicy_www" target="_blank" style="padding: 6px 14px; background: var(--light-blue); color: var(--accent-blue); border-radius: 15px; text-decoration: none; font-size: 12px; font-weight: 600;">
+                    <div class="major-card major-card--blue">
+                        <div class="pro-card-header">
+                            <h4 class="pro-card-title">航空航天政策研究生院</h4>
+                            <a class="pill-link pill-link--sm" href="https://college.kau.ac.kr/web/index.do?siteFlag=lawpolicy_www" target="_blank">
                                 <i class="fas fa-external-link-alt"></i> 官网
                             </a>
                         </div>
@@ -2662,7 +469,7 @@ background-repeat: no-repeat;
                 <i class="fas fa-university"></i>
                 <h4>韩国语教育院</h4>
                 <p>面向外国留学生开设D4韩国语课程</p>
-                <a href="중국어 - 어학원 모집요강.pdf" class="download-btn" download style="display: inline-block; text-align: center; background: var(--air-gold); color: var(--primary-blue); padding: 10px 40px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 14px; min-width: 80px;">
+                <a href="documents/중국어 - 어학원 모집요강.pdf" class="download-btn" download>
                     下载
                 </a>
             </div>
@@ -2670,7 +477,7 @@ background-repeat: no-repeat;
                 <i class="fas fa-file-pdf"></i>
                 <h4>2026年 外国人招生简章</h4>
                 <p>外国人专用招生简章（中文版）</p>
-                <a href="2026학년도 순수외국인전형 모집요강(CHN).pdf" class="download-btn" download style="display: inline-block; text-align: center; background: var(--air-gold); color: var(--primary-blue); padding: 10px 40px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 14px; min-width: 80px;">
+                <a href="documents/2026학년도 순수외국인전형 모집요강(CHN).pdf" class="download-btn" download>
                     下载
                 </a>
             </div>
@@ -2678,7 +485,7 @@ background-repeat: no-repeat;
                 <i class="fas fa-file-pdf"></i>
                 <h4>2026年 一般研究生院招生简章</h4>
                 <p>研究生院外国人新生招生简章（韩语版）</p>
-                <a href="2026 후기 일반대학원 외국인 신입생 모집요강(한글).pdf" class="download-btn" download style="display: inline-block; text-align: center; background: var(--air-gold); color: var(--primary-blue); padding: 10px 40px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 14px; min-width: 80px;">
+                <a href="documents/2026 후기 일반대학원 외국인 신입생 모집요강(한글).pdf" class="download-btn" download>
                     下载
                 </a>
             </div>
@@ -2686,7 +493,7 @@ background-repeat: no-repeat;
                 <i class="fas fa-file-pdf"></i>
                 <h4>服务经营及航空经营学科招生简章</h4>
                 <p>2026年下学期招生简章（中文版）</p>
-                <a href="2026 후기 서비스경영 및 항공경영학과 모집요강(중문) (1).pdf" class="download-btn" download style="display: inline-block; text-align: center; background: var(--air-gold); color: var(--primary-blue); padding: 10px 40px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 14px; min-width: 80px;">
+                <a href="documents/2026 후기 서비스경영 및 항공경영학과 모집요강(중문) (1).pdf" class="download-btn" download>
                     下载
                 </a>
             </div>
@@ -2694,13 +501,15 @@ background-repeat: no-repeat;
                 <i class="fas fa-file-pdf"></i>
                 <h4>全球服务经营学科招生简章</h4>
                 <p>2026年下学期招生简章（中文版）</p>
-                <a href="2026 후기 글로벌서비스경영학과 모집요강(중문) (1).pdf" class="download-btn" download style="display: inline-block; text-align: center; background: var(--air-gold); color: var(--primary-blue); padding: 10px 40px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 14px; min-width: 80px;">
+                <a href="documents/2026 후기 글로벌서비스경영학과 모집요강(중문) (1).pdf" class="download-btn" download>
                     下载
                 </a>
             </div>
         </div>
     </div>
 </div>
+
+    </section>
 
     <!-- 留学项目 -->
     <section class="section programs-section" id="programs">
@@ -2809,6 +618,8 @@ background-repeat: no-repeat;
             <i class="fas fa-chevron-right"></i>
         </button>
         <div class="lightbox-counter" id="lightboxCounter">1 / 6</div>
+        <!-- 操作提示（手机上隐藏） / [한국어] 조작 안내 (휴대폰에서는 숨김) -->
+        <div class="lightbox-hint">🖱️ 滚轮缩放 · 拖拽移动 · 双击放大/还原 · ← → 切换 · Esc 关闭</div>
     </div>
 
     
@@ -2819,7 +630,7 @@ background-repeat: no-repeat;
                 <span class="section-tag">Scholarships</span>
                 <h2 class="section-title">奖学金</h2>
                 <p class="section-subtitle">为优秀中国学生提供丰厚的奖学金支持，助力留学梦想</p>
-                <a href="학부 외국인 장학제도.pdf" class="download-btn" download style="display: inline-block; margin-top: 15px; padding: 10px 25px; background: var(--air-gold); color: var(--primary-blue); border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 14px; transition: all 0.3s ease;">
+                <a href="documents/학부 외국인 장학제도.pdf" class="download-btn section-header-btn" download>
                     <i class="fas fa-download"></i> 下载奖学金制度详情
                 </a>
             </div>
@@ -2861,12 +672,12 @@ background-repeat: no-repeat;
                     <div class="scholarship-content">
                         <h3>一般研究生院奖学金（外国人）</h3>
                         <p>面向一般研究生院外国留学生提供的学费减免奖学金</p>
-                        <div style="margin-top: 15px; padding: 20px; background: var(--gray-100); border-radius: 12px; line-height: 2;">
+                        <div class="scholarship-detail">
                             <p>助教 TA奖学金 — 学费的 20%，讲课及实习·实验辅助（TA奖学金和RA奖学金可重复受惠）</p>
                             <p>助教 RA奖学金 — 学费的 40%，研究辅助（TA奖学金和RA奖学金可重复受惠）</p>
                             <p>外国人专担学科 — 学费的 30%，服务经营学(外国人) · 航空经营学(外国人)，向服务经营学或航空经营学学生发放</p>
                         </div>
-                        <p style="font-size: 12px; color: var(--gray-600); margin-top: 15px; line-height: 1.8;">※ 奖学金内容今后可能变更<br>※ 奖学金对象：全日制(full time)且前一学期成绩在3.0以上者（新生除外）<br>※ 服务经营学或航空经营学志愿者请另行在招生简章中确认奖学金信息</p>
+                        <p class="scholarship-note">※ 奖学金内容今后可能变更<br>※ 奖学金对象：全日制(full time)且前一学期成绩在3.0以上者（新生除外）<br>※ 服务经营学或航空经营学志愿者请另行在招生简章中确认奖学金信息</p>
                     </div>
                 </div>
 
@@ -2894,8 +705,8 @@ background-repeat: no-repeat;
                 <span class="section-tag">Life in Korea</span>
                 <h2 class="section-title">生活服务</h2>
                 <p class="section-subtitle">全方位的留学生活支持，让您在韩国的学习生活无忧无虑</p>
-                <div style="margin-top: 15px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                    <a href="https://college.kau.ac.kr/web/pages/gc24393h.do" target="_blank" style="padding: 10px 25px; background: var(--light-blue); color: var(--accent-blue); border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 14px; transition: all 0.3s ease;">
+                <div class="section-header-actions">
+                    <a class="pill-link pill-link--lg" href="https://college.kau.ac.kr/web/pages/gc24393h.do" target="_blank">
                         <i class="fas fa-info-circle"></i> 生活与学业信息
                     </a>
                 </div>
@@ -2903,7 +714,7 @@ background-repeat: no-repeat;
             <div class="life-grid">
                 <div class="life-card">
                     <div class="life-image">
-                        <img src="pic5.png" alt="宿舍了解" loading="lazy">
+                        <img src="assets/images/life-dormitory.png" alt="宿舍了解" loading="lazy">
                     </div>
                     <div class="life-content">
                         <h3>宿舍介绍</h3>
@@ -2915,7 +726,7 @@ background-repeat: no-repeat;
                 </div>
                 <div class="life-card">
                     <div class="life-image">
-                        <img src="pic6.png" alt="签证办理" loading="lazy">
+                        <img src="assets/images/life-visa.png" alt="签证办理" loading="lazy">
                     </div>
                     <div class="life-content">
                         <h3>签证办理</h3>
@@ -2924,7 +735,7 @@ background-repeat: no-repeat;
                 </div>
                 <div class="life-card">
                     <div class="life-image">
-                        <img src="pic7.png" alt="韩语学习支持" loading="lazy">
+                        <img src="assets/images/life-korean.png" alt="韩语学习支持" loading="lazy">
                     </div>
                     <div class="life-content">
                         <h3>韩语学习</h3>
@@ -2936,7 +747,7 @@ background-repeat: no-repeat;
                 </div>
                 <div class="life-card">
                     <div class="life-image">
-                        <img src="pic8.png" alt="医疗与保险" loading="lazy">
+                        <img src="assets/images/life-medical.png" alt="医疗与保险" loading="lazy">
                     </div>
                     <div class="life-content">
                         <h3>医疗保险</h3>
@@ -2945,19 +756,19 @@ background-repeat: no-repeat;
                 </div>
                 <div class="life-card">
                     <div class="life-image">
-                        <img src="pic9.jpg" alt="交通出行" loading="lazy">
+                        <img src="assets/images/life-transport.jpg" alt="交通出行" loading="lazy">
                     </div>
                     <div class="life-content">
                         <h3>交通出行</h3>
                         <p>学校位于首尔都市圈，地铁、公交便利。留学生可申请交通卡优惠，方便往返首尔市区及机场。</p>
-                        <button class="transport-trigger-btn" onclick="openTransportModal()">
+                        <button class="transport-trigger-btn">
                             <i class="fas fa-map-marked-alt"></i> 具体了解
                         </button>
                     </div>
                 </div>
                 <div class="life-card">
                     <div class="life-image">
-                        <img src="pic10.png" alt="留学生活动" loading="lazy">
+                        <img src="assets/images/life-activities.png" alt="留学生活动" loading="lazy">
                     </div>
                     <div class="life-content">
                         <h3>文化活动</h3>
@@ -2969,7 +780,7 @@ background-repeat: no-repeat;
     </section>
 
     <!-- 校历 -->
-    <section class="section" id="calendar" style="background: linear-gradient(135deg, #fff8e1 0%, #ffffff 50%, #e8f5e9 100%);">
+    <section class="section" id="calendar">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Academic Calendar</span>
@@ -2977,24 +788,24 @@ background-repeat: no-repeat;
                 <p class="section-subtitle">2026~2027学年度主要学期日程安排，帮助留学生合理规划学业与生活</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+            <div class="calendar-grid">
                 <!-- 第一学期 -->
-                <div style="background: var(--white); border-radius: 20px; padding: 35px; box-shadow: 0 8px 30px rgba(0,0,0,0.06); border-top: 5px solid var(--accent-blue);">
-                    <h3 style="font-size: 22px; color: var(--primary-blue); margin-bottom: 25px; display: flex; align-items: center; gap: 10px;">
+                <div class="calendar-card calendar-card--blue">
+                    <h3 class="calendar-card-title">
                         <i class="fas fa-seedling" style="color: var(--accent-blue);"></i> 第一学期（春季）
                     </h3>
-                    <div style="display: flex; flex-direction: column; gap: 10px;">
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--accent-blue); color: white; padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">1月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                    <div class="calendar-months">
+                        <div class="calendar-month">
+                            <span class="calendar-badge">1月</span>
+                            <div class="calendar-events">
                                 <strong>1.1</strong> 元旦<br>
                                 <strong>1.2 ~ 1.8</strong> 复学集中申请<br>
                                 <strong>1.13</strong> 冬季学期结课
                             </div>
                         </div>
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--accent-blue); color: white; padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">2月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                        <div class="calendar-month">
+                            <span class="calendar-badge">2月</span>
+                            <div class="calendar-events">
                                 <strong>2.3 ~ 2.4</strong> 购物车选课<br>
                                 <strong>2.9 ~ 2.13</strong> 休学集中申请<br>
                                 <strong>2.10 ~ 2.11</strong> 正式选课<br>
@@ -3004,9 +815,9 @@ background-repeat: no-repeat;
                                 <strong>2.27</strong> 新生入学式
                             </div>
                         </div>
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--accent-blue); color: white; padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">3月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                        <div class="calendar-month">
+                            <span class="calendar-badge">3月</span>
+                            <div class="calendar-events">
                                 <strong>3.1</strong> 三一节<br>
                                 <strong>3.2</strong> 三一节替代休假日<br>
                                 <strong>3.3</strong> 开学<br>
@@ -3014,18 +825,18 @@ background-repeat: no-repeat;
                                 <strong>3.30</strong> 授课天数4周线
                             </div>
                         </div>
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--accent-blue); color: white; padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">5月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                        <div class="calendar-month">
+                            <span class="calendar-badge">5月</span>
+                            <div class="calendar-events">
                                 <strong>5.5</strong> 儿童节<br>
                                 <strong>5.11</strong> 授课天数2/3线<br>
                                 <strong>5.24</strong> 释迦诞辰日<br>
                                 <strong>5.25</strong> 释迦诞辰日替代休假日
                             </div>
                         </div>
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--accent-blue); color: white; padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">6月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                        <div class="calendar-month">
+                            <span class="calendar-badge">6月</span>
+                            <div class="calendar-events">
                                 <strong>6.3</strong> 地方选举日<br>
                                 <strong>6.6</strong> 显忠日<br>
                                 <strong>6.9 ~ 6.15</strong> 期末考试<br>
@@ -3034,9 +845,9 @@ background-repeat: no-repeat;
                                 <strong>6.29</strong> 夏季学期开学
                             </div>
                         </div>
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--accent-blue); color: white; padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">7月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                        <div class="calendar-month">
+                            <span class="calendar-badge">7月</span>
+                            <div class="calendar-events">
                                 <strong>7.1 ~ 7.7</strong> 复学集中申请<br>
                                 <strong>7.20</strong> 夏季学期结课
                             </div>
@@ -3045,14 +856,14 @@ background-repeat: no-repeat;
                 </div>
 
                 <!-- 第二学期 -->
-                <div style="background: var(--white); border-radius: 20px; padding: 35px; box-shadow: 0 8px 30px rgba(0,0,0,0.06); border-top: 5px solid var(--air-gold);">
-                    <h3 style="font-size: 22px; color: var(--primary-blue); margin-bottom: 25px; display: flex; align-items: center; gap: 10px;">
+                <div class="calendar-card calendar-card--gold">
+                    <h3 class="calendar-card-title">
                         <i class="fas fa-leaf" style="color: var(--air-gold);"></i> 第二学期（秋季）
                     </h3>
-                    <div style="display: flex; flex-direction: column; gap: 10px;">
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--air-gold); color: var(--primary-blue); padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">8月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                    <div class="calendar-months">
+                        <div class="calendar-month">
+                            <span class="calendar-badge calendar-badge--gold">8月</span>
+                            <div class="calendar-events">
                                 <strong>8.6 ~ 8.7</strong> 购物车选课<br>
                                 <strong>8.13 ~ 8.14</strong> 正式选课<br>
                                 <strong>8.15</strong> 光复节<br>
@@ -3061,49 +872,49 @@ background-repeat: no-repeat;
                                 <strong>8.24 ~ 8.28</strong> 注册缴费
                             </div>
                         </div>
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--air-gold); color: var(--primary-blue); padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">9月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                        <div class="calendar-month">
+                            <span class="calendar-badge calendar-badge--gold">9月</span>
+                            <div class="calendar-events">
                                 <strong>9.1</strong> 开学<br>
                                 <strong>9.1 ~ 9.7</strong> 选课变更<br>
                                 <strong>9.24 ~ 9.26</strong> 中秋节<br>
                                 <strong>9.28</strong> 授课天数4周线
                             </div>
                         </div>
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--air-gold); color: var(--primary-blue); padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">10月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                        <div class="calendar-month">
+                            <span class="calendar-badge calendar-badge--gold">10月</span>
+                            <div class="calendar-events">
                                 <strong>10.3</strong> 开天节<br>
                                 <strong>10.5</strong> 开天节替代休假日<br>
                                 <strong>10.9</strong> 韩文日
                             </div>
                         </div>
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--air-gold); color: var(--primary-blue); padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">11月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                        <div class="calendar-month">
+                            <span class="calendar-badge calendar-badge--gold">11月</span>
+                            <div class="calendar-events">
                                 <strong>11.9</strong> 授课天数2/3线
                             </div>
                         </div>
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--air-gold); color: var(--primary-blue); padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">12月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                        <div class="calendar-month">
+                            <span class="calendar-badge calendar-badge--gold">12月</span>
+                            <div class="calendar-events">
                                 <strong>12.8 ~ 12.14</strong> 期末考试<br>
                                 <strong>12.15 ~ 12.21</strong> 第二学期补课<br>
                                 <strong>12.25</strong> 圣诞节<br>
                                 <strong>12.28</strong> 冬季学期开学
                             </div>
                         </div>
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--air-gold); color: var(--primary-blue); padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">2027年1月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                        <div class="calendar-month">
+                            <span class="calendar-badge calendar-badge--gold">2027年1月</span>
+                            <div class="calendar-events">
                                 <strong>1.1</strong> 元旦<br>
                                 <strong>1.4 ~ 1.8</strong> 复学集中申请<br>
                                 <strong>1.18</strong> 冬季学期结课
                             </div>
                         </div>
-                        <div style="display: flex; gap: 12px; padding: 10px 14px; background: var(--gray-100); border-radius: 10px; align-items: flex-start;">
-                            <span style="background: var(--air-gold); color: var(--primary-blue); padding: 3px 10px; border-radius: 6px; font-size: 12px; font-weight: 600; white-space: nowrap;">2027年2月</span>
-                            <div style="font-size: 13px; color: var(--gray-800); line-height: 1.7;">
+                        <div class="calendar-month">
+                            <span class="calendar-badge calendar-badge--gold">2027年2月</span>
+                            <div class="calendar-events">
                                 <strong>2.3 ~ 2.4</strong> 购物车选课<br>
                                 <strong>2.6 ~ 2.8</strong> 春节连休<br>
                                 <strong>2.9</strong> 春节替代连休<br>
@@ -3118,8 +929,8 @@ background-repeat: no-repeat;
                 </div>
             </div>
 
-            <div style="margin-top: 30px; text-align: center;">
-                <a href="https://kau.ac.kr/kaulife/schedule.php" target="_blank" style="display: inline-block; padding: 12px 30px; background: var(--gradient-hero); color: var(--white); border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 14px; transition: all 0.3s ease;">
+            <div class="calendar-more">
+                <a class="btn-gradient btn-gradient--lg" href="https://kau.ac.kr/kaulife/schedule.php" target="_blank">
                     <i class="fas fa-calendar-alt"></i> 查看完整校历（韩文官网）
                 </a>
             </div>
@@ -3149,18 +960,18 @@ background-repeat: no-repeat;
                 <div class="partner-logo">河北科技大学等  </div>
             </div>
             <div class="cooperation-info">
-                <h3 style="color: var(--primary-blue); margin-bottom: 20px;">校际交流协议与合作项目</h3>
-                <p style="color: var(--gray-600); line-height: 1.8; margin-bottom: 20px;">
+                <h3>校际交流协议与合作项目</h3>
+                <p>
                     韩国航空大学与中国多所航空航天院校建立了长期稳定的合作关系，开展学生交换、联合培养、双学位项目、教师互访、科研合作等多种形式的交流合作。</p>
-                <ul style="color: var(--gray-600); line-height: 2;">
+                <ul>
                     <li>✈ 交换生项目：每年接收中国学生进行学期/学年交换</li>
                     <li>✈ 双学位项目：2+2、3+1等多种模式，毕业获两校学位</li>
                     <li>✈ 联合培养：硕士、博士层次联合指导，共享科研资源</li>
                     <li>✈ 短期交流：暑期学校、冬令营、企业参访等活动</li>
                 </ul>
-                <div style="margin-top: 30px; padding: 20px; border-radius: 8px;">
-                    <strong style="color: var(--primary-blue);">合作咨询：</strong>
-                    <span style="color: var(--gray-600);">如需建立校际合作关系或咨询合作项目，请联系国际交流处</span>
+                <div class="cooperation-contact">
+                    <strong>合作咨询：</strong>
+                    <span>如需建立校际合作关系或咨询合作项目，请联系国际交流处</span>
                 </div>
             </div>
         </div>
@@ -3174,78 +985,101 @@ background-repeat: no-repeat;
                 <h2 class="section-title">联系我们</h2>
                 <p class="section-subtitle">欢迎通过以下方式与我们取得联系，我们将竭诚为您服务</p>
             </div>
-           
-               <div class="contact-info" style="text-align: center;">
 
-            <div class="contact-info" style="text-align: center;">
-            <h3 style="margin-bottom: 25px;">国际交流处联系方式</h3>
+            <div class="contact-grid">
+            <div class="contact-info">
+                <h3 class="contact-heading">国际交流处联系方式</h3>
 
-            <!-- 地址 -->
-            <div class="contact-item" style="display: inline-block; width: 220px; vertical-align: top; margin: 0 15px;">
-                <div class="contact-icon" style="text-align: center; font-size: 24px; color: var(--accent-blue); margin-bottom: 10px;">
-                    <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="contact-detail" style="text-align: center;">
-                    <h4 style="margin: 0 0 8px; font-weight: 600;">地址</h4>
-                    <p style="margin: 0; line-height: 1.6; color: var(--gray-800);">
-                        韩国京畿道高阳市德阳区航空大学路76 韩国航空大学
-                        航空宇宙中心309室 国际交流处（10540） 
-                    
-                </div>
-            </div>
+                <div class="contact-items">
+                    <!-- 地址 -->
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-detail">
+                            <h4>地址</h4>
+                            <p>韩国京畿道高阳市德阳区航空大学路76 韩国航空大学 航空宇宙中心309室 国际交流处（10540）</p>
+                        </div>
+                    </div>
 
-            <!-- 电话 -->
-            <div class="contact-item" style="display: inline-block; width: 180px; vertical-align: top; margin: 0 15px;">
-                <div class="contact-icon" style="text-align: center; font-size: 24px; color: var(--accent-blue); margin-bottom: 10px;">
-                    <i class="fas fa-phone" ></i>
-                </div>
-                <div class="contact-detail" style="text-align: center;">
-                    <h4 style="margin: 0 0 8px; font-weight: 600;">电话</h4>
-                    <p style="margin: 0; line-height: 1.6; color: var(--gray-800);">
-                        +82-2-300-0358
-                    
-                    <p style="margin: 4px 0 0; line-height: 1.6; color: var(--gray-800);">
-                        +82-2-300-0367
-                    <p style="margin: 4px 0 0; line-height: 1.6; color: var(--gray-800);">
-                        +82-2-300-0357（中文）
-                    
-                </div>
-            </div>
+                    <!-- 电话 -->
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-detail">
+                            <h4>电话</h4>
+                            <p>+82-2-300-0358</p>
+                            <p>+82-2-300-0367</p>
+                            <p>+82-2-300-0357（中文）</p>
+                        </div>
+                    </div>
 
-            <!-- 邮箱 -->
-            <div class="contact-item" style="display: inline-block; width: 260px; vertical-align: top; margin: 0 15px;">
-                <div class="contact-icon" style="text-align: center; font-size: 24px; color: var(--accent-blue); margin-bottom: 10px;">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <div class="contact-detail" style="text-align: center;">
-                    <h4 style="margin: 0 0 8px; font-weight: 600;">邮箱</h4>
-                    <p style="margin: 0; line-height: 1.6; color: var(--gray-800);">
-                        international@kau.ac.kr
-                    
-                    <p style="margin: 4px 0 0; font-size: 12px; color: #6c757d;">
-                        工作时间：周一至周五 09:00 - 18:00（韩国时间，法定节假日除外）
-                    
-                </div>
-            </div>
-        </div>
-
-          
-        </div>
-                    <h3 style="margin-top: 40px; margin-bottom: 20px; text-align: center;">中国社交媒体</h3>
-                    <div class="social-links" style="justify-content: center;">
-                       
-                        <a href="https://www.xiaohongshu.com/user/profile/682b3313000000000e01d7a9" class="social-link" title="小红书" target="_blank">
-                            <i class="fas fa-book-open"></i>
-                        </a>
-                        </a>
-                        </a>
-                         <a href="https://mp.weixin.qq.com/s/YBpfTflvsJm701hnspe-xg" class="social-link" title="微信公众号">
-                            <i class="fab fa-weixin"></i>
-                        </a>
+                    <!-- 邮箱 -->
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-detail">
+                            <h4>邮箱</h4>
+                            <p>international@kau.ac.kr</p>
+                            <p class="contact-note">工作时间：周一至周五 09:00 - 18:00（韩国时间，法定节假日除外）</p>
+                        </div>
                     </div>
                 </div>
 
-           
+                <h3 class="contact-heading contact-heading-social">中国社交媒体</h3>
+                <div class="social-links social-links-center">
+                    <a href="https://www.xiaohongshu.com/user/profile/682b3313000000000e01d7a9" class="social-link" title="小红书" target="_blank">
+                        <i class="fas fa-book-open"></i>
+                    </a>
+                    <a href="https://mp.weixin.qq.com/s/YBpfTflvsJm701hnspe-xg" class="social-link" title="微信公众号">
+                        <i class="fab fa-weixin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 在线咨询表单：填好后用访客自己的邮件应用发送到国际交流处 -->
+            <!-- [한국어] 문의 양식: 작성 후 방문자 본인의 메일 앱으로 국제교류처에 전송 -->
+            <div class="contact-form">
+                <h3 class="contact-heading">在线咨询</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="contactName">姓名 <span class="form-required">*</span></label>
+                        <input type="text" id="contactName" name="name" required autocomplete="name" placeholder="请输入您的姓名">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">邮箱 / 联系方式 <span class="form-required">*</span></label>
+                        <input type="email" id="contactEmail" name="email" required autocomplete="email" placeholder="example@mail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactCategory">咨询类型 <span class="form-required">*</span></label>
+                        <select id="contactCategory" name="category" required>
+                            <option value="">请选择</option>
+                            <option value="招生咨询">招生咨询</option>
+                            <option value="奖学金">奖学金</option>
+                            <option value="宿舍·生活">宿舍·生活</option>
+                            <option value="签证·外国人登录证">签证·外国人登录证</option>
+                            <option value="交换生·校际合作">交换生·校际合作</option>
+                            <option value="韩国语教育院">韩国语教育院</option>
+                            <option value="其他">其他</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">咨询内容 <span class="form-required">*</span></label>
+                        <textarea id="contactMessage" name="message" required placeholder="请填写您的问题"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> 用邮件发送
+                    </button>
+                </form>
+                <p class="contact-form-note">
+                    点击后会打开您电脑或手机上的邮件应用，内容已自动填好，确认后发送即可。<br>
+                    如果没有自动打开，请直接发送到
+                    <a href="mailto:international@kau.ac.kr">international@kau.ac.kr</a>。
+                </p>
+            </div>
+            </div>
         </div>
     </section>
 
@@ -3258,8 +1092,10 @@ background-repeat: no-repeat;
                 <h2 class="section-title">快速链接</h2>
                 <p class="section-subtitle">点击图标快速访问学校相关系统</p>
             </div>
+            <!-- 电脑上分两行各 7 个；平板/手机上合并成一个网格自动换行 -->
+            <div class="links-grids">
             <!-- 上面7个 -->
-            <div class="links-grid" style="grid-template-columns: repeat(7, 1fr); gap: 15px; max-width: 1200px; margin: 0 auto 15px;">
+            <div class="links-grid">
                 <a href="https://kau.ac.kr/index/main.php" target="_blank" class="link-card">
                     <i class="fas fa-university"></i>
                     <span>学校韩文官网</span>
@@ -3290,7 +1126,7 @@ background-repeat: no-repeat;
                 </a>
             </div>
             <!-- 下面7个 -->
-            <div class="links-grid" style="grid-template-columns: repeat(7, 1fr); gap: 15px; max-width: 1200px; margin: 0 auto;">
+            <div class="links-grid">
                 <a href="https://lib.kau.ac.kr/" target="_blank" class="link-card">
                     <i class="fas fa-book"></i>
                     <span>中央图书馆</span>
@@ -3320,549 +1156,143 @@ background-repeat: no-repeat;
                     <span>证明书办理</span>
                 </a>
             </div>
+            </div>
         </div>
     </section>
 
-<footer style="padding: 60px 0 30px;">
-    <div class="footer-content" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 50px; align-items: start; max-width: 1200px; margin: 0 auto; padding: 0 30px;">
-        <div class="footer-brand" style="text-align: left; padding-right: 20px;">
-            <h3 style="font-size: 20px; margin-bottom: 18px; font-weight: 700;">
-        <a href="https://kau.ac.kr/index/main.php" target="_blank" style="color: inherit; text-decoration: none;">韩国航空大学</a>
-        <span style="opacity: 0.6;"> - </span>
-        <a href="https://college.kau.ac.kr/web/pages/gc78482h.do" target="_blank" style="color: inherit; text-decoration: none;">国际交流处</a>
+<footer>
+    <div class="footer-content">
+        <div class="footer-brand">
+            <h3>
+        <a href="https://kau.ac.kr/index/main.php" target="_blank">韩国航空大学</a>
+        <span class="footer-sep"> - </span>
+        <a href="https://college.kau.ac.kr/web/pages/gc78482h.do" target="_blank">国际交流处</a>
     </h3>
-            <p style="font-size: 16px; line-height: 1.9; opacity: 0.85;">
+            <p>
     韩国唯一的航空特色化大学，致力于培养全球航空航天领域领军人才。<br>
     为中国学生提供优质的留学教育资源，搭建中韩航空教育交流桥梁。
 </p>
         </div>
         <div class="footer-links">
-            <h4 style="font-size: 18px; margin-bottom: 20px; color: var(--air-gold); font-weight: 600;">学校资讯</h4>
-            <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 12px;"><a href="#about" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">学校介绍</a></li>
-                <li style="margin-bottom: 12px;"><a href="#labs" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">研究室介绍</a></li>
-                <li style="margin-bottom: 12px;"><a href="#majors" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">专业介绍</a></li>
-                <li style="margin-bottom: 12px;"><a href="#admissions" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">招生信息</a></li>
-                <li style="margin-bottom: 12px;"><a href="#programs" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">留学项目</a></li>
+            <h4>学校资讯</h4>
+            <ul>
+                <li><a href="#about">学校介绍</a></li>
+                <li><a href="#labs">研究室介绍</a></li>
+                <li><a href="#majors">专业介绍</a></li>
+                <li><a href="#admissions">招生信息</a></li>
+                <li><a href="#programs">留学项目</a></li>
             </ul>
         </div>
         <div class="footer-links">
-            <h4 style="font-size: 18px; margin-bottom: 20px; color: var(--air-gold); font-weight: 600;">校园资讯</h4>
-            <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 12px;"><a href="#notice" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">通知公告</a></li>
-                <li style="margin-bottom: 12px;"><a href="#scholarships" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">奖学金</a></li>
-                <li style="margin-bottom: 12px;"><a href="#calendar" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">校历</a></li>
+            <h4>校园资讯</h4>
+            <ul>
+                <li><a href="#notice">通知公告</a></li>
+                <li><a href="#scholarships">奖学金</a></li>
+                <li><a href="#calendar">校历</a></li>
             </ul>
         </div>
         <div class="footer-links">
-            <h4 style="font-size: 18px; margin-bottom: 20px; color: var(--air-gold); font-weight: 600;">生活服务</h4>
-            <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 12px;"><a href="#life" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">宿舍介绍</a></li>
-                <li style="margin-bottom: 12px;"><a href="#life" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">签证办理</a></li>
-                <li style="margin-bottom: 12px;"><a href="#life" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">韩语学习</a></li>
-                <li style="margin-bottom: 12px;"><a href="#life" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">医疗保险</a></li>
-                <li style="margin-bottom: 12px;"><a href="#life" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">交通出行</a></li>
-                <li style="margin-bottom: 12px;"><a href="#life" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">文化活动</a></li>
+            <h4>生活服务</h4>
+            <ul>
+                <li><a href="#life">宿舍介绍</a></li>
+                <li><a href="#life">签证办理</a></li>
+                <li><a href="#life">韩语学习</a></li>
+                <li><a href="#life">医疗保险</a></li>
+                <li><a href="#life">交通出行</a></li>
+                <li><a href="#life">文化活动</a></li>
             </ul>
         </div>
         <div class="footer-links">
-            <h4 style="font-size: 18px; margin-bottom: 20px; color: var(--air-gold); font-weight: 600;">合作交流</h4>
-            <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 12px;"><a href="#cooperation" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">国际合作</a></li>
-                <li style="margin-bottom: 12px;"><a href="#contact" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 15px; transition: color 0.3s;">联系我们</a></li>
+            <h4>合作交流</h4>
+            <ul>
+                <li><a href="#cooperation">国际合作</a></li>
+                <li><a href="#contact">联系我们</a></li>
             </ul>
         </div>
     </div>
-    <div class="footer-bottom" style="max-width: 1200px; margin: 50px auto 0; padding: 25px 30px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 14px; opacity: 0.7;">
+    <div class="footer-bottom">
         <p>&copy; 2026 韩国航空大学 国际交流处 | Korea Aerospace University the Office of International Affairs (OIA)</p>
-        <p style="margin-top: 8px;">本网站为韩国航空大学国际交流处中文官方网站，所有信息以官方最新发布为准</p>
+        <p>本网站为韩国航空大学国际交流处中文官方网站，所有信息以官方最新发布为准</p>
     </div>
 </footer>
-
-    
-    <script>
-        // ===== 移动端菜单切换 =====
-        function toggleMenu() {
-            const navMenu = document.getElementById('navMenu');
-            navMenu.classList.toggle('active');
-        }
-
-        // ===== 平滑滚动 =====
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    document.getElementById('navMenu').classList.remove('active');
-                }
-            });
-        });
-
-        // ===== 导航栏滚动效果 =====
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(0, 51, 102, 0.98)';
-                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-            } else {
-                navbar.style.background = 'rgba(0, 51, 102, 0.95)';
-                navbar.style.boxShadow = 'none';
-            }
-        });
-
-        
-        // ===== 通知公告画廊 =====
-        const notices = [
-            {
-                src: "inform20.png",
-                thumb: "inform20.png",
-                title: "与乌兹别克斯坦交通部签署政府层面MOU",
-                date: "2026-09-16",
-                tag: "校内新闻",
-                tagClass: "tag-blue" 
-            },
-            {
-                src: "inform19.png",
-                thumb: "inform19.png",
-                title: "乌兹别克斯坦交通部长带团访问",
-                date: "2026-09-14",
-                tag: "校内新闻",
-                tagClass: "tag-blue" 
-            },
-            {
-                src: "inform18.png",
-                thumb: "inform18.png",
-                title: "第83届高阳经济论x韩国航空大学举办",
-                date: "2026-09-11",
-                tag: "校内新闻",
-                tagClass: "tag-blue"
-            },
-            {
-                src: "inform16.png",
-                thumb: "inform16.png",
-                title: "驻韩坦桑尼亚大使一行访问我校",
-                date: "2026-09-04",
-                tag: "校内新闻",
-                tagClass: "tag-blue"
-            },
-            {
-                src: "inform15.png",
-                thumb: "inform15.png",
-                title: "圆满举办深圳职业技术大学“韩国科技创新研学”",
-                date: "2026-08-26",
-                tag: "校内新闻",
-                tagClass: "tag-blue"
-            },
-            {
-                src: "inform17.png",
-                thumb: "inform17.png",
-                title: "2025年度下学期学位授予典礼圆满举行",
-                date: "2026-08-20",
-                tag: "校内新闻",
-                tagClass: "tag-blue"
-            },
-            {
-                src: "inform14.png",
-                thumb: "inform14.png",
-                title: "与国土资源部举行“全球航空政策研修项目政策座谈会”",
-                date: "2026-08-11",
-                tag: "校内新闻",
-                tagClass: "tag-blue"
-            },
-            {
-                src: "inform13.png",
-                thumb: "inform13.png",
-                title: "与韩国UAM协会签署“UAM生态体系建设”业务合作协议",
-                date: "2026-07-30",
-                tag: "校内新闻",
-                tagClass: "tag-blue"
-            },
-            {
-                src: "inform12.png",
-                thumb: "inform12.png",
-                title: "2026-2学期国际学伴招募通知",
-                date: "2026-07-28",
-                tag: "信息公告",
-                tagClass: "tag-gold"
-            },
-            {
-                src: "inform10.png",
-                thumb: "inform10.png",
-                title: "外国留学生生活馆(宿舍)运营相关事项说明",
-                date: "2026-07-28",
-                tag: "信息公告",
-                tagClass: "tag-gold"
-            },
-            {
-                src: "inform11.png",
-                thumb: "inform11.png",
-                title: "2026学年第二学期宿舍申请指南",
-                date: "2026-07-24",
-                tag: "信息公告",
-                tagClass: "tag-gold"
-            },
-            {
-                src: "inform9.png",
-                thumb: "inform9.png",
-                title: "与国土交通部举办“2026韩国航空安全论坛暨第31届航空安全研讨会”",
-                date: "2026-07-15",
-                tag: "校内新闻",
-                tagClass: "tag-blue"
-            },
-            {
-                src: "inform8.png",
-                thumb: "inform8.png",
-                title: "与京畿道及高阳市议会议员当选人就地区发展合作方案展开座谈",
-                date: "2026-06-26",
-                tag: "校内新闻",
-                tagClass: "tag-blue"
-            },
-            {
-                src: "inform1.jpg",
-                thumb: "inform1.jpg",
-                title: "休闲空间暑假期间暂停运营的通知",
-                date: "2026-06-25",
-                tag: "信息公告",
-                tagClass: "tag-gold"
-            },
-            {
-                src: "inform2.jpg",
-                thumb: "inform2.jpg",
-                title: "预防毒品相关教育信息",
-                date: "2026-06-22",
-                tag: "信息公告",
-                tagClass: "tag-gold"
-            },
-            {
-                src: "inform3.png",
-                thumb: "inform3.png",
-                title: "与郑州航空工业管理学院签署MOU，深化航空领域国际合作",
-                date: "2026-06-11",
-                tag: "校内新闻",
-                tagClass: "tag-blue"
-            },
-            {
-                src: "inform4.png",
-                thumb: "inform4.png",
-                title: "越南军事技术大学校长一行访问我校",
-                date: "2026-05-26",
-                tag: "校内新闻",
-                tagClass: "tag-blue"
-            },
-            {
-                src: "inform5.png",
-                thumb: "inform5.png",
-                title: "与乌兹别克斯坦政府合作建设中亚航空人才培养枢纽",
-                date: "2026-05-07",
-                tag: "校内新闻",
-                tagClass: "tag-blue"
-            },
-            {
-                src: "inform7.png",
-                thumb: "inform7.png",
-                title: "与乌兹别克斯坦布哈拉创新教育大学签署合作协议",
-                date: "2026-05-04",
-                tag: "校内新闻",
-                tagClass: "tag-blue"
-            },
-            {
-                src: "inform6.png",
-                thumb: "inform6.png",
-                title: "国家遗产夜活动邀请",
-                date: "2026-04-28",
-                tag: "信息公告",
-                tagClass: "tag-gold"
-            }
-            // 后续添加更多通知时，只需在此数组中追加对象即可
-            // 格式：{ src: "图片文件名", thumb: "缩略图文件名", title: "标题", date: "日期", tag: "标签", tagClass: "标签样式" }
-        ];
-
-        let currentNoticeIndex = 0;
-
-        const mainImage = document.getElementById('mainImage');
-        const mainWrapper = document.getElementById('mainWrapper');
-        const counter = document.getElementById('counter');
-        const noticeTag = document.getElementById('noticeTag');
-        const noticeTitle = document.getElementById('noticeTitle');
-        const noticeDate = document.getElementById('noticeDate');
-        const thumbList = document.getElementById('thumbList');
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImage = document.getElementById('lightboxImage');
-        const lightboxCounter = document.getElementById('lightboxCounter');
-
-        // 初始化
-        function initNoticeGallery() {
-            renderThumbs();
-            goToNotice(0);
-        }
-
-        // 渲染缩略图
-        function renderThumbs() {
-            thumbList.innerHTML = notices.map((notice, i) => `
-                <div class="thumb-card ${i === 0 ? 'active' : ''}" data-index="${i}">
-                    <div class="thumb-img">
-                        <img src="${notice.thumb}" alt="${notice.title}" loading="lazy">
-                    </div>
-                    <div class="thumb-content">
-                        <div class="thumb-title">${notice.title}</div>
-                        <div class="thumb-date">${notice.date}</div>
-                        <span class="notice-tag ${notice.tagClass} thumb-tag">${notice.tag}</span>
-                    </div>
-                </div>
-            `).join('');
-
-            document.querySelectorAll('.thumb-card').forEach(card => {
-                card.addEventListener('click', () => {
-                    goToNotice(parseInt(card.dataset.index));
-                });
-            });
-        }
-
-        // 切换通知
-        function goToNotice(index) {
-            if (index < 0) index = notices.length - 1;
-            if (index >= notices.length) index = 0;
-
-            currentNoticeIndex = index;
-            const notice = notices[index];
-
-            mainImage.classList.add('fade-out');
-
-            setTimeout(() => {
-                mainImage.src = notice.src;
-                mainImage.alt = notice.title;
-                noticeTag.textContent = notice.tag;
-                noticeTag.className = 'notice-tag ' + notice.tagClass;
-                noticeTitle.textContent = notice.title;
-                noticeDate.querySelector('span').textContent = notice.date;
-                mainImage.classList.remove('fade-out');
-            }, 200);
-
-            counter.textContent = (index + 1) + ' / ' + notices.length;
-
-            document.querySelectorAll('.thumb-card').forEach((card, i) => {
-                card.classList.toggle('active', i === index);
-                if (i === index) {
-                    card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }
-            });
-        }
-
-        function nextNotice() { goToNotice(currentNoticeIndex + 1); }
-        function prevNotice() { goToNotice(currentNoticeIndex - 1); }
-
-        // 灯箱
-        function openLightbox() {
-            lightboxImage.src = notices[currentNoticeIndex].src;
-            lightboxCounter.textContent = (currentNoticeIndex + 1) + ' / ' + notices.length;
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        function lightboxNext() {
-            goToNotice(currentNoticeIndex + 1);
-            lightboxImage.src = notices[currentNoticeIndex].src;
-            lightboxCounter.textContent = (currentNoticeIndex + 1) + ' / ' + notices.length;
-        }
-
-        function lightboxPrev() {
-            goToNotice(currentNoticeIndex - 1);
-            lightboxImage.src = notices[currentNoticeIndex].src;
-            lightboxCounter.textContent = (currentNoticeIndex + 1) + ' / ' + notices.length;
-        }
-
-        // 事件绑定
-        if (document.getElementById('prevBtn')) {
-            document.getElementById('prevBtn').addEventListener('click', prevNotice);
-        }
-        if (document.getElementById('nextBtn')) {
-            document.getElementById('nextBtn').addEventListener('click', nextNotice);
-        }
-        if (document.getElementById('lightboxPrev')) {
-            document.getElementById('lightboxPrev').addEventListener('click', (e) => { e.stopPropagation(); lightboxPrev(); });
-        }
-        if (document.getElementById('lightboxNext')) {
-            document.getElementById('lightboxNext').addEventListener('click', (e) => { e.stopPropagation(); lightboxNext(); });
-        }
-        if (document.getElementById('lightboxClose')) {
-            document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
-        }
-        if (mainWrapper) {
-            mainWrapper.addEventListener('click', openLightbox);
-        }
-        if (lightbox) {
-            lightbox.addEventListener('click', (e) => {
-                if (e.target === lightbox) closeLightbox();
-            });
-        }
-
-        // 键盘支持
-        document.addEventListener('keydown', (e) => {
-            if (lightbox && lightbox.classList.contains('active')) {
-                if (e.key === 'ArrowRight') lightboxNext();
-                if (e.key === 'ArrowLeft') lightboxPrev();
-                if (e.key === 'Escape') closeLightbox();
-            } else {
-                if (e.key === 'ArrowRight') nextNotice();
-                if (e.key === 'ArrowLeft') prevNotice();
-            }
-        });
-
-        // 触摸滑动
-        let touchStartX = 0;
-        if (mainWrapper) {
-            mainWrapper.addEventListener('touchstart', (e) => {
-                touchStartX = e.changedTouches[0].screenX;
-            });
-            mainWrapper.addEventListener('touchend', (e) => {
-                const diff = touchStartX - e.changedTouches[0].screenX;
-                if (Math.abs(diff) > 50) {
-                    diff > 0 ? nextNotice() : prevNotice();
-                }
-            });
-        }
-
-        // 初始化画廊
-        initNoticeGallery();
-// ===== 滚动动画 =====
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.section').forEach(section => {
-            observer.observe(section);
-        });
-
-        // ===== 交通详情弹窗 =====
-        function openTransportModal() {
-            document.getElementById('transportModal').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeTransportModal() {
-            document.getElementById('transportModal').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        // 点击弹窗背景关闭
-        document.getElementById('transportModal').addEventListener('click', function(e) {
-            if (e.target === this) closeTransportModal();
-        });
-
-        // ESC键关闭弹窗
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') closeTransportModal();
-        });
-
-                // ===== 表单提交 =====
-        function handleSubmit(e) {
-            e.preventDefault();
-            alert('感谢您的咨询！我们已收到您的信息，国际交流处工作人员将在2-3个工作日内通过邮件回复您。');
-            e.target.reset();
-        }
-    </script>
-    <!-- Lightbox 全屏放大查看 -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" onclick="closeLightbox()" aria-label="关闭">
-            <i class="fas fa-times"></i>
-        </button>
-        <button class="lightbox-nav lightbox-prev" onclick="changeImage(-1)" aria-label="上一张">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <div class="lightbox-content">
-            <div class="lightbox-img-container" id="lightboxImgContainer">
-                <img src="" alt="通知详情" id="lightboxImg" draggable="false">
-            </div>
-        </div>
-        <button class="lightbox-nav lightbox-next" onclick="changeImage(1)" aria-label="下一张">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-        <div class="zoom-controls">
-            <button class="zoom-btn" onclick="zoomOut()" aria-label="缩小">−</button>
-            <span class="zoom-level" id="zoomLevel">100%</span>
-            <button class="zoom-btn" onclick="zoomIn()" aria-label="放大">+</button>
-            <button class="zoom-btn zoom-reset-btn" onclick="resetZoom()" aria-label="重置">重置</button>
-        </div>
-        <div class="lightbox-counter">
-            <span id="currentIndex">1</span> / <span id="totalCount">3</span>
-        </div>
-        <div class="lightbox-hint">🖱️ 滚轮缩放 · 拖拽移动 · 双击放大/还原 · ← → 切换 · Esc 关闭</div>
-    </div>
 
     <!-- 交通详情弹窗 -->
     <div class="transport-modal" id="transportModal">
         <div class="transport-content">
             <div class="transport-header">
                 <h3><i class="fas fa-subway"></i> 韩国航空大学 交通出行指南</h3>
-                <button class="transport-close" onclick="closeTransportModal()" aria-label="关闭">
+                <button class="transport-close" aria-label="关闭">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
             <div class="transport-body">
                 <div class="transport-info-grid">
                     <div class="transport-info-card">
-                        <h4><i class="fas fa-train" style="color:var(--accent-blue)"></i> 地铁</h4>
+                        <h4><i class="fas fa-train"></i> 地铁</h4>
                         <ul>
                             <li>京义·中央线 韩国航空大学站 2号出口</li>
                         </ul>
                     </div>
                     <div class="transport-info-card">
-                        <h4><i class="fas fa-bus" style="color:var(--accent-blue)"></i> 普通公交</h4>
+                        <h4><i class="fas fa-bus"></i> 普通公交</h4>
                         <ul>
                             <li>65、66、82</li>
                         </ul>
                     </div>
                     <div class="transport-info-card">
-                        <h4><i class="fas fa-bus-alt" style="color:var(--accent-blue)"></i> 市区公交</h4>
+                        <h4><i class="fas fa-bus-alt"></i> 市区公交</h4>
                         <ul>
                             <li>97、11、19、100</li>
                         </ul>
                     </div>
                     <div class="transport-info-card">
-                        <h4><i class="fas fa-road" style="color:var(--accent-blue)"></i> 主干线公交</h4>
+                        <h4><i class="fas fa-road"></i> 主干线公交</h4>
                         <ul>
                             <li>700、760、771</li>
                         </ul>
                     </div>
                     <div class="transport-info-card">
-                        <h4><i class="fas fa-map-marker-alt" style="color:var(--accent-blue)"></i> 社区线路公交</h4>
+                        <h4><i class="fas fa-map-marker-alt"></i> 社区线路公交</h4>
                         <ul>
                             <li>7727、7726</li>
                         </ul>
                     </div>
                     <div class="transport-info-card">
-                        <h4><i class="fas fa-shuttle-van" style="color:var(--accent-blue)"></i> 社区公交</h4>
+                        <h4><i class="fas fa-shuttle-van"></i> 社区公交</h4>
                         <ul>
                             <li>075B、022A、042</li>
                         </ul>
                     </div>
                 </div>
                 <div class="transport-map-wrap">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3159.8!2d126.865!3d37.598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9f8c8c8c8c8c%3A0x8c8c8c8c8c8c8c8c!2sKorea+Aerospace+University!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr" 
-                        allowfullscreen="" 
-                        loading="lazy" 
+                    <!-- 地图显示不出来时（例如中国大陆无法访问 Google），会看到这段提示 -->
+                    <p class="transport-map-fallback">
+                        <i class="fas fa-map-marked-alt"></i>
+                        地图无法显示时，请点击下方按钮在地图应用中查看
+                    </p>
+                    <!-- 地图地址放在 data-src，打开弹窗时才加载（见 main.js），不拖慢首页 -->
+                    <iframe
+                        data-src="https://www.google.com/maps/embed?origin=mfe&amp;pb=!1m3!2m1!1s37.5994,126.8651!6i16!3m1!1szh-CN!5m1!1szh-CN"
+                        title="韩国航空大学位置地图"
+                        allowfullscreen=""
+                        loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
+                </div>
+                <!-- 在地图应用中打开（坐标：37.5994, 126.8651） -->
+                <div class="transport-map-links">
+                    <span class="transport-map-links-label"><i class="fas fa-location-arrow"></i> 在地图中打开：</span>
+                    <a class="map-link" href="https://uri.amap.com/marker?position=126.8651,37.5994&amp;name=韩国航空大学&amp;coordinate=wgs84&amp;callnative=1" target="_blank" rel="noopener">高德地图</a>
+                    <a class="map-link" href="https://api.map.baidu.com/marker?location=37.5994,126.8651&amp;title=韩国航空大学&amp;content=韩国京畿道高阳市德阳区航空大学路76&amp;coord_type=wgs84&amp;output=html&amp;src=webapp.kauoia.chinese" target="_blank" rel="noopener">百度地图</a>
+                    <a class="map-link" href="https://map.naver.com/p/search/한국항공대학교" target="_blank" rel="noopener">Naver 地图</a>
+                    <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=37.5994,126.8651" target="_blank" rel="noopener">Google 地图</a>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- 动作脚本（需通过 http 打开，详见 README.md） -->
+    <script type="module" src="assets/js/main.js"></script>
 
 </body>
 </html>
