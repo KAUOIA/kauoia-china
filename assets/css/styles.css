@@ -715,7 +715,7 @@ background-repeat: no-repeat;
     border-radius: 10px;
     border-left: 4px solid var(--accent-blue);
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 500;
     color: var(--gray-800);
     transition: all 0.3s ease;
