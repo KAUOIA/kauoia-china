@@ -743,7 +743,7 @@ background-repeat: no-repeat;
 }
 
 .pro-card-title {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--gray-800);
     font-weight: 500;
     transition: all 0.3s ease;
