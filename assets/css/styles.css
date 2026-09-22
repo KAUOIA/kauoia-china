@@ -709,6 +709,23 @@ background-repeat: no-repeat;
     font-weight: 500;
     color: var(--gray-800);
 }
+.grad-dept {
+    padding: 14px 18px;
+    background: var(--white);
+    border-radius: 10px;
+    border-left: 4px solid var(--accent-blue);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gray-800);
+    transition: all 0.3s ease;
+}
+
+.grad-dept:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    color: var(--accent-blue);
+}
 
 /* 专业研究生院：2 列 */
 .majors-pro-grid {
