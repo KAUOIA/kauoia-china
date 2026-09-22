@@ -743,9 +743,14 @@ background-repeat: no-repeat;
 }
 
 .pro-card-title {
-    font-size: 18px;
-    color: var(--primary-blue);
-    font-weight: 700;
+    font-size: 13px;
+    color: var(--gray-800);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.pro-card-title:hover {
+    color: var(--accent-blue);
 }
 
 /* 招生信息 */
