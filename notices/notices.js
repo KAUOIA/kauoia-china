@@ -36,6 +36,14 @@
    =========================================================== */
 
 export const notices = [
+    {
+        src: "inform22.webp",
+        thumb: "inform22.webp",
+        title: "我校举办16届AI飞行器顶尖挑战赛",
+        date: "2026-09-16",
+        tag: "校内新闻",
+        tagClass: "tag-blue"
+    },
    {
         src: "inform20.webp",
         thumb: "inform20.webp",
