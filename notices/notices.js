@@ -36,7 +36,7 @@
    =========================================================== */
 
 export const notices = [
-    {
+   {
         src: "inform20.webp",
         thumb: "inform20.webp",
         title: "与乌兹别克斯坦交通部签署政府层面MOU",
@@ -155,6 +155,14 @@ export const notices = [
         date: "2026-06-22",
         tag: "信息公告",
         tagClass: "tag-gold"
+    },
+    {
+        src: "inform21.webp",
+        thumb: "inform21.webp",
+        title: "建校74周年纪念仪式",
+        date: "2026-06-12",
+        tag: "校内新闻",
+        tagClass: "tag-blue"
     },
     {
         src: "inform3.webp",
