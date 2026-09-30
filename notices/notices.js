@@ -37,6 +37,14 @@
 
 export const notices = [
     {
+        src: "inform23.webp",
+        thumb: "inform23.webp",
+        title: "韩俊浩(音)议员与許喜寕校长就UAM集群建设方案进行讨论",
+        date: "2026-09-23",
+        tag: "校内新闻",
+        tagClass: "tag-blue"
+    },
+   {
         src: "inform22.webp",
         thumb: "inform22.webp",
         title: "我校举办16届AI飞行器顶尖挑战赛",
