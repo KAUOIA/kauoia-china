@@ -37,6 +37,22 @@
 
 export const notices = [
     {
+        src: "inform25.webp",
+        thumb: "inform25.webp",
+        title: "韩国国立大学签署合作",
+        date: "2026-10-28",
+        tag: "校内新闻",
+        tagClass: "tag-blue"
+   },
+   {
+        src: "inform24.webp",
+        thumb: "inform24.webp",
+        title: "蒙古外交官到访",
+        date: "2026-10-28",
+        tag: "校内新闻",
+        tagClass: "tag-blue"
+   },
+   {
         src: "inform23.webp",
         thumb: "inform23.webp",
         title: "韩俊浩(音)议员与許喜寕校长就UAM集群建设方案进行讨论",
