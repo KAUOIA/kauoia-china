@@ -36,7 +36,15 @@
    =========================================================== */
 
 export const notices = [
-    {
+   {
+        src: "inform26.webp",
+        thumb: "inform26.webp",
+        title: "外国人非法摩托车配送外卖强制出境事实核查,
+        date: "2026-11-02",
+        tag: "信息公告",
+        tagClass: "tag-gold"
+   },
+   {
         src: "inform25.webp",
         thumb: "inform25.webp",
         title: "韩国国立大学签署合作",
