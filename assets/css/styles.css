@@ -810,8 +810,14 @@ background-repeat: no-repeat;
 
 /* 留学项目 */
 .programs-section {
-    background: var(--primary-blue);
+    background: transparent;
     color: var(--white);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 40px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #003366 0%, #004080 100%);
 }
 
 .programs-section .section-title {
@@ -869,6 +875,31 @@ background-repeat: no-repeat;
     border-radius: 20px;
     font-size: 12px;
     font-weight: 500;
+}
+/* 留学项目整体宽度和居中 */
+.programs-section .container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* 留学项目卡片排列 */
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .programs-section {
+        margin: 0 15px;
+        padding: 35px 20px;
+    }
+
+    .programs-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
 
 /* 奖学金 */
