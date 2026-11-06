@@ -1534,7 +1534,7 @@ display: grid;
 grid-template-columns: repeat(2, 1fr);
 gap: 25px;
 margin-top: 30px;
-max-width: 900px;
+max-width: 1000px;
 margin-left: auto;
 margin-right: auto;
 }
@@ -1551,7 +1551,7 @@ min-width: 80px;
 }
 
 .download-card-highlight {
-grid-column: span 2;
+grid-column: span 1;
 }
 
 .download-card {
@@ -1607,12 +1607,6 @@ transform: scale(1.05);
 box-shadow: 0 5px 20px rgba(201, 169, 97, 0.4);
 }
 
-.download-card-highlight {
-background: linear-gradient(135deg, rgba(201, 169, 97, 0.2) 0%, rgba(255, 255, 255, 0.15) 100%);
-border: 2px solid var(--air-gold);
-position: relative;
-}
-
 .download-card-highlight::before {
 content: '推荐';
 position: absolute;
@@ -1624,16 +1618,6 @@ padding: 4px 12px;
 border-radius: 12px;
 font-size: 12px;
 font-weight: 600;
-}
-
-.download-card-highlight i {
-color: var(--air-gold);
-}
-
-.download-card-highlight:hover {
-background: linear-gradient(135deg, rgba(201, 169, 97, 0.3) 0%, rgba(255, 255, 255, 0.2) 100%);
-transform: translateY(-8px);
-box-shadow: 0 15px 40px rgba(201, 169, 97, 0.3);
 }
 
 /* ===== 研究室介绍区域 ===== */
