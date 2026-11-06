@@ -1607,19 +1607,6 @@ transform: scale(1.05);
 box-shadow: 0 5px 20px rgba(201, 169, 97, 0.4);
 }
 
-.download-card-highlight::before {
-content: '推荐';
-position: absolute;
-top: -10px;
-right: 20px;
-background: var(--air-gold);
-color: var(--primary-blue);
-padding: 4px 12px;
-border-radius: 12px;
-font-size: 12px;
-font-weight: 600;
-}
-
 /* ===== 研究室介绍区域 ===== */
 .labs-section {
     background: linear-gradient(135deg, #f8f9fa 0%, #e6f2ff 50%, #f0f7ff 100%);
